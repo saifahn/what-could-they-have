@@ -1,8 +1,12 @@
 export interface Card {
   name: string
   mana_cost?: string
-  cmc: number
+  cmc?: number
   type_line: string
   power?: string
   toughness?: string
+  layout?: string
+  card_faces?: Card[]
 }
+
+// maybe change card face to its own thing
