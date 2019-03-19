@@ -8,7 +8,8 @@ function getColours(numColours: number): string[] {
     // remove a random colour each time
     const length = initColours.length
     const randomNum = Math.floor(Math.random() * length)
-    colours.push(initColours.splice(randomNum, randomNum + 1)[0])
+    const toPush = initColours.splice(randomNum, 1)
+    colours.push(toPush[0])
   }
   return colours
 }

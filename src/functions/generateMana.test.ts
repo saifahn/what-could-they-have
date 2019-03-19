@@ -46,7 +46,6 @@ it('can generate two colours of mana', () => {
     coloursToGenerate
   }
   const mana = generateMana(testParams)
-  console.log(mana)
   const numGeneratedColours = getNumberOfColours(mana)
   expect(numGeneratedColours).toBeLessThanOrEqual(coloursToGenerate)
 })
