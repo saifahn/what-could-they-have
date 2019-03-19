@@ -1,4 +1,5 @@
 import canBeCast, { formatMana } from './canBeCast'
+import generateMana from './generateMana'
 import { Card } from '../common/types'
 
 const testCards: Card[] = [
@@ -175,4 +176,18 @@ describe('canBeCast determines if card is castable', () => {
   // this doesn't happen too much in magic at the moment so it's fine for now I think
 
   // tests should have different var names
+})
+
+describe('integration? and other tests', () => {
+  test('filtering using canBeCast gives the correct cards', () => {
+    const testCost = '{W}{W}{U}{U}'
+    const result = testCards.filter((card) => canBeCast(card, testCost))
+    expect(result.length).toEqual(3)
+  })
+
+  test('generateMana can be used with canBeCast', () => {
+    const testCost = generateMana({ len: 4, coloursToGenerate: 4 })
+    const result = testCards.filter((card) => canBeCast(card, testCost))
+    expect(result.length).toBeGreaterThan(0)
+  })
 })

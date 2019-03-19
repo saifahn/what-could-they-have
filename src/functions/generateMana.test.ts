@@ -1,4 +1,4 @@
-import generateMana from './generateMana'
+import generateMana, { COLOURS } from './generateMana'
 
 /* 
 
@@ -30,7 +30,7 @@ function getNumberOfColours(manaString: string) {
   // TODO: get unique from string
   const uniqueColours: string[] = []
   manaString.split('').forEach((character) => {
-    if (uniqueColours.indexOf(character) === -1) {
+    if (character in COLOURS && uniqueColours.indexOf(character) === -1) {
       uniqueColours.push(character)
     }
   })

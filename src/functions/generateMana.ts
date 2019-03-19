@@ -1,4 +1,4 @@
-const COLOURS = ['W', 'U', 'B', 'R', 'G']
+export const COLOURS = ['W', 'U', 'B', 'R', 'G']
 
 function getColours(numColours: number): string[] {
   // make a copy of the old array
@@ -26,7 +26,7 @@ function generateMana({ len, coloursToGenerate }: generateManaParams): string {
     // add a random number of different colours from the array
     const coloursLength = colours.length
     const randomNum = Math.floor(Math.random() * coloursLength)
-    mana += colours[randomNum]
+    mana += `{${colours[randomNum]}}`
   }
   return mana
 }
