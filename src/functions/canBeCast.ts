@@ -2,7 +2,7 @@ import { Card } from '../common/types'
 
 export function formatMana(cost: string) {
   const manaRE = /\{([\dWUBRG/]+)\}/g
-  const manaObject = { cmc: 0 }
+  const manaObject: any = { cmc: 0 }
   const manaArray = cost.match(manaRE) || []
   manaArray.forEach((symbol) => {
     const newSymbol = symbol.replace(manaRE, '$1')
@@ -56,13 +56,13 @@ function canBeCast(card: Card, cost: string): boolean {
     returns true if the card can be cast
   */
   if (!card.mana_cost) {
-    console.log(`the card is ${card.name} and it doesn't have a cost`)
+    // console.log(`the card is ${card.name} and it doesn't have a cost`)
     return false
   }
   const availableMana = formatMana(cost)
   const cardMana = formatMana(card.mana_cost)
 
-  if (card.layout == 'split') {
+  if (card.card_faces) {
     const firstFace = card.card_faces[0]
     const secondFace = card.card_faces[1]
     // stop evaluating a face if it isn't instant
@@ -78,7 +78,7 @@ function canBeCast(card: Card, cost: string): boolean {
   }
 
   if (availableMana.cmc < cardMana.cmc) {
-    console.log(`the card is ${card.name} and it has too high a cost`)
+    // console.log(`the card is ${card.name} and it has too high a cost`)
     return false
   }
 
@@ -95,7 +95,7 @@ function canBeCast(card: Card, cost: string): boolean {
       continue
     }
 
-    let amount = cardEntries[i][1]
+    let amount: any = cardEntries[i][1]
     // if hybrid
     const hybridRE = /([WUBRG2])\/([WUBRGCP])/
     const hybridMatch = symbol.match(hybridRE)
