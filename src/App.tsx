@@ -46,23 +46,23 @@ class App extends Component<{}> {
     let len, coloursToGenerate
     switch (mode) {
       case 'basic':
-        len = 2
+        len = 3
         coloursToGenerate = 1
         break
       case 'common':
-        len = 3
+        len = 4
         coloursToGenerate = 2
         break
       case 'uncommon':
-        len = 4
+        len = 5
         coloursToGenerate = 3
         break
       case 'rare':
-        len = 5
+        len = 6
         coloursToGenerate = 4
         break
       case 'mythic':
-        len = 6
+        len = 7
         coloursToGenerate = 5
         break
     }
