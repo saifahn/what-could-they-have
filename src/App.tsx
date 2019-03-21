@@ -10,7 +10,7 @@ interface State {
   availableMana: string
   len: number
   coloursToGenerate: number
-  mode: 'common' | 'uncommon' | 'rare' | 'mythic'
+  mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
 }
 
@@ -18,9 +18,9 @@ class App extends Component<{}> {
   state: State = {
     cards: [],
     availableMana: '',
-    len: 4,
+    len: 3,
     coloursToGenerate: 1,
-    mode: 'common',
+    mode: 'basic',
     input: React.createRef()
   }
 
@@ -43,7 +43,32 @@ class App extends Component<{}> {
   setDifficulty = (event: FormEvent) => {
     event.preventDefault()
     const mode = this.state.input.current.value
-    this.setState({ mode })
+    let len, coloursToGenerate
+    switch (mode) {
+      case 'basic':
+        len = 2
+        coloursToGenerate = 1
+        break
+      case 'common':
+        len = 3
+        coloursToGenerate = 2
+        break
+      case 'uncommon':
+        len = 4
+        coloursToGenerate = 3
+        break
+      case 'rare':
+        len = 5
+        coloursToGenerate = 4
+        break
+      case 'mythic':
+        len = 6
+        coloursToGenerate = 5
+        break
+    }
+    this.setState({ mode, len, coloursToGenerate }, () => {
+      this.loadCards()
+    })
   }
 
   componentDidMount() {
@@ -73,6 +98,7 @@ class App extends Component<{}> {
           </button>
           <form onSubmit={this.setDifficulty}>
             <select ref={input}>
+              <option value="basic">basic</option>
               <option value="common">common</option>
               <option value="uncommon">uncommon</option>
               <option value="rare">rare</option>
