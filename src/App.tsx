@@ -1,5 +1,5 @@
 import React from 'react'
-import Game from './Game/Game'
+import Game from './components/Game'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
 

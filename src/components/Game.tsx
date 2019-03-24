@@ -3,6 +3,7 @@ import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
 import RNA from '../RNA-flash-cards.json'
 import { Card } from '../common/types'
+import TextInputForm from './TextInputForm'
 
 interface State {
   cards: Card[]
@@ -157,14 +158,19 @@ class Game extends Component {
               Select Difficulty
             </button>
           </form>
-          <form onSubmit={this.handleGuess}>
+          <TextInputForm
+            onSubmit={this.handleGuess}
+            onChange={this.handleGuessChange}
+            value={guess}
+          />
+          {/* <form onSubmit={this.handleGuess}>
             <input
               type="text"
               onChange={this.handleGuessChange}
               value={guess}
             />
             <button>Guess</button>
-          </form>
+          </form> */}
         </section>
       </div>
     )
