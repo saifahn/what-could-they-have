@@ -26,3 +26,7 @@
 .App {
   display: flex;
 }
+
+.mt-8 {
+  margin-top: 2rem;
+}

@@ -7,25 +7,58 @@ import './App.css'
 
 interface State {
   cards: Card[]
+  guessedCards: Card[]
   availableMana: string
   len: number
   coloursToGenerate: number
   mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
+  guess: string
 }
 
 class App extends Component<{}> {
   state: State = {
     cards: [],
+    guessedCards: [],
     availableMana: '',
     len: 3,
     coloursToGenerate: 1,
     mode: 'basic',
-    input: React.createRef()
+    input: React.createRef(),
+    guess: ''
   }
 
   constructor(props: any) {
     super(props)
+  }
+
+  handleGuess = (event: FormEvent) => {
+    event.preventDefault()
+    let { cards, guess, guessedCards } = this.state
+    const hasBeenGuessed = guessedCards.find(
+      (card) => card.name.toLowerCase() === guess.toLowerCase()
+    )
+    if (hasBeenGuessed) {
+      guess = ''
+      return this.setState({ guessedCards, guess }, () =>
+        console.log('You have already guessed that one!')
+      )
+    }
+    const foundCard = cards.find(
+      (card) => card.name.toLowerCase() === guess.toLowerCase()
+    )
+    if (foundCard) {
+      guessedCards.push(foundCard)
+      guess = ''
+      this.setState({ guessedCards, guess })
+    } else {
+      console.log("oops, can't find a card with that name")
+    }
+  }
+
+  handleGuessChange = (event: FormEvent<HTMLInputElement>) => {
+    const guess = event.currentTarget.value
+    this.setState({ guess })
   }
 
   loadCards = () => {
@@ -76,24 +109,41 @@ class App extends Component<{}> {
   }
 
   render() {
-    const { availableMana, cards, mode, input } = this.state
+    const {
+      availableMana,
+      cards,
+      mode,
+      input,
+      guess,
+      guessedCards
+    } = this.state
     return (
       <div className="App container-lg mx-auto">
         <section className="Info">
-          <h1>You are playing on {mode} mode</h1>
-          <p>Your opponent has {availableMana} available.</p>
+          <p>You are playing on {mode} mode</p>
+          <h3>Your opponent has {availableMana} available.</h3>
           <p>
-            There are {cards.length} cards they could cast at instant speed.
+            You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
+            <strong>{cards.length}</strong> cards that can be cast at instant
+            speed.
           </p>
-          <p>The cards names are:</p>
+          <div>
+            <p>The cards names are:</p>
+            <ul>
+              {cards.map((card) => (
+                <li key={card.name}>{card.name}</li>
+              ))}
+            </ul>
+          </div>
+          <h3 className="mt-8">Cards you have guessed:</h3>
           <ul>
-            {cards.map((card) => {
-              return <li key={card.name}>{card.name}</li>
-            })}
+            {guessedCards.map((card) => (
+              <li key={card.name}>{card.name}</li>
+            ))}
           </ul>
         </section>
-        <section className="Settings">
-          <button className="Settings__button" onClick={this.loadCards}>
+        <section className="Actions">
+          <button className="Actions__button" onClick={this.loadCards}>
             New Mana
           </button>
           <form onSubmit={this.setDifficulty}>
@@ -104,9 +154,17 @@ class App extends Component<{}> {
               <option value="rare">rare</option>
               <option value="mythic">mythic</option>
             </select>
-            <button className="Settings__button" type="submit">
+            <button className="Actions__button" type="submit">
               Select Difficulty
             </button>
+          </form>
+          <form onSubmit={this.handleGuess}>
+            <input
+              type="text"
+              onChange={this.handleGuessChange}
+              value={guess}
+            />
+            <button>Guess</button>
           </form>
         </section>
       </div>
