@@ -7,6 +7,7 @@ export interface Card {
   toughness?: string
   layout?: string
   card_faces?: Card[]
+  oracle_text?: string
 }
 
 // maybe change card face to its own thing

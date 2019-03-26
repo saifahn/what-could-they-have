@@ -42,7 +42,6 @@ class Main extends Component {
   }
 
   handleManaChange = (event: FormEvent<HTMLInputElement>) => {
-    // first only handle any character gets converted into a
     const manaFilter = event.currentTarget.value
     // format this
     const formattedMana = this.formatManaCost(manaFilter)
@@ -60,9 +59,21 @@ class Main extends Component {
           onChange={this.handleManaChange}
         />
         <section>
-          <ul>
+          <ul className="CardList mx-auto">
             {cardsToShow &&
-              cardsToShow.map((card) => <li key={card.name}>{card.name}</li>)}
+              cardsToShow.map((card, index) => (
+                <li
+                  className={'Card' + (index != 0 ? ' mt-10' : '')}
+                  key={card.name}
+                >
+                  <div className="flex justify-between">
+                    <h3>{card.name}</h3>
+                    <h4>{card.mana_cost}</h4>
+                  </div>
+                  <p>{card.type_line}</p>
+                  <p>{card.oracle_text}</p>
+                </li>
+              ))}
           </ul>
         </section>
       </main>
