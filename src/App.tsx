@@ -1,5 +1,6 @@
 import React from 'react'
 import Game from './components/Game'
+import Main from './components/Main'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
 
@@ -13,9 +14,7 @@ function App() {
         </header>
 
         <Switch>
-          <Route exact path="/">
-            <p>This is the Home Page</p>
-          </Route>
+          <Route exact path="/" component={Main} />
           <Route path="/game" component={Game} />
         </Switch>
       </div>
