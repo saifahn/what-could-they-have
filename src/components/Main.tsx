@@ -35,9 +35,18 @@ class Main extends Component {
     return cards.filter((card: Card) => canBeCast(card, filter))
   }
 
+  formatManaCost = (mana: string) => {
+    const re = /(\w(\/\w)?)/g
+    // return match
+    return mana.replace(re, '{$1}')
+  }
+
   handleManaChange = (event: FormEvent<HTMLInputElement>) => {
+    // first only handle any character gets converted into a
     const manaFilter = event.currentTarget.value
-    const cardsToShow = this.filterCards(manaFilter)
+    // format this
+    const formattedMana = this.formatManaCost(manaFilter)
+    const cardsToShow = this.filterCards(formattedMana)
     this.setState({ manaFilter, cardsToShow })
   }
 
