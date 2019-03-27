@@ -1,5 +1,6 @@
 import React, { Component, FormEvent } from 'react'
 import { data } from '../RNA-flash-cards.json'
+import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
 
@@ -59,22 +60,7 @@ class Main extends Component {
           onChange={this.handleManaChange}
         />
         <section>
-          <ul className="CardList mx-auto">
-            {cardsToShow &&
-              cardsToShow.map((card, index) => (
-                <li
-                  className={'Card' + (index != 0 ? ' mt-10' : '')}
-                  key={card.name}
-                >
-                  <div className="flex justify-between">
-                    <h3>{card.name}</h3>
-                    <h4>{card.mana_cost}</h4>
-                  </div>
-                  <p>{card.type_line}</p>
-                  <p>{card.oracle_text}</p>
-                </li>
-              ))}
-          </ul>
+          <CardList cardsToShow={cardsToShow} />
         </section>
       </main>
     )
