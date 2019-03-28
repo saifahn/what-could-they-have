@@ -15,6 +15,7 @@ interface State {
   input: RefObject<any>
   guess: string
   feedback: string
+  showAllCards: boolean
 }
 
 class Game extends Component {
@@ -27,18 +28,25 @@ class Game extends Component {
     mode: 'basic',
     input: React.createRef(),
     guess: '',
-    feedback: ''
+    feedback: '',
+    showAllCards: false,
   }
 
   constructor(props: any) {
     super(props)
   }
 
+  getUnguessedCards = () => {
+    const { cards, guessedCards } = this.state
+    const guessedCardsSet = new Set(guessedCards)
+    return cards.filter((card) => !guessedCardsSet.has(card))
+  }
+
   handleGuess = (event: FormEvent) => {
     event.preventDefault()
     let { cards, feedback, guess, guessedCards } = this.state
     const hasBeenGuessed = guessedCards.find(
-      (card) => card.name.toLowerCase() === guess.toLowerCase()
+      (card) => card.name.toLowerCase() === guess.toLowerCase(),
     )
     if (hasBeenGuessed) {
       guess = ''
@@ -46,7 +54,7 @@ class Game extends Component {
       return this.setState({ feedback, guessedCards, guess })
     }
     const foundCard = cards.find(
-      (card) => card.name.toLowerCase() === guess.toLowerCase()
+      (card) => card.name.toLowerCase() === guess.toLowerCase(),
     )
     if (foundCard) {
       guessedCards.push(foundCard)
@@ -67,15 +75,19 @@ class Game extends Component {
     this.setState({ guess })
   }
 
+  showCards = () => {
+    this.setState({ showAllCards: true })
+  }
+
   loadCards = () => {
     const { len, coloursToGenerate } = this.state
     const availableMana = generateMana({ len, coloursToGenerate })
     const cards = RNA.data.filter((card: Card) =>
-      canBeCast(card, availableMana)
+      canBeCast(card, availableMana),
     )
     this.setState({
       availableMana,
-      cards
+      cards,
     })
   }
 
@@ -122,7 +134,8 @@ class Game extends Component {
       input,
       feedback,
       guess,
-      guessedCards
+      guessedCards,
+      showAllCards,
     } = this.state
     return (
       <div className="App">
@@ -139,6 +152,7 @@ class Game extends Component {
           <button className="Actions__button" onClick={this.loadCards}>
             New Mana
           </button>
+          <button onClick={this.showCards}>Show Unguessed Cards</button>
           <form onSubmit={this.setDifficulty}>
             <select ref={input}>
               <option value="basic">basic</option>
@@ -152,7 +166,7 @@ class Game extends Component {
             </button>
           </form>
           <TextInputForm
-            disabled={guessedCards.length === cards.length}
+            disabled={showAllCards || guessedCards.length === cards.length}
             onSubmit={this.handleGuess}
             onChange={this.handleGuessChange}
             value={guess}
@@ -177,6 +191,16 @@ class Game extends Component {
             ))}
           </ul>
         </section>
+        {showAllCards && (
+          <section className="AllCards">
+            <h3>All Castable Cards</h3>
+            <ul>
+              {this.getUnguessedCards().map((card) => (
+                <li key={card.name}>{card.name}</li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     )
   }
