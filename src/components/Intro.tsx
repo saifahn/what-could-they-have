@@ -2,7 +2,7 @@ import React from 'react'
 
 function Intro() {
   return (
-    <section>
+    <section className="Intro">
       <p>
         In Limited Magic, your opponent will oftentimes do something that
         doesn't make sense according to what's on the board. When your opponent

@@ -69,6 +69,22 @@ h4 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+.Intro p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.ManaFilter {
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 0.5rem;
+  width: 70%;
+  max-width: 560px;
+}
+
 .flex {
   display: flex;
 }
