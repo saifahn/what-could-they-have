@@ -9,7 +9,9 @@ function App() {
     <Router>
       <div className="container-lg mx-auto">
         <header>
-          <Link to="/">Home</Link>
+          <Link to="/" className="mr-4">
+            Home
+          </Link>
           <Link to="/game">Game</Link>
         </header>
 

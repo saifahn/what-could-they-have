@@ -14,6 +14,7 @@ interface State {
   mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
   guess: string
+  feedback: string
 }
 
 class Game extends Component {
@@ -25,7 +26,8 @@ class Game extends Component {
     coloursToGenerate: 1,
     mode: 'basic',
     input: React.createRef(),
-    guess: ''
+    guess: '',
+    feedback: ''
   }
 
   constructor(props: any) {
@@ -34,25 +36,29 @@ class Game extends Component {
 
   handleGuess = (event: FormEvent) => {
     event.preventDefault()
-    let { cards, guess, guessedCards } = this.state
+    let { cards, feedback, guess, guessedCards } = this.state
     const hasBeenGuessed = guessedCards.find(
       (card) => card.name.toLowerCase() === guess.toLowerCase()
     )
     if (hasBeenGuessed) {
       guess = ''
-      return this.setState({ guessedCards, guess }, () =>
-        console.log('You have already guessed that one!')
-      )
+      feedback = 'You have already guessed that one!'
+      return this.setState({ feedback, guessedCards, guess })
     }
     const foundCard = cards.find(
       (card) => card.name.toLowerCase() === guess.toLowerCase()
     )
     if (foundCard) {
       guessedCards.push(foundCard)
+      feedback =
+        guessedCards.length === cards.length
+          ? 'Well done, you got them all!'
+          : 'Nice one!'
       guess = ''
-      this.setState({ guessedCards, guess })
+      this.setState({ feedback, guessedCards, guess })
     } else {
-      console.log("oops, can't find a card with that name")
+      feedback = "That card doesn't exist :("
+      this.setState({ feedback })
     }
   }
 
@@ -114,6 +120,7 @@ class Game extends Component {
       cards,
       mode,
       input,
+      feedback,
       guess,
       guessedCards
     } = this.state
@@ -127,20 +134,6 @@ class Game extends Component {
             <strong>{cards.length}</strong> cards that can be cast at instant
             speed.
           </p>
-          <div>
-            <p>The cards names are:</p>
-            <ul>
-              {cards.map((card) => (
-                <li key={card.name}>{card.name}</li>
-              ))}
-            </ul>
-          </div>
-          <h3 className="mt-8">Cards you have guessed:</h3>
-          <ul>
-            {guessedCards.map((card) => (
-              <li key={card.name}>{card.name}</li>
-            ))}
-          </ul>
         </section>
         <section className="Actions">
           <button className="Actions__button" onClick={this.loadCards}>
@@ -159,6 +152,7 @@ class Game extends Component {
             </button>
           </form>
           <TextInputForm
+            disabled={guessedCards.length === cards.length}
             onSubmit={this.handleGuess}
             onChange={this.handleGuessChange}
             value={guess}
@@ -171,6 +165,17 @@ class Game extends Component {
             />
             <button>Guess</button>
           </form> */}
+        </section>
+        <section className="Feedback">
+          <p>{feedback}</p>
+        </section>
+        <section className="GuessedCards">
+          <h3 className="mt-8">Cards you have guessed:</h3>
+          <ul>
+            {guessedCards.map((card) => (
+              <li key={card.name}>{card.name}</li>
+            ))}
+          </ul>
         </section>
       </div>
     )
