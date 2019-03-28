@@ -3,17 +3,13 @@ import Game from './components/Game'
 import Main from './components/Main'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   return (
     <Router>
       <div className="container-lg mx-auto">
-        <header>
-          <Link to="/" className="mr-4">
-            Home
-          </Link>
-          <Link to="/game">Game</Link>
-        </header>
+        <Header />
 
         <Switch>
           <Route exact path="/" component={Main} />

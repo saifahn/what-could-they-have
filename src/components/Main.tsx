@@ -3,6 +3,7 @@ import { data } from '../RNA-flash-cards.json'
 import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
+import Intro from './Intro'
 
 interface State {
   cards: Card[]
@@ -24,7 +25,7 @@ class Main extends Component {
   state: State = {
     cards: [],
     cardsToShow: [],
-    manaFilter: ''
+    manaFilter: '',
   }
 
   componentDidMount() {
@@ -38,13 +39,11 @@ class Main extends Component {
 
   formatManaCost = (mana: string) => {
     const re = /(\w(\/\w)?)/g
-    // return match
     return mana.replace(re, '{$1}')
   }
 
   handleManaChange = (event: FormEvent<HTMLInputElement>) => {
     const manaFilter = event.currentTarget.value
-    // format this
     const formattedMana = this.formatManaCost(manaFilter)
     const cardsToShow = this.filterCards(formattedMana)
     this.setState({ manaFilter, cardsToShow })
@@ -54,6 +53,7 @@ class Main extends Component {
     const { cardsToShow, manaFilter } = this.state
     return (
       <main>
+        <Intro />
         <input
           type="text"
           value={manaFilter}
