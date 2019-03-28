@@ -54,11 +54,18 @@ class Main extends Component {
     return (
       <main>
         <Intro />
-        <input
-          type="text"
-          value={manaFilter}
-          onChange={this.handleManaChange}
-        />
+        <section>
+          <h3>
+            Filter cards from <em>Ravnica Allegiance</em> by mana cost
+          </h3>
+          <input
+            className="ManaFilter mx-auto mt-4"
+            type="text"
+            value={manaFilter}
+            onChange={this.handleManaChange}
+            placeholder="type a mana cost e.g. WWBBB"
+          />
+        </section>
         <section>
           <CardList cardsToShow={cardsToShow} />
         </section>
