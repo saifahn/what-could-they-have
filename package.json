@@ -14,8 +14,10 @@
     "typescript": "3.3.3333"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:css": "postcss src/styles/tailwind-base.css -o src/tailwind.css",
+    "watch:css": "postcss src/styles/tailwind-base.css -o src/tailwind.css -w",
+    "start": "yarn watch:css & react-scripts start",
+    "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook"
@@ -34,9 +36,12 @@
     "@storybook/react": "^3.4.12",
     "@types/react-router-dom": "^4.3.1",
     "@types/storybook__react": "^4.0.1",
+    "autoprefixer": "^9.5.0",
     "awesome-typescript-loader": "^3.5.0",
     "babel-loader": "^8.0.5",
+    "postcss-cli": "^6.1.2",
     "react-docgen-typescript-loader": "^3.0.1",
-    "react-docgen-typescript-webpack-plugin": "^1.1.0"
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "tailwindcss": "^0.7.4"
   }
 }
