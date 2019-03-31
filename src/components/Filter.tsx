@@ -11,7 +11,7 @@ interface State {
   manaFilter: string
 }
 
-class Main extends Component {
+class Filter extends Component {
   // state = {
   //   cards: [],
   //   filters: {
@@ -53,7 +53,6 @@ class Main extends Component {
     const { cardsToShow, manaFilter } = this.state
     return (
       <main>
-        <Intro />
         <section>
           <h3>
             Filter cards from <em>Ravnica Allegiance</em> by mana cost
@@ -74,4 +73,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+export default Filter

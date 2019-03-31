@@ -138,7 +138,7 @@ class Game extends Component {
       showAllCards,
     } = this.state
     return (
-      <div className="App">
+      <main>
         <section className="Info">
           <p>You are playing on {mode} mode</p>
           <h3>Your opponent has {availableMana} available.</h3>
@@ -201,7 +201,7 @@ class Game extends Component {
             </ul>
           </section>
         )}
-      </div>
+      </main>
     )
   }
 }

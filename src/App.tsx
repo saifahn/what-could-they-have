@@ -1,6 +1,7 @@
 import React from 'react'
 import Game from './components/Game'
-import Main from './components/Main'
+import Filter from './components/Filter'
+import Intro from './components/Intro'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
@@ -12,7 +13,8 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" component={Intro} />
+          <Route path="/filter" component={Filter} />
           <Route path="/game" component={Game} />
         </Switch>
       </div>

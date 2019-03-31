@@ -2,7 +2,7 @@ import React from 'react'
 
 function Intro() {
   return (
-    <section className="Intro">
+    <main className="Intro">
       <p>
         In Limited Magic, your opponent will oftentimes do something that
         doesn't make sense according to what's on the board. When your opponent
@@ -15,7 +15,11 @@ function Intro() {
         practice that knowledge or potentially as a tool figure out what your
         opponent has during a game.
       </p>
-    </section>
+      <select>
+        <option value="RNA">Ravnica Allegiance</option>
+      </select>
+      <h2>Set Specific Notes</h2>
+    </main>
   )
 }
 

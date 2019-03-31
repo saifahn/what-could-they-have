@@ -5,10 +5,13 @@ function Header() {
   return (
     <header>
       <h1>What Could They Have? — Ravnica Allegiance</h1>
-      <Link to="/" className="mr-4">
-        Home
+      <Link to="/">Home</Link>
+      <Link to="/filter" className="ml-4">
+        Filter
       </Link>
-      <Link to="/game">Game</Link>
+      <Link to="/game" className="ml-4">
+        Game
+      </Link>
     </header>
   )
 }
