@@ -3,7 +3,6 @@ import { data } from '../RNA-flash-cards.json'
 import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
-import Intro from './Intro'
 
 interface State {
   cards: Card[]
@@ -54,11 +53,9 @@ class Filter extends Component {
     return (
       <main>
         <section>
-          <h3>
-            Filter cards from <em>Ravnica Allegiance</em> by mana cost
-          </h3>
+          <h3 className="mt-4">Filter cards by mana cost</h3>
           <input
-            className="ManaFilter mx-auto mt-4"
+            className="appearance-none border bg-grey-lighter border-grey-lighter text-black text-lg text-center w-full max-w-sm sm:text-xl shadow py-3 px-4 mt-6 rounded focus:outline-none focus:bg-white focus:border-grey"
             type="text"
             value={manaFilter}
             onChange={this.handleManaChange}
