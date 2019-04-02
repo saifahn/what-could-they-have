@@ -1,74 +1,11 @@
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.container {
-  width: 100%;
-}
-
-.container-sm {
-  max-width: 576px;
-}
-
-.container-md {
-  max-width: 768px;
-}
-
-.container-lg {
-  max-width: 992px;
-}
-
-.container-xl {
-  max-width: 1200px;
-}
-
-.mx-auto {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.App {
-  /* display: flex; */
-}
-
-.CardList {
-  padding: 0;
-  list-style: none;
-  width: 90%;
-  max-width: 450px;
-}
-
-.Card {
+p {
   margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.Intro p {
-  font-size: 1.2rem;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
-.ManaFilter {
-  outline: none;
-  border: none;
-  font-size: 1.5rem;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  padding: 0.5rem;
-  width: 70%;
-  max-width: 560px;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-between {
-  justify-content: space-between;
+@media screen and (min-width: 576px) {
+  p {
+    font-size: 1.25rem;
+  }
 }

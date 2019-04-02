@@ -153,22 +153,27 @@ class Game extends Component {
           </p>
         </section>
         <section className="Actions mt-4">
-          <button
-            onClick={this.newGame}
-            className="bg-blue hover:bg-blue-dark text-white py-2 px-4 rounded"
+          <div className="flex flex-wrap justify-start">
+            <button
+              onClick={this.newGame}
+              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 mr-4 rounded"
+            >
+              New Game
+            </button>
+            <button
+              onClick={this.showCards}
+              className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded"
+            >
+              Give Up
+            </button>
+          </div>
+          <form
+            onSubmit={this.setDifficulty}
+            className="flex flex-wrap items-baseline mt-4"
           >
-            New Mana
-          </button>
-          <button
-            onClick={this.showCards}
-            className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent ml-4 mt-4 rounded"
-          >
-            Show Unguessed Cards
-          </button>
-          <form onSubmit={this.setDifficulty} className="flex items-baseline">
             <select
               ref={input}
-              className="mt-4 appearance-none bg-grey-lighter border border-grey-lighter text-black text-md sm:text-xl py-2 px-4 pr-8 rounded focus:outline-none focus:bg-white focus:border-grey"
+              className="appearance-none bg-grey-lighter border border-grey-lighter text-black text-md sm:text-xl py-2 px-4 pr-6 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
             >
               <option value="basic">basic</option>
               <option value="common">common</option>
@@ -178,21 +183,21 @@ class Game extends Component {
             </select>
             <button
               type="submit"
-              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 ml-4 rounded"
+              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 rounded"
             >
               Select Difficulty
             </button>
           </form>
-          <form onSubmit={this.handleGuess} className="mt-4">
+          <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
             <input
               disabled={showAllCards || guessedCards.length === cards.length}
               type="text"
               onChange={this.handleGuessChange}
               value={guess}
-              className="mt-4 appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-xl py-2 px-4 pr-8 rounded focus:outline-none focus:bg-white focus:border-grey"
+              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-xl py-2 px-4 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
               placeholder="Type your guess here!"
             />
-            <button className="bg-transparent hover:bg-red-darker text-red-darker hover:text-white py-2 px-4 border border-red-darker hover:border-transparent ml-4 rounded">
+            <button className="bg-transparent hover:bg-red-darker text-red-darker hover:text-white py-2 px-4 border border-red-darker hover:border-transparent rounded">
               Guess
             </button>
           </form>

@@ -9,7 +9,7 @@ interface Props {
 export default function CardList(props: Props) {
   const { cardsToShow } = props
   return (
-    <ul className="CardList mx-auto">
+    <ul className="list-reset max-w-sm">
       {cardsToShow &&
         cardsToShow.map((card) => {
           return card.card_faces ? (
