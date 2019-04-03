@@ -9,3 +9,7 @@ p {
     font-size: 1.25rem;
   }
 }
+
+.select-center {
+  text-align-last: center;
+}

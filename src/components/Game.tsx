@@ -1,4 +1,4 @@
-import React, { Component, FormEvent, RefObject } from 'react'
+import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
 import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
 import RNA from '../RNA-flash-cards.json'
@@ -93,7 +93,7 @@ class Game extends Component {
     })
   }
 
-  setDifficulty = (event: FormEvent) => {
+  setDifficulty = (event: SyntheticEvent) => {
     event.preventDefault()
     const mode = this.state.input.current.value
     let len, coloursToGenerate
@@ -141,18 +141,43 @@ class Game extends Component {
     } = this.state
     return (
       <main>
-        <section className="Info">
-          <p>
-            You are playing on <em>{mode}</em> mode
-          </p>
-          <h3>Your opponent has {availableMana} available.</h3>
+        <section>
+          <form className="mt-2">
+            You are playing on{' '}
+            <select
+              ref={input}
+              className="appearance-none font-semibold bg-white border-b-2 border-dashed rounded-none border-blue-darker text-md sm:text-xl text-center py-1 focus:outline-none focus:bg-blue-lighter focus:border-blue mx-2 select-center"
+              onChange={this.setDifficulty}
+            >
+              <option value="basic">basic</option>
+              <option value="common">common</option>
+              <option value="uncommon">uncommon</option>
+              <option value="rare">rare</option>
+              <option value="mythic">mythic</option>
+            </select>{' '}
+            mode
+          </form>
+          <h3 className="mt-4">Your opponent has {availableMana} available.</h3>
+          <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
+            <input
+              disabled={showAllCards || guessedCards.length === cards.length}
+              type="text"
+              onChange={this.handleGuessChange}
+              value={guess}
+              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-xl py-2 px-4 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
+              placeholder="Type your guess here!"
+            />
+            <button className="bg-transparent hover:bg-red-darker text-red-darker hover:text-white py-2 px-4 border border-red-darker hover:border-transparent rounded">
+              Guess
+            </button>
+          </form>
           <p>
             You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
             <strong>{cards.length}</strong> cards that can be cast at instant
             speed.
           </p>
         </section>
-        <section className="Actions mt-4">
+        <section className="mt-4">
           <div className="flex flex-wrap justify-start">
             <button
               onClick={this.newGame}
@@ -167,40 +192,6 @@ class Game extends Component {
               Give Up
             </button>
           </div>
-          <form
-            onSubmit={this.setDifficulty}
-            className="flex flex-wrap items-baseline mt-4"
-          >
-            <select
-              ref={input}
-              className="appearance-none bg-grey-lighter border border-grey-lighter text-black text-md sm:text-xl py-2 px-4 pr-6 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
-            >
-              <option value="basic">basic</option>
-              <option value="common">common</option>
-              <option value="uncommon">uncommon</option>
-              <option value="rare">rare</option>
-              <option value="mythic">mythic</option>
-            </select>
-            <button
-              type="submit"
-              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 rounded"
-            >
-              Select Difficulty
-            </button>
-          </form>
-          <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
-            <input
-              disabled={showAllCards || guessedCards.length === cards.length}
-              type="text"
-              onChange={this.handleGuessChange}
-              value={guess}
-              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-xl py-2 px-4 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
-              placeholder="Type your guess here!"
-            />
-            <button className="bg-transparent hover:bg-red-darker text-red-darker hover:text-white py-2 px-4 border border-red-darker hover:border-transparent rounded">
-              Guess
-            </button>
-          </form>
         </section>
         <section className="Feedback">
           <p>{feedback}</p>
