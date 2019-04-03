@@ -52,9 +52,15 @@ class Game extends Component {
       feedback = 'You have already guessed that one!'
       return this.setState({ feedback, guessedCards, guess })
     }
-    const foundCard = cards.find(
-      (card) => card.name.toLowerCase() === guess.toLowerCase(),
-    )
+    const foundCard = cards.find((card) => {
+      let isCorrectGuess
+      if (card.card_faces) {
+        isCorrectGuess = card.card_faces.some(
+          (face) => face.name.toLowerCase() === guess.toLowerCase(),
+        )
+      }
+      return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
+    })
     if (foundCard) {
       guessedCards.push(foundCard)
       feedback =
