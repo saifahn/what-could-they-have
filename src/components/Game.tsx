@@ -1,7 +1,8 @@
 import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
 import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
-import RNA from '../RNA-flash-cards.json'
+// import CardsData from '../RNA-flash-cards.json'
+import CardsData from '../M19-flash-cards.json'
 import { Card } from '../common/types'
 
 interface State {
@@ -87,7 +88,7 @@ class Game extends Component {
   newGame = () => {
     const { len, coloursToGenerate } = this.state
     const availableMana = generateMana({ len, coloursToGenerate })
-    const cards = RNA.data.filter((card: Card) =>
+    const cards = CardsData.data.filter((card: Card) =>
       canBeCast(card, availableMana),
     )
     this.setState({

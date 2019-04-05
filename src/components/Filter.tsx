@@ -1,5 +1,6 @@
 import React, { Component, FormEvent } from 'react'
-import { data } from '../RNA-flash-cards.json'
+// import { data } from '../RNA-flash-cards.json'
+import { data } from '../M19-flash-cards.json'
 import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
