@@ -1,7 +1,7 @@
 import React from 'react'
 import { Iconify } from '../functions/Iconify'
 import { Card } from '../common/types'
-import { formatText } from '../functions/formatText'
+import { createText } from '../functions/formatText'
 
 interface Props {
   card: Card
@@ -9,7 +9,7 @@ interface Props {
 
 export function BaseCard(props: Props) {
   const { card } = props
-  const formattedText = formatText(card.oracle_text)
+  const formattedText = createText(card.oracle_text)
   const manaCost = Iconify(card.mana_cost)
   return (
     <li className="shadow rounded p-4 mt-4">
@@ -18,7 +18,7 @@ export function BaseCard(props: Props) {
         <div>{manaCost}</div>
       </div>
       <p>{card.type_line}</p>
-      <p dangerouslySetInnerHTML={formattedText} />
+      {formattedText}
     </li>
   )
 }
@@ -28,7 +28,7 @@ export function SplitCard(props: Props) {
   return (
     <li className="shadow rounded p-4 mt-4">
       {card.card_faces.map((face: Card, index: number) => {
-        const formattedText = formatText(face.oracle_text)
+        const formattedText = createText(face.oracle_text)
         const margin = index != 0 ? ' mt-4' : ''
         const manaCost = Iconify(face.mana_cost)
         return (
@@ -38,7 +38,7 @@ export function SplitCard(props: Props) {
               <div>{manaCost}</div>
             </div>
             <p>{face.type_line}</p>
-            <p dangerouslySetInnerHTML={formattedText} />
+            {formattedText}
           </React.Fragment>
         )
       })}
