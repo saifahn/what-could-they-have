@@ -7,19 +7,19 @@ const testCards: Card[] = [
     name: 'Absorb',
     mana_cost: '{W}{U}{U}',
     cmc: 3,
-    type_line: 'Instant'
+    type_line: 'Instant',
   },
   {
     name: 'Applied Biomancy',
     mana_cost: '{G}{U}',
     cmc: 2,
-    type_line: 'Instant'
+    type_line: 'Instant',
   },
   {
     name: 'Angel of Grace',
     mana_cost: '{3}{W}{W}',
     cmc: 5,
-    type_line: 'Creature — Angel'
+    type_line: 'Creature — Angel',
   },
   {
     name: 'Collision // Colossus',
@@ -31,14 +31,14 @@ const testCards: Card[] = [
       {
         name: 'Collision',
         mana_cost: '1{R/G}',
-        type_line: 'Instant'
+        type_line: 'Instant',
       },
       {
         name: 'Colossus',
         mana_cost: '{R}{G}',
-        type_line: 'Instant'
-      }
-    ]
+        type_line: 'Instant',
+      },
+    ],
   },
   {
     name: 'Incubation // Incongruity',
@@ -50,20 +50,20 @@ const testCards: Card[] = [
       {
         name: 'Incubation',
         mana_cost: '{G/U}',
-        type_line: 'Sorcery'
+        type_line: 'Sorcery',
       },
       {
         name: 'Incongruity',
         mana_cost: '{1}{G}{U}',
-        type_line: 'Instant'
-      }
-    ]
+        type_line: 'Instant',
+      },
+    ],
   },
   {
     name: "Lawmage's Binding",
     mana_cost: '{1}{W}{U}',
     cmc: 3,
-    type_line: 'Enchantment — Aura'
+    type_line: 'Enchantment — Aura',
   },
   {
     name: 'Warrant // Warden',
@@ -75,25 +75,25 @@ const testCards: Card[] = [
       {
         name: 'Warrant',
         mana_cost: '{W/U}{W/U}',
-        type_line: 'Instant'
+        type_line: 'Instant',
       },
       {
         name: 'Warden',
         mana_cost: '{3}{W}{U}',
-        type_line: 'Sorcery'
-      }
-    ]
-  }
+        type_line: 'Sorcery',
+      },
+    ],
+  },
 ]
 
 const absorbCard = testCards.find((card) => card.name === 'Absorb') as Card
 
 const incubationIncongruityCard = testCards.find(
-  (card) => card.name === 'Incubation // Incongruity'
+  (card) => card.name === 'Incubation // Incongruity',
 ) as Card
 
 const warrantWardenCard = testCards.find(
-  (card) => card.name === 'Warrant // Warden'
+  (card) => card.name === 'Warrant // Warden',
 ) as Card
 
 describe('formatMana function returns a usable manaObject', () => {
@@ -103,7 +103,7 @@ describe('formatMana function returns a usable manaObject', () => {
       generic: 2,
       W: 1,
       U: 1,
-      cmc: 4
+      cmc: 4,
     }
     const actual = formatMana(cost)
     expect(actual).toMatchObject(expected)
@@ -163,6 +163,12 @@ describe('canBeCast determines if card is castable', () => {
     const testCost = '{G}'
     const result = canBeCast(incubationIncongruityCard, testCost)
     expect(result).toEqual(false)
+  })
+
+  test('is case-insensitive', () => {
+    const testCost = '{u}{w}'
+    const result = canBeCast(warrantWardenCard, testCost)
+    expect(result).toEqual(true)
   })
 
   // test('calculates with high generic mana', () => {

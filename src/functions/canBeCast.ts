@@ -1,7 +1,7 @@
 import { Card } from '../common/types'
 
 export function formatMana(cost: string) {
-  const manaRE = /\{([\dWUBRG/]+)\}/g
+  const manaRE = /\{([\dWUBRGCP/]+)\}/g
   const manaObject: any = { cmc: 0 }
   const manaArray = cost.match(manaRE) || []
   manaArray.forEach((symbol) => {
@@ -59,7 +59,7 @@ function canBeCast(card: Card, cost: string): boolean {
     // console.log(`the card is ${card.name} and it doesn't have a cost`)
     return false
   }
-  const availableMana = formatMana(cost)
+  const availableMana = formatMana(cost.toUpperCase())
   const cardMana = formatMana(card.mana_cost)
 
   if (card.card_faces) {
