@@ -174,13 +174,16 @@ class Game extends Component {
               type="text"
               onChange={this.handleGuessChange}
               value={guess}
-              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-xl py-2 px-4 rounded focus:outline-none focus:bg-white focus:border-grey mr-4"
+              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker"
               placeholder="Type your guess here!"
             />
-            <button className="bg-transparent hover:bg-red-darker text-red-darker hover:text-white py-2 px-4 border border-red-darker hover:border-transparent rounded">
-              Guess
+            <button className="hover:bg-transparent bg-red-darker hover:text-red-darker text-white py-2 px-2 border hover:border-red-darker border-transparent">
+              ⏎
             </button>
           </form>
+          <section className="Feedback">
+            <p className="text-blue-darker">{feedback}</p>
+          </section>
           <p>
             You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
             <strong>{cards.length}</strong> cards that can be cast at instant
@@ -191,26 +194,25 @@ class Game extends Component {
           <div className="flex flex-wrap justify-start">
             <button
               onClick={this.newGame}
-              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 mr-4 rounded"
+              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 mr-4"
             >
               New Game
             </button>
             <button
               onClick={this.showCards}
-              className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded"
+              className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent"
             >
               Give Up
             </button>
           </div>
         </section>
-        <section className="Feedback">
-          <p>{feedback}</p>
-        </section>
         <section className="GuessedCards">
           <h3 className="mt-8">Cards you have guessed:</h3>
           <ul className="mt-4">
             {guessedCards.map((card) => (
-              <li key={card.name}>{card.name}</li>
+              <li key={card.name} className="leading-normal">
+                {card.name}
+              </li>
             ))}
           </ul>
         </section>
@@ -219,7 +221,9 @@ class Game extends Component {
             <h3>All Castable Cards</h3>
             <ul className="mt-4">
               {this.getUnguessedCards().map((card) => (
-                <li key={card.name}>{card.name}</li>
+                <li key={card.name} className="leading-normal">
+                  {card.name}
+                </li>
               ))}
             </ul>
           </section>
