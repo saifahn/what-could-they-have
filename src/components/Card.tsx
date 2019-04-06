@@ -1,5 +1,5 @@
 import React from 'react'
-import { Iconify } from '../functions/Iconify'
+import { iconify } from '../functions/iconify'
 import { Card } from '../common/types'
 import { createText } from '../functions/formatText'
 
@@ -10,7 +10,7 @@ interface Props {
 export function BaseCard(props: Props) {
   const { card } = props
   const formattedText = createText(card.oracle_text)
-  const manaCost = Iconify(card.mana_cost)
+  const manaCost = iconify(card.mana_cost)
   return (
     <li className="shadow rounded p-4 mt-4">
       <div className="flex justify-between">
@@ -30,7 +30,7 @@ export function SplitCard(props: Props) {
       {card.card_faces.map((face: Card, index: number) => {
         const formattedText = createText(face.oracle_text)
         const margin = index != 0 ? ' mt-4' : ''
-        const manaCost = Iconify(face.mana_cost)
+        const manaCost = iconify(face.mana_cost)
         return (
           <React.Fragment key={face.name}>
             <div className={`flex justify-between${margin}`}>

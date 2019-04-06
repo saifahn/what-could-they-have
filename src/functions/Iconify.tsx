@@ -60,7 +60,7 @@ const map: Map = {
   '{Y}': 'ms-y',
 }
 
-export function Iconify(mana: string = '') {
+export function iconify(mana: string = '') {
   const manaRE = /\{([\dWUBRGCP/]+)\}/g
   const splitMana = mana.match(manaRE)
   let manaIcons

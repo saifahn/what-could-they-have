@@ -3,7 +3,7 @@ import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
 import RNA from '../RNA-flash-cards.json'
 import { Card } from '../common/types'
-import { Iconify } from '../functions/Iconify'
+import { iconify } from '../functions/iconify'
 
 interface State {
   cards: Card[]
@@ -146,7 +146,7 @@ class Game extends Component {
       guessedCards,
       showAllCards,
     } = this.state
-    const formattedMana = Iconify(availableMana)
+    const formattedMana = iconify(availableMana)
     return (
       <main>
         <section>
