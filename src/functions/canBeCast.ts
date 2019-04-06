@@ -1,7 +1,7 @@
 import { Card } from '../common/types'
 
 export function formatMana(cost: string) {
-  const manaRE = /\{([\dWUBRG/]+)\}/g
+  const manaRE = /\{([\dWUBRGCP/]+)\}/g
   const manaObject: any = { cmc: 0 }
   const manaArray = cost.match(manaRE) || []
   manaArray.forEach((symbol) => {
