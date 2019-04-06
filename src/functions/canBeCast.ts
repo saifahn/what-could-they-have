@@ -59,7 +59,7 @@ function canBeCast(card: Card, cost: string): boolean {
     // console.log(`the card is ${card.name} and it doesn't have a cost`)
     return false
   }
-  const availableMana = formatMana(cost)
+  const availableMana = formatMana(cost.toUpperCase())
   const cardMana = formatMana(card.mana_cost)
 
   if (card.card_faces) {
