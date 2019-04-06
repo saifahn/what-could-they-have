@@ -13,3 +13,7 @@ p {
 .select-center {
   text-align-last: center;
 }
+
+.ml-tiny {
+  margin-left: 0.1rem;
+}

@@ -3,6 +3,7 @@ import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
 import RNA from '../RNA-flash-cards.json'
 import { Card } from '../common/types'
+import { Iconify } from '../functions/Iconify'
 
 interface State {
   cards: Card[]
@@ -145,6 +146,7 @@ class Game extends Component {
       guessedCards,
       showAllCards,
     } = this.state
+    const formattedMana = Iconify(availableMana)
     return (
       <main>
         <section>
@@ -163,7 +165,9 @@ class Game extends Component {
             </select>{' '}
             mode
           </form>
-          <h3 className="mt-4">Your opponent has {availableMana} available.</h3>
+          <h3 className="mt-4">
+            Your opponent has <span>{formattedMana}</span> available.
+          </h3>
           <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
             <input
               disabled={showAllCards || guessedCards.length === cards.length}

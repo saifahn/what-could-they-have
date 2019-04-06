@@ -67,7 +67,12 @@ export function Iconify(mana: string = '') {
   if (splitMana) {
     manaIcons = splitMana.map((symbol, index) => {
       let symbolClass = map[symbol]
-      return <i key={index} className={`ms ${symbolClass} ms-cost ms-shadow`} />
+      return (
+        <i
+          key={index}
+          className={`ms ${symbolClass} ms-cost ms-shadow ml-tiny`}
+        />
+      )
     })
   }
   return manaIcons
