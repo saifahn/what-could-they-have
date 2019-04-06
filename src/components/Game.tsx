@@ -1,9 +1,9 @@
-import React, { Component, FormEvent, RefObject } from 'react'
+import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
 import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
 import RNA from '../RNA-flash-cards.json'
 import { Card } from '../common/types'
-import TextInputForm from './TextInputForm'
+import { iconify } from '../functions/iconify'
 
 interface State {
   cards: Card[]
@@ -53,9 +53,15 @@ class Game extends Component {
       feedback = 'You have already guessed that one!'
       return this.setState({ feedback, guessedCards, guess })
     }
-    const foundCard = cards.find(
-      (card) => card.name.toLowerCase() === guess.toLowerCase(),
-    )
+    const foundCard = cards.find((card) => {
+      let isCorrectGuess
+      if (card.card_faces) {
+        isCorrectGuess = card.card_faces.some(
+          (face) => face.name.toLowerCase() === guess.toLowerCase(),
+        )
+      }
+      return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
+    })
     if (foundCard) {
       guessedCards.push(foundCard)
       feedback =
@@ -65,7 +71,7 @@ class Game extends Component {
       guess = ''
       this.setState({ feedback, guessedCards, guess })
     } else {
-      feedback = "That card doesn't exist :("
+      feedback = "That card isn't castable"
       this.setState({ feedback })
     }
   }
@@ -79,7 +85,7 @@ class Game extends Component {
     this.setState({ showAllCards: true })
   }
 
-  loadCards = () => {
+  newGame = () => {
     const { len, coloursToGenerate } = this.state
     const availableMana = generateMana({ len, coloursToGenerate })
     const cards = RNA.data.filter((card: Card) =>
@@ -88,10 +94,13 @@ class Game extends Component {
     this.setState({
       availableMana,
       cards,
+      feedback: '',
+      guessedCards: [],
+      showAllCards: false,
     })
   }
 
-  setDifficulty = (event: FormEvent) => {
+  setDifficulty = (event: SyntheticEvent) => {
     event.preventDefault()
     const mode = this.state.input.current.value
     let len, coloursToGenerate
@@ -118,12 +127,12 @@ class Game extends Component {
         break
     }
     this.setState({ mode, len, coloursToGenerate }, () => {
-      this.loadCards()
+      this.newGame()
     })
   }
 
   componentDidMount() {
-    this.loadCards()
+    this.newGame()
   }
 
   render() {
@@ -137,71 +146,89 @@ class Game extends Component {
       guessedCards,
       showAllCards,
     } = this.state
+    const formattedMana = iconify(availableMana)
     return (
-      <div className="App">
-        <section className="Info">
-          <p>You are playing on {mode} mode</p>
-          <h3>Your opponent has {availableMana} available.</h3>
+      <main>
+        <section>
+          <form className="mt-2">
+            You are playing on{' '}
+            <select
+              ref={input}
+              className="appearance-none font-semibold bg-white border-b-2 border-dashed rounded-none border-blue-darker text-md sm:text-xl text-center py-1 focus:outline-none focus:bg-blue-lighter focus:border-blue mx-2 select-center"
+              onChange={this.setDifficulty}
+            >
+              <option value="basic">basic</option>
+              <option value="common">common</option>
+              <option value="uncommon">uncommon</option>
+              <option value="rare">rare</option>
+              <option value="mythic">mythic</option>
+            </select>{' '}
+            mode
+          </form>
+          <h3 className="mt-4">
+            Your opponent has <span>{formattedMana}</span> available.
+          </h3>
+          <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
+            <input
+              disabled={showAllCards || guessedCards.length === cards.length}
+              type="text"
+              onChange={this.handleGuessChange}
+              value={guess}
+              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker"
+              placeholder="Type your guess here!"
+            />
+            <button className="hover:bg-transparent bg-red-darker hover:text-red-darker text-white py-2 px-2 border hover:border-red-darker border-transparent">
+              ⏎
+            </button>
+          </form>
+          <section className="Feedback">
+            <p className="text-blue-darker">{feedback}</p>
+          </section>
           <p>
             You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
             <strong>{cards.length}</strong> cards that can be cast at instant
             speed.
           </p>
         </section>
-        <section className="Actions">
-          <button className="Actions__button" onClick={this.loadCards}>
-            New Mana
-          </button>
-          <button onClick={this.showCards}>Show Unguessed Cards</button>
-          <form onSubmit={this.setDifficulty}>
-            <select ref={input}>
-              <option value="basic">basic</option>
-              <option value="common">common</option>
-              <option value="uncommon">uncommon</option>
-              <option value="rare">rare</option>
-              <option value="mythic">mythic</option>
-            </select>
-            <button className="Actions__button" type="submit">
-              Select Difficulty
+        <section className="mt-4">
+          <div className="flex flex-wrap justify-start">
+            <button
+              onClick={this.newGame}
+              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 mr-4"
+            >
+              New Game
             </button>
-          </form>
-          <TextInputForm
-            disabled={showAllCards || guessedCards.length === cards.length}
-            onSubmit={this.handleGuess}
-            onChange={this.handleGuessChange}
-            value={guess}
-          />
-          {/* <form onSubmit={this.handleGuess}>
-            <input
-              type="text"
-              onChange={this.handleGuessChange}
-              value={guess}
-            />
-            <button>Guess</button>
-          </form> */}
-        </section>
-        <section className="Feedback">
-          <p>{feedback}</p>
+            <button
+              onClick={this.showCards}
+              className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent"
+            >
+              Give Up
+            </button>
+          </div>
         </section>
         <section className="GuessedCards">
           <h3 className="mt-8">Cards you have guessed:</h3>
-          <ul>
+          <ul className="mt-4">
             {guessedCards.map((card) => (
-              <li key={card.name}>{card.name}</li>
+              <li key={card.name} className="leading-normal">
+                {card.name}
+              </li>
             ))}
           </ul>
         </section>
         {showAllCards && (
-          <section className="AllCards">
+          <section className="AllCards mt-6">
             <h3>All Castable Cards</h3>
-            <ul>
+            <ul className="mt-4">
               {this.getUnguessedCards().map((card) => (
-                <li key={card.name}>{card.name}</li>
+                <li key={card.name} className="leading-normal">
+                  {card.name}
+                </li>
               ))}
             </ul>
           </section>
         )}
-      </div>
+      </main>
     )
   }
 }
