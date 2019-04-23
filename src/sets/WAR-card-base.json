@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Awakening of Vitu-Ghazi",
+    "mana_cost": "{3}{G}{G}",
+    "colors": ["G"],
+    "cmc": 5,
+    "layout": "normal",
+    "oracle_text": "Put nine +1/+1 counters on target land you control. It becomes a legendary 0/0 Elemental creature with haste named Vitu-Ghazi. It's still a land.",
+    "scryfall_id": "b42b2fb4-8016-462c-8764-2639adec931f",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Band Together",
+    "mana_cost": "{2}{G}",
+    "colors": ["G"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Up to two target creatures you control each deal damage equal to their power to another target creature.",
+    "scryfall_id": "4d1d8aa1-d742-477c-819a-0113912d5011",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Battlefield Promotion",
+    "mana_cost": "{1}{W}",
+    "colors": ["W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Put a +1/+1 counter on target creature. That creature gains first strike until end of turn. You gain 2 life.",
+    "scryfall_id": "89f8e970-b90c-4829-8970-0a3364027bbb",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Blindblast",
+    "mana_cost": "{2}{R}",
+    "colors": ["R"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Blindblast deals 1 damage to target creature. That creature can't block this turn.\nDraw a card.",
+    "scryfall_id": "1d49637b-2255-4f16-8f24-140145966bfa",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Bolt Bend",
+    "mana_cost": "{3}{R}",
+    "colors": ["R"],
+    "cmc": 4,
+    "layout": "normal",
+    "oracle_text": "This spell costs {3} less to cast if you control a creature with power 4 or greater.\nChange the target of target spell or ability with a single target.",
+    "scryfall_id": "39b35408-3728-4e1b-9f58-b0775df914d6",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Chandra's Pyrohelix",
+    "mana_cost": "{1}{R}",
+    "colors": ["R"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Chandra's Pyrohelix deals 2 damage divided as you choose among one or two targets.",
+    "scryfall_id": "1c482f51-9222-4e9e-a9fd-bb14a0afe156",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Chandra's Triumph",
+    "mana_cost": "{1}{R}",
+    "colors": ["R"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Chandra's Triumph deals 3 damage to target creature or planeswalker an opponent controls. Chandra's Triumph deals 5 damage to that permanent instead if you control a Chandra planeswalker.",
+    "scryfall_id": "70f43c17-7022-4052-86b8-90b74382b7bf",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Commence the Endgame",
+    "mana_cost": "{4}{U}{U}",
+    "colors": ["U"],
+    "cmc": 6,
+    "layout": "normal",
+    "oracle_text": "This spell can't be countered.\nDraw two cards, then amass X, where X is the number of cards in your hand. (Put X +1/+1 counters on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first.)",
+    "scryfall_id": "209d70a2-c8c1-4072-ab1f-57804b55a09a",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Crush Dissent",
+    "mana_cost": "{3}{U}",
+    "colors": ["U"],
+    "cmc": 4,
+    "layout": "normal",
+    "oracle_text": "Counter target spell unless its controller pays {2}.\nAmass 2. (Put two +1/+1 counters on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first.)",
+    "scryfall_id": "94c70f23-0ca9-425e-a53a-6c09921c0075",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Deathsprout",
+    "mana_cost": "{1}{B}{B}{G}",
+    "colors": ["B", "G"],
+    "cmc": 4,
+    "layout": "normal",
+    "oracle_text": "Destroy target creature. Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
+    "scryfall_id": "6d615557-aea8-4057-9fbd-d62dd98edc13",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Defiant Strike",
+    "mana_cost": "{W}",
+    "colors": ["W"],
+    "cmc": 1,
+    "layout": "normal",
+    "oracle_text": "Target creature gets +1/+0 until end of turn.\nDraw a card.",
+    "scryfall_id": "dc183a40-7e15-40b1-9faa-b243401b3d10",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Despark",
+    "mana_cost": "{W}{B}",
+    "colors": ["B", "W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Exile target permanent with converted mana cost 4 or greater.",
+    "scryfall_id": "32b17dfc-b916-4134-ba77-501cff435e7e",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Desperate Lunge",
+    "mana_cost": "{1}{W}",
+    "colors": ["W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Target creature gets +2/+2 and gains flying until end of turn. You gain 2 life.",
+    "scryfall_id": "69ce134a-25ef-4f8d-a385-7c29fc5707dc",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Divine Arrow",
+    "mana_cost": "{1}{W}",
+    "colors": ["W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Divine Arrow deals 4 damage to target attacking or blocking creature.",
+    "scryfall_id": "73cbb58a-1b00-4883-9b45-da7ded7317e3",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Dovin's Veto",
+    "mana_cost": "{W}{U}",
+    "colors": ["U", "W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "This spell can't be countered.\nCounter target noncreature spell.",
+    "scryfall_id": "5d6b5054-2224-4f68-9d82-3ed17c5dacc4",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Forced Landing",
+    "mana_cost": "{1}{G}",
+    "colors": ["G"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Put target creature with flying on the bottom of its owner's library.",
+    "scryfall_id": "5cb319a7-564c-4748-82cf-c26ab110c32c",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Giant Growth",
+    "mana_cost": "{G}",
+    "colors": ["G"],
+    "cmc": 1,
+    "layout": "normal",
+    "oracle_text": "Target creature gets +3/+3 until end of turn.",
+    "scryfall_id": "06ec9e8b-4bd8-4caf-a559-6514b7ab4ca4",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Gideon's Sacrifice",
+    "mana_cost": "{W}",
+    "colors": ["W"],
+    "cmc": 1,
+    "layout": "normal",
+    "oracle_text": "Choose a creature or planeswalker you control. All damage that would be dealt this turn to you and permanents you control is dealt to the chosen permanent instead (if it's still on the battlefield).",
+    "scryfall_id": "849c79ad-8bfc-4512-ab41-f213b6b285ab",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Gideon's Triumph",
+    "mana_cost": "{1}{W}",
+    "colors": ["W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Target opponent sacrifices a creature that attacked or blocked this turn. If you control a Gideon planeswalker, that player sacrifices two of those creatures instead.",
+    "scryfall_id": "d6610c6a-717f-406e-a49d-b6e548880946",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Heartfire",
+    "mana_cost": "{1}{R}",
+    "colors": ["R"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or planeswalker.\nHeartfire deals 4 damage to any target.",
+    "scryfall_id": "7db219ea-2ed1-4a86-955c-d61ecedbc019",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Heartwarming Redemption",
+    "mana_cost": "{2}{R}{W}",
+    "colors": ["R", "W"],
+    "cmc": 4,
+    "layout": "normal",
+    "oracle_text": "Discard all the cards in your hand, then draw that many cards plus one. You gain life equal to the number of cards in your hand.",
+    "scryfall_id": "af569235-f5cb-4e3e-ba77-c1c429ed0a60",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Ignite the Beacon",
+    "mana_cost": "{4}{W}",
+    "colors": ["W"],
+    "cmc": 5,
+    "layout": "normal",
+    "oracle_text": "Search your library for up to two planeswalker cards, reveal them, put them into your hand, then shuffle your library.",
+    "scryfall_id": "4e11d6f9-0b80-4b19-ab96-23f80b66b409",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Jaya's Greeting",
+    "mana_cost": "{1}{R}",
+    "colors": ["R"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Jaya's Greeting deals 3 damage to target creature. Scry 1.",
+    "scryfall_id": "ec66f169-5cf9-4d7c-a5ab-c64fc4801358",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Lazotep Plating",
+    "mana_cost": "{1}{U}",
+    "colors": ["U"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Amass 1. (Put a +1/+1 counter on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first.)\nYou and permanents you control gain hexproof until end of turn. (You and they can't be the targets of spells or abilities your opponents control.)",
+    "scryfall_id": "f03b5405-6016-405b-a504-a454731b9276",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Liliana's Triumph",
+    "mana_cost": "{1}{B}",
+    "colors": ["B"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Each opponent sacrifices a creature. If you control a Liliana planeswalker, each opponent also discards a card.",
+    "scryfall_id": "84803db8-fdb0-462b-92f6-33d591593d2d",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Nahiri's Stoneblades",
+    "mana_cost": "{1}{R}",
+    "colors": ["R"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Up to two target creatures each get +2/+0 until end of turn.",
+    "scryfall_id": "0a14331e-8da5-4455-ac69-e510684e989c",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Narset's Reversal",
+    "mana_cost": "{U}{U}",
+    "colors": ["U"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Copy target instant or sorcery spell, then return it to its owner's hand. You may choose new targets for the copy.",
+    "scryfall_id": "63754036-d51e-47bb-925b-564d9dc922ff",
+    "type_line": "Instant"
+  },
+  {
+    "name": "No Escape",
+    "mana_cost": "{2}{U}",
+    "colors": ["U"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Counter target creature or planeswalker spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.\nScry 1.",
+    "scryfall_id": "bc9888a1-6f35-4802-b8fb-902017736d4a",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Ob Nixilis's Cruelty",
+    "mana_cost": "{2}{B}",
+    "colors": ["B"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Target creature gets -5/-5 until end of turn. If that creature would die this turn, exile it instead.",
+    "scryfall_id": "94db72a8-57f7-4f17-9f09-cae90ef50304",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Pledge of Unity",
+    "mana_cost": "{1}{G}{W}",
+    "colors": ["G", "W"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Put a +1/+1 counter on each creature you control. You gain 1 life for each creature you control.",
+    "scryfall_id": "ca9b3518-7fcd-49e2-a4c4-e5daa8be6c21",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Rally of Wings",
+    "mana_cost": "{1}{W}",
+    "colors": ["W"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Untap all creatures you control. Creatures you control with flying get +2/+2 until end of turn.",
+    "scryfall_id": "f043642d-35fe-4ea9-a1d3-78ddfdddeaf4",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Ral's Outburst",
+    "mana_cost": "{2}{U}{R}",
+    "colors": ["R", "U"],
+    "cmc": 4,
+    "layout": "normal",
+    "oracle_text": "Ral's Outburst deals 3 damage to any target. Look at the top two cards of your library. Put one of them into your hand and the other into your graveyard.",
+    "scryfall_id": "6be3dd3e-50d2-4729-9caa-b2cd984f4c97",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Return to Nature",
+    "mana_cost": "{1}{G}",
+    "colors": ["G"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target enchantment.\n• Exile target card from a graveyard.",
+    "scryfall_id": "085e3129-591b-46ec-ac8b-cff428927c01",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Samut's Sprint",
+    "mana_cost": "{R}",
+    "colors": ["R"],
+    "cmc": 1,
+    "layout": "normal",
+    "oracle_text": "Target creature gets +2/+1 and gains haste until end of turn. Scry 1.",
+    "scryfall_id": "94bda699-2b5d-4f5b-bee5-792b99d2b64a",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Sarkhan's Catharsis",
+    "mana_cost": "{4}{R}",
+    "colors": ["R"],
+    "cmc": 5,
+    "layout": "normal",
+    "oracle_text": "Sarkhan's Catharsis deals 5 damage to target player or planeswalker.",
+    "scryfall_id": "2f4b6f26-c66b-4048-9503-af0a886ef14f",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Sorin's Thirst",
+    "mana_cost": "{B}{B}",
+    "colors": ["B"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Sorin's Thirst deals 2 damage to target creature and you gain 2 life.",
+    "scryfall_id": "50eecfc2-452d-461c-a37c-8aa10183e5a0",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Steady Aim",
+    "mana_cost": "{1}{G}",
+    "colors": ["G"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Untap target creature. It gets +1/+4 and gains reach until end of turn.",
+    "scryfall_id": "4af6a1b5-a561-4d92-b429-de13b2ccaf81",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Teferi's Time Twist",
+    "mana_cost": "{1}{U}",
+    "colors": ["U"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Exile target permanent you control. Return that card to the battlefield under its owner's control at the beginning of the next end step. If it enters the battlefield as a creature, it enters with an additional +1/+1 counter on it.",
+    "scryfall_id": "c878bdc0-d697-4a2f-bba5-758b27f4247a",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Topple the Statue",
+    "mana_cost": "{2}{W}",
+    "colors": ["W"],
+    "cmc": 3,
+    "layout": "normal",
+    "oracle_text": "Tap target permanent. If it's an artifact, destroy it.\nDraw a card.",
+    "scryfall_id": "2829fa40-92e4-4017-aacd-9d9feae04aa2",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Totally Lost",
+    "mana_cost": "{4}{U}",
+    "colors": ["U"],
+    "cmc": 5,
+    "layout": "normal",
+    "oracle_text": "Put target nonland permanent on top of its owner's library.",
+    "scryfall_id": "adffef78-f776-42d3-ab40-3347c8e5c88b",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Tyrant's Scorn",
+    "mana_cost": "{U}{B}",
+    "colors": ["B", "U"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Choose one —\n• Destroy target creature with converted mana cost 3 or less.\n• Return target creature to its owner's hand.",
+    "scryfall_id": "b7e2708c-2824-4925-b529-d625deb77924",
+    "type_line": "Instant"
+  },
+  {
+    "name": "Unlikely Aid",
+    "mana_cost": "{1}{B}",
+    "colors": ["B"],
+    "cmc": 2,
+    "layout": "normal",
+    "oracle_text": "Target creature gets +2/+0 and gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+    "scryfall_id": "9c260c5c-e796-4f81-9e15-0c5be75106b9",
+    "type_line": "Instant"
+  }
+]

@@ -12,7 +12,7 @@ function Header() {
         Game
       </Link>
       <h1 className="text-2xl sm:text-3xl mt-4">
-        What Could They Have? — Guilds of Ravnica
+        What Could They Have? — War of the Spark
       </h1>
     </header>
   )

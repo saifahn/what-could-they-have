@@ -1,5 +1,7 @@
 import React from 'react'
 
+// based on https://github.com/ahaurw01/mtg-whats-that-do/blob/master/components/Iconify.js
+
 interface Map {
   [key: string]: string
 }

@@ -1,7 +1,7 @@
 import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
 import canBeCast from '../functions/canBeCast'
 import generateMana from '../functions/generateMana'
-import data from '../sets/GRN-card-base.json'
+import data from '../sets/WAR-card-base.json'
 import { Card } from '../common/types'
 import { iconify } from '../functions/iconify'
 

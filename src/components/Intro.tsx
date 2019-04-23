@@ -1,13 +1,13 @@
 import React from 'react'
 import marked from 'marked'
-const grnText = require('../sets/GRN-text.md')
+const warText = require('../sets/WAR-text.md')
 
 class Intro extends React.Component {
   state = {
     markdown: { __html: '' },
   }
   componentDidMount() {
-    fetch(grnText)
+    fetch(warText)
       .then((response) => {
         return response.text()
       })
