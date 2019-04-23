@@ -29,11 +29,16 @@ class Filter extends Component {
   }
 
   componentDidMount() {
-    this.setState({ cards: data })
+    const cards = data
+    const cardsToShow = data
+    this.setState({ cards, cardsToShow })
   }
 
   filterCards = (filter: string): Card[] => {
     const { cards } = this.state
+    if (!filter) {
+      return cards
+    }
     return cards.filter((card: Card) => canBeCast(card, filter))
   }
 
