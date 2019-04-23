@@ -1,5 +1,6 @@
 import React, { Component, FormEvent } from 'react'
-import { data } from '../RNA-flash-cards.json'
+// import { data } from '../RNA-flash-cards.json'
+import data from '../sets/WAR-card-base.json'
 import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
@@ -28,11 +29,16 @@ class Filter extends Component {
   }
 
   componentDidMount() {
-    this.setState({ cards: data })
+    const cards = data
+    const cardsToShow = data
+    this.setState({ cards, cardsToShow })
   }
 
   filterCards = (filter: string): Card[] => {
     const { cards } = this.state
+    if (!filter) {
+      return cards
+    }
     return cards.filter((card: Card) => canBeCast(card, filter))
   }
 

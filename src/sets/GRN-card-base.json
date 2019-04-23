@@ -1,0 +1,533 @@
+[
+    {
+        "name": "Artful Takedown",
+        "mana_cost": "{2}{U}{B}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Choose one or both —\n• Tap target creature.\n• Target creature gets -2/-4 until end of turn.",
+        "scryfall_id": "4c9e8f24-af62-4d13-bfed-a8b3294b64c3",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Assassin's Trophy",
+        "mana_cost": "{B}{G}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Destroy target permanent an opponent controls. Its controller may search their library for a basic land card, put it onto the battlefield, then shuffle their library.",
+        "scryfall_id": "906b6e99-128f-4c11-8daf-16099d35b0d4",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Assure // Assemble",
+        "mana_cost": "{G/W}{G/W} // {4}{G}{W}",
+        "cmc": 8,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Assure",
+                "mana_cost": "{G/W}{G/W}",
+                "type_line": "Instant",
+                "oracle_text": "Put a +1/+1 counter on target creature. That creature gains indestructible until end of turn.",
+                "watermark": "selesnya",
+                "artist": "Jason A. Engle",
+                "illustration_id": "43c5588b-11a8-465f-adc5-f5d5d7581813"
+            },
+            {
+                "object": "card_face",
+                "name": "Assemble",
+                "mana_cost": "{4}{G}{W}",
+                "type_line": "Instant",
+                "oracle_text": "Create three 2/2 green and white Elf Knight creature tokens with vigilance.",
+                "watermark": "selesnya",
+                "artist": "Jason A. Engle"
+            }
+        ],
+        "scryfall_id": "ad454e7a-06c9-4694-ae68-7b1431e00077",
+        "type_line": "Instant // Instant"
+    },
+    {
+        "name": "Bounty of Might",
+        "mana_cost": "{4}{G}{G}",
+        "cmc": 6,
+        "layout": "normal",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.\nTarget creature gets +3/+3 until end of turn.\nTarget creature gets +3/+3 until end of turn.",
+        "scryfall_id": "e9a950d8-e6e2-42d6-83d7-a60c15d2035d",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Capture Sphere",
+        "mana_cost": "{3}{U}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Flash\nEnchant creature\nWhen Capture Sphere enters the battlefield, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "scryfall_id": "5a799ac8-5798-4a26-81c1-763d6dcfcbe8",
+        "type_line": "Enchantment — Aura"
+    },
+    {
+        "name": "Chance for Glory",
+        "mana_cost": "{1}{R}{W}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Creatures you control gain indestructible. Take an extra turn after this one. At the beginning of that turn's end step, you lose the game.",
+        "scryfall_id": "85edf6f9-b863-41e2-bb51-857ea2798090",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Chemister's Insight",
+        "mana_cost": "{3}{U}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Draw two cards.\nJump-start (You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.)",
+        "scryfall_id": "0e13a295-0d51-4b56-8c58-0896eb41c567",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Collar the Culprit",
+        "mana_cost": "{3}{W}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Destroy target creature with toughness 4 or greater.",
+        "scryfall_id": "cdf305b7-d1f7-4770-9201-8f3fb6735cd9",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Command the Storm",
+        "mana_cost": "{4}{R}",
+        "cmc": 5,
+        "layout": "normal",
+        "oracle_text": "Command the Storm deals 5 damage to target creature.",
+        "scryfall_id": "c4144e98-957e-43ac-b107-8ccf450748df",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Crush Contraband",
+        "mana_cost": "{3}{W}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Choose one or both —\n• Exile target artifact.\n• Exile target enchantment.",
+        "scryfall_id": "13e162b3-2e5a-4235-a2a7-1c8e3e9f2c19",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Crushing Canopy",
+        "mana_cost": "{2}{G}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.",
+        "scryfall_id": "c0c4f213-0ea4-44c0-8429-172a317b77f5",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Dazzling Lights",
+        "mana_cost": "{U}",
+        "cmc": 1,
+        "layout": "normal",
+        "oracle_text": "Target creature gets -3/-0 until end of turn.\nSurveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on the top of your library in any order.)",
+        "scryfall_id": "a9d4639a-b634-469e-a848-35e3a3dfd47e",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Devious Cover-Up",
+        "mana_cost": "{2}{U}{U}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "Counter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard. You may shuffle up to four target cards from your graveyard into your library.",
+        "scryfall_id": "21ac6b0a-b1a5-439d-b65e-5f04e1826c80",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Discovery // Dispersal",
+        "mana_cost": "{1}{U/B} // {3}{U}{B}",
+        "cmc": 7,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Discovery",
+                "mana_cost": "{1}{U/B}",
+                "type_line": "Sorcery",
+                "oracle_text": "Surveil 2, then draw a card. (To surveil 2, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+                "watermark": "dimir",
+                "artist": "Mark Behm",
+                "illustration_id": "6b4c151d-16cb-412a-a72b-81af2c62f5ed"
+            },
+            {
+                "object": "card_face",
+                "name": "Dispersal",
+                "mana_cost": "{3}{U}{B}",
+                "type_line": "Instant",
+                "oracle_text": "Each opponent returns a nonland permanent they control with the highest converted mana cost among permanents they control to its owner's hand, then discards a card.",
+                "watermark": "dimir",
+                "artist": "Mark Behm"
+            }
+        ],
+        "scryfall_id": "ace631d1-897a-417e-8628-0170713f03d3",
+        "type_line": "Sorcery // Instant"
+    },
+    {
+        "name": "Disdainful Stroke",
+        "mana_cost": "{1}{U}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Counter target spell with converted mana cost 4 or greater.",
+        "scryfall_id": "0193dfa3-8409-44be-b4be-6c3cad42d4a4",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Dream Eater",
+        "mana_cost": "{4}{U}{U}",
+        "cmc": 6,
+        "power": "4",
+        "toughness": "3",
+        "layout": "normal",
+        "oracle_text": "Flash\nFlying\nWhen Dream Eater enters the battlefield, surveil 4. When you do, you may return target nonland permanent an opponent controls to its owner's hand. (To surveil 4, look at the top four cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+        "scryfall_id": "9f3a4677-7683-4f63-af31-b76491ec9f9c",
+        "type_line": "Creature — Nightmare Sphinx"
+    },
+    {
+        "name": "Expansion // Explosion",
+        "mana_cost": "{U/R}{U/R} // {X}{U}{U}{R}{R}",
+        "cmc": 6,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Expansion",
+                "mana_cost": "{U/R}{U/R}",
+                "type_line": "Instant",
+                "oracle_text": "Copy target instant or sorcery spell with converted mana cost 4 or less. You may choose new targets for the copy.",
+                "watermark": "izzet",
+                "artist": "Deruchenko Alexander",
+                "illustration_id": "fbabb386-2a31-4013-b0e8-fffa9265e31e"
+            },
+            {
+                "object": "card_face",
+                "name": "Explosion",
+                "mana_cost": "{X}{U}{U}{R}{R}",
+                "type_line": "Instant",
+                "oracle_text": "Explosion deals X damage to any target. Target player draws X cards.",
+                "watermark": "izzet",
+                "artist": "Deruchenko Alexander"
+            }
+        ],
+        "scryfall_id": "e0644c92-4d67-475e-8c8e-0e2c493682fb",
+        "type_line": "Instant // Instant"
+    },
+    {
+        "name": "Hypothesizzle",
+        "mana_cost": "{3}{U}{R}",
+        "cmc": 5,
+        "layout": "normal",
+        "oracle_text": "Draw two cards. Then you may discard a nonland card. When you do, Hypothesizzle deals 4 damage to target creature.",
+        "scryfall_id": "d5690329-feb8-49c0-8f59-ee13782e8d3b",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Inescapable Blaze",
+        "mana_cost": "{4}{R}{R}",
+        "cmc": 6,
+        "layout": "normal",
+        "oracle_text": "This spell can't be countered.\nInescapable Blaze deals 6 damage to any target.",
+        "scryfall_id": "46651efd-0906-4350-a1b8-52e3f8aff45d",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Integrity // Intervention",
+        "mana_cost": "{R/W} // {2}{R}{W}",
+        "cmc": 5,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Integrity",
+                "mana_cost": "{R/W}",
+                "type_line": "Instant",
+                "oracle_text": "Target creature gets +2/+2 until end of turn.",
+                "watermark": "boros",
+                "artist": "Ben Maier",
+                "illustration_id": "d0925ff9-0837-4934-b3d9-c62fdcb3be78"
+            },
+            {
+                "object": "card_face",
+                "name": "Intervention",
+                "mana_cost": "{2}{R}{W}",
+                "type_line": "Instant",
+                "oracle_text": "Intervention deals 3 damage to any target and you gain 3 life.",
+                "watermark": "boros",
+                "artist": "Ben Maier"
+            }
+        ],
+        "scryfall_id": "4a82084e-b178-442b-8007-7b2a70f3fbba",
+        "type_line": "Instant // Instant"
+    },
+    {
+        "name": "Invert // Invent",
+        "mana_cost": "{U/R} // {4}{U}{R}",
+        "cmc": 7,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Invert",
+                "mana_cost": "{U/R}",
+                "type_line": "Instant",
+                "oracle_text": "Switch the power and toughness of each of up to two target creatures until end of turn.",
+                "watermark": "izzet",
+                "artist": "Mathias Kollros",
+                "illustration_id": "154c4b3a-2222-4e11-9507-4486828208b6"
+            },
+            {
+                "object": "card_face",
+                "name": "Invent",
+                "mana_cost": "{4}{U}{R}",
+                "type_line": "Instant",
+                "oracle_text": "Search your library for an instant card and/or a sorcery card, reveal them, put them into your hand, then shuffle your library.",
+                "watermark": "izzet",
+                "artist": "Mathias Kollros"
+            }
+        ],
+        "scryfall_id": "054a4e4f-8baa-41cf-b24c-d068e8b9a070",
+        "type_line": "Instant // Instant"
+    },
+    {
+        "name": "Ionize",
+        "mana_cost": "{1}{U}{R}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Counter target spell. Ionize deals 2 damage to that spell's controller.",
+        "scryfall_id": "f161f7d2-eaa1-4931-93f9-befa8b5df821",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Join Shields",
+        "mana_cost": "{3}{G}{W}",
+        "cmc": 5,
+        "layout": "normal",
+        "oracle_text": "Untap all creatures you control. They gain hexproof and indestructible until end of turn. (They can't be the targets of spells or abilities your opponents control. Damage and effects that say \"destroy\" don't destroy them.)",
+        "scryfall_id": "91898d8a-589d-43db-8dc4-0ec6a3bd6d49",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Justice Strike",
+        "mana_cost": "{R}{W}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Target creature deals damage to itself equal to its power.",
+        "scryfall_id": "27619ce9-59df-4f0e-a5db-2d32a530e547",
+        "type_line": "Instant"
+    },
+    {
+        "name": "March of the Multitudes",
+        "mana_cost": "{X}{G}{W}{W}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of the creature's color.)\nCreate X 1/1 white Soldier creature tokens with lifelink.",
+        "scryfall_id": "2cc2b646-0181-4f0a-a141-00ca56069a06",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Mausoleum Secrets",
+        "mana_cost": "{1}{B}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Undergrowth — Search your library for a black card with converted mana cost less than or equal to the number of creature cards in your graveyard, reveal it, put it into your hand, then shuffle your library.",
+        "scryfall_id": "26f7cf38-78cc-4139-9f2a-4dd0be7d9da8",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Might of the Masses",
+        "mana_cost": "{G}",
+        "cmc": 1,
+        "layout": "normal",
+        "oracle_text": "Target creature gets +1/+1 until end of turn for each creature you control.",
+        "scryfall_id": "cf6d9ef7-0b16-4095-9c70-f6776e4cd3cb",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Mission Briefing",
+        "mana_cost": "{U}{U}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Surveil 2, then choose an instant or sorcery card in your graveyard. You may cast that card this turn. If that card would be put into your graveyard this turn, exile it instead. (To surveil 2, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+        "scryfall_id": "02bed34d-67d9-4ae9-b351-dc9a89daeabf",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Necrotic Wound",
+        "mana_cost": "{B}",
+        "cmc": 1,
+        "layout": "normal",
+        "oracle_text": "Undergrowth — Target creature gets -X/-X until end of turn, where X is the number of creature cards in your graveyard. If that creature would die this turn, exile it instead.",
+        "scryfall_id": "9ab636af-5b30-4138-8e68-81f567f10417",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Pack's Favor",
+        "mana_cost": "{2}{G}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nTarget creature gets +3/+3 until end of turn.",
+        "scryfall_id": "0f88c3aa-63e1-4617-bf1f-48f44988e7d6",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Pause for Reflection",
+        "mana_cost": "{2}{G}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nPrevent all combat damage that would be dealt this turn.",
+        "scryfall_id": "3cfcf84c-a30c-4c4f-9f8c-ee807661e499",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Price of Fame",
+        "mana_cost": "{3}{B}",
+        "cmc": 4,
+        "layout": "normal",
+        "oracle_text": "This spell costs {2} less to cast if it targets a legendary creature.\nDestroy target creature.\nSurveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+        "scryfall_id": "61b52152-0f7c-4466-9e49-033477028f67",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Radical Idea",
+        "mana_cost": "{1}{U}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Draw a card.\nJump-start (You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.)",
+        "scryfall_id": "c9570734-5e9b-46ff-b606-9759b5195756",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Response // Resurgence",
+        "mana_cost": "{R/W}{R/W} // {3}{R}{W}",
+        "cmc": 7,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Response",
+                "mana_cost": "{R/W}{R/W}",
+                "type_line": "Instant",
+                "oracle_text": "Response deals 5 damage to target attacking or blocking creature.",
+                "watermark": "boros",
+                "artist": "Daarken",
+                "illustration_id": "07f82a15-4c2d-4d6a-8a9d-4f548365e61c"
+            },
+            {
+                "object": "card_face",
+                "name": "Resurgence",
+                "mana_cost": "{3}{R}{W}",
+                "type_line": "Sorcery",
+                "oracle_text": "Creatures you control gain first strike and vigilance until end of turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
+                "watermark": "boros",
+                "artist": "Daarken"
+            }
+        ],
+        "scryfall_id": "92162888-35ea-4f4f-ab99-64dd3104e230",
+        "type_line": "Instant // Sorcery"
+    },
+    {
+        "name": "Righteous Blow",
+        "mana_cost": "{W}",
+        "cmc": 1,
+        "layout": "normal",
+        "oracle_text": "Righteous Blow deals 2 damage to target attacking or blocking creature.",
+        "scryfall_id": "b4501520-acf4-438f-9e96-4a649875ffdd",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Risk Factor",
+        "mana_cost": "{2}{R}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Target opponent may have Risk Factor deal 4 damage to them. If that player doesn't, you draw three cards.\nJump-start (You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.)",
+        "scryfall_id": "4eda89d9-9bd1-4a55-ac02-f9a0625d8e5b",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Sinister Sabotage",
+        "mana_cost": "{1}{U}{U}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Counter target spell.\nSurveil 1. (Look at the top card of your library. You may put that card into your graveyard.)",
+        "scryfall_id": "6cbef36d-7170-424f-8fb1-8e7e112b7f0b",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Sonic Assault",
+        "mana_cost": "{1}{U}{R}",
+        "cmc": 3,
+        "layout": "normal",
+        "oracle_text": "Tap target creature. Sonic Assault deals 2 damage to that creature's controller.\nJump-start (You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.)",
+        "scryfall_id": "cc61a398-cf16-415b-b3cf-897217dc7cc9",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Status // Statue",
+        "mana_cost": "{B/G} // {2}{B}{G}",
+        "cmc": 5,
+        "layout": "split",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Status",
+                "mana_cost": "{B/G}",
+                "type_line": "Instant",
+                "oracle_text": "Target creature gets +1/+1 and gains deathtouch until end of turn.",
+                "watermark": "golgari",
+                "artist": "Ben Wootten",
+                "illustration_id": "4d482200-5fb2-40cb-8693-dd48b256e21e"
+            },
+            {
+                "object": "card_face",
+                "name": "Statue",
+                "mana_cost": "{2}{B}{G}",
+                "type_line": "Instant",
+                "oracle_text": "Destroy target artifact, creature, or enchantment.",
+                "watermark": "golgari",
+                "artist": "Ben Wootten"
+            }
+        ],
+        "scryfall_id": "44614c6d-5508-4077-b825-66d5d684086c",
+        "type_line": "Instant // Instant"
+    },
+    {
+        "name": "Sure Strike",
+        "mana_cost": "{1}{R}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Target creature gets +3/+0 and gains first strike until end of turn.",
+        "scryfall_id": "8d01f1ce-9931-4712-a907-72c2c6d5ee76",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Take Heart",
+        "mana_cost": "{W}",
+        "cmc": 1,
+        "layout": "normal",
+        "oracle_text": "Target creature gets +2/+2 until end of turn. You gain 1 life for each attacking creature you control.",
+        "scryfall_id": "b26f10d5-b826-45b0-abed-80d86e1335c9",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Unexplained Disappearance",
+        "mana_cost": "{1}{U}",
+        "cmc": 2,
+        "layout": "normal",
+        "oracle_text": "Return target creature to its owner's hand.\nSurveil 1. (Look at the top card of your library. You may put that card into your graveyard.)",
+        "scryfall_id": "9c99b239-50d2-4393-80ec-94dbfaa6ae70",
+        "type_line": "Instant"
+    },
+    {
+        "name": "Whisper Agent",
+        "mana_cost": "{1}{U/B}{U/B}",
+        "cmc": 3,
+        "power": "3",
+        "toughness": "2",
+        "layout": "normal",
+        "oracle_text": "Flash\nWhen Whisper Agent enters the battlefield, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+        "scryfall_id": "f6d318e7-f49e-49f8-98b6-d62c34aa4af2",
+        "type_line": "Creature — Human Rogue"
+    }
+]
