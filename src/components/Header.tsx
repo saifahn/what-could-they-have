@@ -11,8 +11,8 @@ function Header() {
       <Link to="/game" className="ml-4">
         Game
       </Link>
-      <h1 className="text-2xl sm:text-3xl mt-2">
-        What Could They Have? — Ravnica Allegiance
+      <h1 className="text-2xl sm:text-3xl mt-4">
+        What Could They Have? — Guilds of Ravnica
       </h1>
     </header>
   )

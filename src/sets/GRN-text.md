@@ -1,4 +1,4 @@
-## General RNA things
+## General GRN things
 
 - Undergrowth as a main mechanic means that opponents may sometimes chump attack to fill up their graveyard - if there are unusual attacks, it doesn't mean that they necessarily have a pump spell.
 
