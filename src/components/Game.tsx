@@ -71,7 +71,7 @@ class Game extends Component {
       guess = ''
       this.setState({ feedback, guessedCards, guess })
     } else {
-      feedback = "That card isn't castable"
+      feedback = "That card doesn't exist, or isn't castable"
       this.setState({ feedback })
     }
   }
