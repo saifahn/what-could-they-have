@@ -13,16 +13,20 @@ p {
 }
 
 .SetSpecificPart h2 {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .SetSpecificPart h3 {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.SetSpecificPart ol {
+  margin-top: 1rem;
 }
 
 .SetSpecificPart ul {
   list-style: square;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .SetSpecificPart li {

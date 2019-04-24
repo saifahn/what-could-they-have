@@ -9,7 +9,7 @@ import Header from './components/Header'
 function App() {
   return (
     <Router>
-      <div className="inner-container py-4">
+      <div className="inner-container pt-4 pb-16">
         <Header />
 
         <Switch>
