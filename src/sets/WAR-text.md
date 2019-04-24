@@ -1,9 +1,25 @@
-## General WAR things
+## Table of Contents
 
-- Proliferate. There are no instants with proliferate, but watch out for onboard tricks involving cards such as Karn's Bastion, Merfolk Skydiver, Martyr for the Cause (+sacrifice effect) etc.
-- Amass. Instant speed can pump a Zombie Army token, luckily there are only two cards: Commence the Endgame and Lazotep Plating.
+1. [WAR Mechanics](#war-mechanics)
+2. [X damage / +X / -X Effects](#additional-damage)
+3. [Misc. Post-Combat Plays](#miscellaneous-post-combat-plays)
+4. [Sweepers](#sweepers)
+5. [Flash Creatures](#flash-creatures)
+6. [Edicts](#edicts)
+7. [Direct Damage](#direct-damage)
+8. [Graveyard Recursion](#graveyard-recursion)
+9. [Counter Spells](#counter-spells)
+10. [Fogs / Lifegain](#fogs-and-lifegain)
+11. [Bounce Spells](#instant-bounce-spells)
 
-## X damage | +X | -X effects
+## WAR Mechanics
+
+- _Proliferate_. There are no instants with proliferate, but watch out for onboard tricks involving cards such as Karn's Bastion, Merfolk Skydiver, Martyr for the Cause (+sacrifice effect) etc.
+- _Amass_. Instant speed can pump a Zombie Army token, luckily there are only two cards: Commence the Endgame and Lazotep Plating.
+
+## Additional Damage
+
+Not an entirely accurate title. This includes +X/+X effects, -X/-X effects, and damage spells. This section probably accounts for most 'unusual' attacks or blocks.
 
 ### X = 1
 
@@ -35,6 +51,7 @@
 - Chandra's Triumph
 - Giant Growth
 - Ral's Outburst
+- Tolsimir, Friends to Wolves
 
 ### X = 4
 
@@ -48,7 +65,6 @@
 - Chandra's Triumph (CHANDRA)
 - Sarkhan's Catharsis (finish off a planeswalker)
 - Price of Betrayal (finish off a creature/planeswalker)
-- Tolsimir, Friends to Wolves
 
 ### Unspecified
 
@@ -58,7 +74,7 @@
 - Widespread Brutality
 - Cyclops Electromancer
 
-## Post Combat Threats
+## Miscellaneous Post-Combat Plays
 
 - Kasmina's Transmutation (can kill things with 1 damage on them)
 - Massacre Girl
@@ -66,19 +82,26 @@
 
 ## Sweepers
 
+Opponents may make weird attacks with small creatures if they're going to play a sweeper post-combat. The presence of Vraska's Finisher at common does make it a bit scarier to eat a small creature with one of your big ones, however.
+
 - Time Wipe
 - Widespread Brutality
 - Solar Blaze?
 
 ## Flash Creatures
 
+Beware of the rares for instant speed creatures that may eat one of your smaller creatures if you attack into them. The uncommon is listed mainly as a chumper here.
+
 - Commence the Endgame
-- Lazotep Plating
 - Awakening of Vitu-Ghazi
+- Lazotep Plating
 
 ## Edicts
 
+Opponents may offer decent trades to get you to a single creature in order to use one of these to full effect. Maybe you don't have to chump that one turn to expose the creature that is crucial to your game plan.
+
 - Gideon's Triumph
+- Angrath's Rampage
 - Liliana's Triumph
 - Liliana, Dreadhorde General
 
@@ -91,8 +114,11 @@
 - Chandra's Triumph
 - Bond of Passion
 - Davriel's Shadowfugue
+- Ob Nixilis, the Hate-Twisted
 
 ## Graveyard Recursion
+
+Opponents may chump attack with 'enter the battlefield' abilities in the hope that they may trade and they can recur them.
 
 - Aid the Fallen
 - Bond of Revival
@@ -108,7 +134,7 @@
 - Bolt Bend?
 - Dovin's Veto
 
-## Fogs / Lifegain
+## Fogs and Lifegain
 
 - Battlefield Promotion
 - Gideon's Sacrifice
@@ -116,6 +142,6 @@
 - Pledge of Unity
 - Heartwarming Redemption
 
-## Bounce Spells
+## Instant Bounce Spells
 
 - Totally Lost
