@@ -1,20 +1,21 @@
-## General WAR things
-
-- Proliferate. There are no instants with proliferate, but watch out for onboard tricks involving cards such as Karn's Bastion, Merfolk Skydiver, Martyr for the Cause (+sacrifice effect) etc.
-- Amass. Instant speed can pump a Zombie Army token, luckily there are only two cards: Commence the Endgame and Lazotep Plating.
-
 ## Table of Contents
 
-1. [X damage / +X / -X Effects](#additional-damage)
-2. [Misc. Post-Combat Plays](#miscellaneous-post-combat-plays)
-3. [Sweepers](#sweepers)
-4. [Flash Creatures](#flash-creatures)
-5. [Edicts](#edicts)
-6. [Direct Damage](#direct-damage)
-7. [Graveyard Recursion](#graveyard-recursion)
-8. [Counter Spells](#counter-spells)
-9. [Fogs / Lifegain](#fogs-and-lifegain)
-10. [Bounce Spells](#instant-bounce-spells)
+1. [WAR Mechanics](#war-mechanics)
+2. [X damage / +X / -X Effects](#additional-damage)
+3. [Misc. Post-Combat Plays](#miscellaneous-post-combat-plays)
+4. [Sweepers](#sweepers)
+5. [Flash Creatures](#flash-creatures)
+6. [Edicts](#edicts)
+7. [Direct Damage](#direct-damage)
+8. [Graveyard Recursion](#graveyard-recursion)
+9. [Counter Spells](#counter-spells)
+10. [Fogs / Lifegain](#fogs-and-lifegain)
+11. [Bounce Spells](#instant-bounce-spells)
+
+## WAR Mechanics
+
+- _Proliferate_. There are no instants with proliferate, but watch out for onboard tricks involving cards such as Karn's Bastion, Merfolk Skydiver, Martyr for the Cause (+sacrifice effect) etc.
+- _Amass_. Instant speed can pump a Zombie Army token, luckily there are only two cards: Commence the Endgame and Lazotep Plating.
 
 ## Additional Damage
 
