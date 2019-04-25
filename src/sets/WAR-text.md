@@ -86,7 +86,8 @@ Opponents may make weird attacks with small creatures if they're going to play a
 
 - Time Wipe
 - Widespread Brutality
-- Solar Blaze?
+- Solar Blaze
+- Single Combat
 
 ## Flash Creatures
 
@@ -114,6 +115,7 @@ Opponents may offer decent trades to get you to a single creature in order to us
 - Chandra's Triumph
 - Bond of Passion
 - Davriel's Shadowfugue
+- Sorin, Vengeful Bloodlord
 - Ob Nixilis, the Hate-Twisted
 
 ## Graveyard Recursion
@@ -131,8 +133,8 @@ Opponents may chump attack with 'enter the battlefield' abilities in the hope th
 
 - Crush Dissent
 - No Escape
-- Bolt Bend?
 - Dovin's Veto
+- Bolt Bend (not really a counter spell but watch out!)
 
 ## Fogs and Lifegain
 
