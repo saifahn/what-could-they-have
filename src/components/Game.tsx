@@ -172,7 +172,7 @@ class Game extends Component {
               type="text"
               onChange={this.handleGuessChange}
               value={guess}
-              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker"
+              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker flex-shrink"
               placeholder="Type your guess here!"
             />
             <button className="hover:bg-transparent bg-red-darker hover:text-red-darker text-white py-2 px-2 border hover:border-red-darker border-transparent">
