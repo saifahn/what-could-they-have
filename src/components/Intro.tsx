@@ -30,8 +30,8 @@ class Intro extends React.Component {
         </p>
         <p>
           This website is intended to help you learn the instants in the set,
-          practice that knowledge or potentially as a tool figure out what your
-          opponent has during a game.
+          practice that knowledge or potentially as a tool to figure out what
+          your opponent has during a game.
         </p>
       </>
     )
