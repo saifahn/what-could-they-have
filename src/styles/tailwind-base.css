@@ -1,3 +1,9 @@
-@tailwind preflight;
+@tailwind base;
+
+a {
+  color: theme('colors.green.400');
+  text-decoration: underline;
+}
+
 @tailwind components;
 @tailwind utilities;
