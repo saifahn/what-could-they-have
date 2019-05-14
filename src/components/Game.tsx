@@ -4,6 +4,13 @@ import generateMana from '../functions/generateMana'
 import data from '../sets/WAR-card-base.json'
 import { Card } from '../common/types'
 import { iconify } from '../functions/iconify'
+import { CardLink } from './CardLink'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { setSelectedCard, setCardModalState } from '../actions'
+import { StoreState } from '../reducers'
+import { CardModal } from './CardModal'
+import CardList from './CardList'
 
 interface State {
   cards: Card[]
@@ -18,7 +25,14 @@ interface State {
   showAllCards: boolean
 }
 
-class Game extends Component {
+interface Props {
+  selectedCard: Card | undefined
+  cardModalOpen: boolean
+  setSelectedCard: (card: Card) => void
+  setCardModalState: (value: boolean) => void
+}
+
+class Game extends Component<Props, State> {
   state: State = {
     cards: [],
     guessedCards: [],
@@ -98,6 +112,17 @@ class Game extends Component {
     })
   }
 
+  openCard = (cardName: string) => {
+    const { setCardModalState, setSelectedCard } = this.props
+    // find the selectedCard, set it
+    const card = this.state.cards.find((card) => card.name === cardName)
+    if (card) {
+      setSelectedCard(card)
+    }
+    // open the modal
+    setCardModalState(true)
+  }
+
   setDifficulty = (event: SyntheticEvent) => {
     event.preventDefault()
     const mode = this.state.input.current.value
@@ -123,6 +148,10 @@ class Game extends Component {
         len = 7
         coloursToGenerate = 5
         break
+      default:
+        len = 3
+        coloursToGenerate = 1
+        break
     }
     this.setState({ mode, len, coloursToGenerate }, () => {
       this.newGame()
@@ -144,9 +173,20 @@ class Game extends Component {
       guessedCards,
       showAllCards,
     } = this.state
+    const {
+      setSelectedCard,
+      setCardModalState,
+      cardModalOpen,
+      selectedCard,
+    } = this.props
     const formattedMana = iconify(availableMana)
     return (
       <main>
+        <CardModal
+          selectedCard={selectedCard}
+          cardModalOpen={cardModalOpen}
+          closeModal={() => setCardModalState(false)}
+        />
         <section>
           <form className="mt-2">
             You are playing on{' '}
@@ -220,7 +260,7 @@ class Game extends Component {
             <ul className="mt-4">
               {this.getUnguessedCards().map((card) => (
                 <li key={card.name} className="leading-normal">
-                  {card.name}
+                  <CardLink onPress={this.openCard}>{card.name}</CardLink>
                 </li>
               ))}
             </ul>
@@ -231,4 +271,23 @@ class Game extends Component {
   }
 }
 
-export default Game
+const mapStateToProps = (state: StoreState) => {
+  const { selectedCard, cardModalOpen } = state
+  return { selectedCard, cardModalOpen }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch) => {
+  return {
+    setSelectedCard: (card: Card) => {
+      dispatch(setSelectedCard(card))
+    },
+    setCardModalState: (value: boolean) => {
+      dispatch(setCardModalState(value))
+    },
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Game)
