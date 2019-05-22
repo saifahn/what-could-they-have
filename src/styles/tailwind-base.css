@@ -1,7 +1,7 @@
 @tailwind base;
 
 a {
-  color: theme('colors.green.400');
+  color: theme('colors.pink.700');
   text-decoration: underline;
 }
 

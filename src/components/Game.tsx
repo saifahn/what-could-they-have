@@ -188,11 +188,11 @@ class Game extends Component<Props, State> {
           closeModal={() => setCardModalState(false)}
         />
         <section>
-          <form className="mt-2">
+          <form className="text-lg mt-2">
             You are playing on{' '}
             <select
               ref={input}
-              className="appearance-none font-semibold bg-white border-b-2 border-dashed rounded-none border-blue-darker text-md sm:text-xl text-center py-1 focus:outline-none focus:bg-blue-lighter focus:border-blue mx-2 select-center"
+              className="appearance-none font-semibold bg-white border-b-2 border-dashed rounded-none border-pink-700 text-md sm:text-xl text-center py-1 focus:outline-none focus:bg-pink-300 focus:border-pink-400 mx-2 select-center"
               onChange={this.setDifficulty}
             >
               <option value="basic">basic</option>
@@ -203,9 +203,9 @@ class Game extends Component<Props, State> {
             </select>{' '}
             mode
           </form>
-          <h3 className="mt-4">
+          <p className="mt-4 font-semibold">
             Your opponent has <span>{formattedMana}</span> available.
-          </h3>
+          </p>
           <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
             <input
               disabled={showAllCards || guessedCards.length === cards.length}
@@ -215,12 +215,12 @@ class Game extends Component<Props, State> {
               className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker flex-shrink"
               placeholder="Type your guess here!"
             />
-            <button className="hover:bg-transparent bg-red-darker hover:text-red-darker text-white py-2 px-2 border hover:border-red-darker border-transparent">
+            <button className="hover:bg-transparent bg-pink-700 hover:text-pink-700 text-white py-2 px-2 border hover:border-pink-700">
               ⏎
             </button>
           </form>
           <section className="Feedback">
-            <p className="text-blue-darker">{feedback}</p>
+            <p className="text-red-500">{feedback}</p>
           </section>
           <p>
             You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
@@ -232,20 +232,20 @@ class Game extends Component<Props, State> {
           <div className="flex flex-wrap justify-start">
             <button
               onClick={this.newGame}
-              className="bg-blue hover:bg-blue-dark text-white py-2 px-4 mr-4"
+              className="bg-pink-700 hover:bg-pink-800 text-white py-2 px-4 mr-4"
             >
               New Game
             </button>
             <button
               onClick={this.showCards}
-              className="bg-transparent hover:bg-blue text-blue hover:text-white py-2 px-4 border border-blue hover:border-transparent"
+              className="bg-transparent hover:bg-pink-700 text-pink-700 hover:text-white py-2 px-4 border border-pink-700 hover:border-transparent"
             >
               Give Up
             </button>
           </div>
         </section>
         <section className="GuessedCards">
-          <h3 className="mt-8">Cards you have guessed:</h3>
+          <p className="font-semibold mt-8">Cards you have guessed:</p>
           <ul className="mt-4">
             {guessedCards.map((card) => (
               <li key={card.name} className="leading-normal">
@@ -256,7 +256,7 @@ class Game extends Component<Props, State> {
         </section>
         {showAllCards && (
           <section className="AllCards mt-6">
-            <h3>All Castable Cards</h3>
+            <p className="font-semibold">All Castable Cards</p>
             <ul className="mt-4">
               {this.getUnguessedCards().map((card) => (
                 <li key={card.name} className="leading-normal">
