@@ -14,7 +14,7 @@ export class CardModal extends React.Component<Props> {
       cardModalOpen &&
       selectedCard && (
         <div
-          className="fixed inset-0 z-50 overflow-auto bg-grey-darker flex p-4"
+          className="fixed inset-0 z-50 overflow-auto bg-gray-400 flex p-4"
           onClick={closeModal}
         >
           <div
