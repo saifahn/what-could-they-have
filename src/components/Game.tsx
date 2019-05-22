@@ -215,7 +215,7 @@ class Game extends Component<Props, State> {
               className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker flex-shrink"
               placeholder="Type your guess here!"
             />
-            <button className="hover:bg-transparent bg-pink-700 hover:text-pink-700 text-white py-2 px-2 border hover:border-pink-700">
+            <button className="hover:bg-transparent bg-pink-700 hover:bg-pink-800 text-white py-2 px-2 border border-pink-700 hover:border-pink-800">
               ⏎
             </button>
           </form>
@@ -249,7 +249,7 @@ class Game extends Component<Props, State> {
           <ul className="mt-4">
             {guessedCards.map((card) => (
               <li key={card.name} className="leading-normal">
-                {card.name}
+                <CardLink onPress={this.openCard}>{card.name}</CardLink>
               </li>
             ))}
           </ul>

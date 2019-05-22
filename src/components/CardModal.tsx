@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../common/types'
+import { SplitCard, BaseCard } from './Card'
 
 interface Props {
   selectedCard: Card | undefined
@@ -14,18 +15,18 @@ export class CardModal extends React.Component<Props> {
       cardModalOpen &&
       selectedCard && (
         <div
-          className="fixed inset-0 z-50 overflow-auto bg-gray-400 flex p-4"
+          className="fixed inset-0 z-50 overflow-auto bg-smoke-800 flex p-4"
           onClick={closeModal}
         >
           <div
-            className="relative p-8 bg-white m-auto flex-col flex"
+            className="relative p-4 bg-white m-auto flex-col flex"
             onClick={(e) => {
               e.stopPropagation()
             }}
           >
-            <h3>The selected card is {selectedCard.name}</h3>
+            <CardInfo card={selectedCard} />
             <button
-              className="mt-4 py-3 bg-blue text-white"
+              className="mt-4 py-3 bg-pink-700 text-white"
               onClick={closeModal}
             >
               Close Modal
@@ -35,4 +36,12 @@ export class CardModal extends React.Component<Props> {
       )
     )
   }
+}
+
+function CardInfo({ card }: { card: Card }) {
+  return (
+    <div>
+      {card.card_faces ? <SplitCard card={card} /> : <BaseCard card={card} />}
+    </div>
+  )
 }
