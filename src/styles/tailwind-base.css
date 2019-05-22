@@ -5,5 +5,17 @@ a {
   text-decoration: underline;
 }
 
+p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: theme('fontSize.base');
+}
+
+@media screen and (min-width: 576px) {
+  p {
+    font-size: theme('fontSize.xl');
+  }
+}
+
 @tailwind components;
 @tailwind utilities;

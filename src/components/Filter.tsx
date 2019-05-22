@@ -59,9 +59,11 @@ class Filter extends Component {
     return (
       <main>
         <section>
-          <h3 className="mt-4">Filter cards by mana cost</h3>
+          <h3 className="font-semibold text-lg mt-4">
+            Filter cards by mana cost
+          </h3>
           <input
-            className="appearance-none border bg-grey-lighter border-grey-lighter text-black text-lg text-center w-full max-w-sm sm:text-xl shadow py-2 px-4 mt-6 focus:outline-none focus:bg-white focus:border-red-darker"
+            className="appearance-none border bg-grey-lighter border-grey-lighter text-black text-lg text-center w-full max-w-md sm:text-xl shadow py-2 px-4 mt-6 focus:outline-none focus:bg-white focus:border-red-darker"
             type="text"
             value={manaFilter}
             onChange={this.handleManaChange}
