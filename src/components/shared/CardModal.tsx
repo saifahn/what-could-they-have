@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from '../../common/types'
 import { SplitCard, BaseCard } from '../Card'
 import { connect } from 'react-redux'
-import { StoreState } from '../../reducers'
+import { CardModalState } from '../../reducers/cardModal'
 import { Dispatch } from 'redux'
 import { setCardModalState } from '../../actions'
 
@@ -48,8 +48,8 @@ function CardInfo({ card }: { card: Card }) {
   )
 }
 
-const mapStateToProps = (state: StoreState) => {
-  const { selectedCard, cardModalOpen } = state
+const mapStateToProps = (state: any) => {
+  const { selectedCard, cardModalOpen } = state.cardModal
   return { selectedCard, cardModalOpen }
 }
 

@@ -1,4 +1,4 @@
 import { createStore } from 'redux'
-import { cardModalReducer } from './reducers'
+import { rootReducer } from './reducers'
 
-export const store = createStore(cardModalReducer)
+export const store = createStore(rootReducer)

@@ -1,5 +1,11 @@
 import { Card } from '../common/types'
-import { SET_SELECTED_CARD, SET_CARD_MODAL_STATE } from '../constants'
+import {
+  ADD_GUESSED_CARD,
+  SET_SELECTED_CARD,
+  SET_CARD_MODAL_STATE,
+  RESET_GUESSED_CARDS,
+  SET_FEEDBACK,
+} from '../constants'
 
 export interface SetCardModalState {
   type: string
@@ -20,5 +26,19 @@ export const setCardModalState = (value: boolean): SetCardModalState => ({
 
 export const setSelectedCard = (value: Card): SetSelectedCard => ({
   type: SET_SELECTED_CARD,
+  value,
+})
+
+export const addGuessedCard = (value: Card) => ({
+  type: ADD_GUESSED_CARD,
+  value,
+})
+
+export const resetGuessedCards = () => ({
+  type: RESET_GUESSED_CARDS,
+})
+
+export const setFeedback = (value: string) => ({
+  type: SET_FEEDBACK,
   value,
 })

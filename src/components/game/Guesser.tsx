@@ -1,8 +1,58 @@
 import React, { FormEvent } from 'react'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { setFeedback, addGuessedCard, resetGuessedCards } from '../../actions'
+import { Card } from '../../common/types'
 
-export class Guesser extends React.Component<any> {
+export class GuesserComponent extends React.Component<any> {
   state = {
     guess: '',
+  }
+
+  handleGuess = (event: FormEvent) => {
+    event.preventDefault()
+    let { guess } = this.state
+    let {
+      cards,
+      feedback,
+      guessedCards,
+      addGuessedCard,
+      setFeedback,
+    } = this.props
+    const hasBeenGuessed = guessedCards.find(
+      (card: Card) => card.name.toLowerCase() === guess.toLowerCase(),
+    )
+    if (hasBeenGuessed) {
+      guess = ''
+      feedback = 'You have already guessed that one!'
+      setFeedback(feedback)
+      return this.setState({ guess })
+    }
+
+    const foundCard = cards.find((card: Card) => {
+      let isCorrectGuess
+      if (card.card_faces) {
+        isCorrectGuess = card.card_faces.some(
+          (face) => face.name.toLowerCase() === guess.toLowerCase(),
+        )
+      }
+      return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
+    })
+
+    if (foundCard) {
+      addGuessedCard(foundCard)
+      feedback =
+        this.props.guessedCards.length === cards.length
+          ? 'Well done, you got them all!'
+          : 'Nice one!'
+      guess = ''
+
+      this.setState({ guess })
+      setFeedback(feedback)
+    } else {
+      feedback = "That card doesn't exist, or isn't castable"
+      setFeedback(feedback)
+    }
   }
 
   handleChange = (event: FormEvent<HTMLInputElement>) => {
@@ -11,11 +61,11 @@ export class Guesser extends React.Component<any> {
   }
 
   render() {
-    const { disabled, onGuess } = this.props
+    const { disabled } = this.props
     const { guess } = this.state
 
     return (
-      <form onSubmit={onGuess} className="flex flex-wrap mt-6">
+      <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
         <input
           disabled={disabled}
           type="text"
@@ -31,3 +81,23 @@ export class Guesser extends React.Component<any> {
     )
   }
 }
+
+const mapStateToProps = (state: any) => {
+  const { guessedCards, feedback, addGuessedCards } = state.game
+  return { guessedCards, feedback, addGuessedCards }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  setFeedback: (value: string) => dispatch(setFeedback(value)),
+  addGuessedCard: (card: Card) => {
+    dispatch(addGuessedCard(card))
+  },
+  resetGuessedCards: () => {
+    dispatch(resetGuessedCards())
+  },
+})
+
+export const Guesser = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(GuesserComponent)

@@ -1,4 +1,4 @@
-import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
+import React, { Component, RefObject, SyntheticEvent } from 'react'
 import canBeCast from '../../functions/canBeCast'
 import generateMana from '../../functions/generateMana'
 import data from '../../sets/WAR-card-base.json'
@@ -8,43 +8,41 @@ import { CardLink } from '../CardLink'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { setSelectedCard, setCardModalState } from '../../actions'
-import { StoreState } from '../../reducers'
-import { CardModal } from '../shared/CardModal'
 import { DifficultySelector } from './DifficultySelector'
 import { Guesser } from './Guesser'
 
 interface State {
   cards: Card[]
-  guessedCards: Card[]
   availableMana: string
   len: number
   coloursToGenerate: number
   // TODO: convert to enum in a different file
   mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
-  guess: string
-  feedback: string
   showAllCards: boolean
 }
 
-interface Props {
+interface ConnectProps {
   selectedCard: Card | undefined
   cardModalOpen: boolean
+  feedback: string
+  guessedCards: Card[]
   setSelectedCard: (card: Card) => void
   setCardModalState: (value: boolean) => void
+  addGuessedCard: (card: Card) => void
+  resetGuessedCards: () => void
 }
+
+interface Props extends ConnectProps {}
 
 class Game extends Component<Props, State> {
   state: State = {
     cards: [],
-    guessedCards: [],
     availableMana: '',
     len: 3,
     coloursToGenerate: 1,
     mode: 'basic',
     input: React.createRef(),
-    guess: '',
-    feedback: '',
     showAllCards: false,
   }
 
@@ -53,43 +51,9 @@ class Game extends Component<Props, State> {
   }
 
   getUnguessedCards = () => {
-    const { cards, guessedCards } = this.state
-    const guessedCardsSet = new Set(guessedCards)
+    const { cards } = this.state
+    const guessedCardsSet = new Set(this.props.guessedCards)
     return cards.filter((card) => !guessedCardsSet.has(card))
-  }
-
-  handleGuess = (event: FormEvent) => {
-    event.preventDefault()
-    let { cards, feedback, guess, guessedCards } = this.state
-    const hasBeenGuessed = guessedCards.find(
-      (card) => card.name.toLowerCase() === guess.toLowerCase(),
-    )
-    if (hasBeenGuessed) {
-      guess = ''
-      feedback = 'You have already guessed that one!'
-      return this.setState({ feedback, guessedCards, guess })
-    }
-    const foundCard = cards.find((card) => {
-      let isCorrectGuess
-      if (card.card_faces) {
-        isCorrectGuess = card.card_faces.some(
-          (face) => face.name.toLowerCase() === guess.toLowerCase(),
-        )
-      }
-      return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
-    })
-    if (foundCard) {
-      guessedCards.push(foundCard)
-      feedback =
-        guessedCards.length === cards.length
-          ? 'Well done, you got them all!'
-          : 'Nice one!'
-      guess = ''
-      this.setState({ feedback, guessedCards, guess })
-    } else {
-      feedback = "That card doesn't exist, or isn't castable"
-      this.setState({ feedback })
-    }
   }
 
   showCards = () => {
@@ -103,8 +67,6 @@ class Game extends Component<Props, State> {
     this.setState({
       availableMana,
       cards,
-      feedback: '',
-      guessedCards: [],
       showAllCards: false,
     })
   }
@@ -160,15 +122,8 @@ class Game extends Component<Props, State> {
   }
 
   render() {
-    const {
-      availableMana,
-      cards,
-      input,
-      feedback,
-      guessedCards,
-      showAllCards,
-    } = this.state
-    const { setCardModalState, cardModalOpen, selectedCard } = this.props
+    const { availableMana, cards, input, showAllCards } = this.state
+    const { guessedCards, feedback } = this.props
     const formattedMana = iconify(availableMana)
     const isGameOver = showAllCards || guessedCards.length === cards.length
 
@@ -182,7 +137,7 @@ class Game extends Component<Props, State> {
           <p className="mt-4 font-semibold">
             Your opponent has <span>{formattedMana}</span> available.
           </p>
-          <Guesser onGuess={this.handleGuess} disabled={isGameOver} />
+          <Guesser disabled={isGameOver} cards={cards} />
           <section className="Feedback">
             <p className="text-red-500">{feedback}</p>
           </section>
@@ -235,9 +190,10 @@ class Game extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: StoreState) => {
-  const { selectedCard, cardModalOpen } = state
-  return { selectedCard, cardModalOpen }
+const mapStateToProps = (state: any) => {
+  const { selectedCard, cardModalOpen } = state.cardModal
+  const { guessedCards, feedback } = state.game
+  return { selectedCard, cardModalOpen, guessedCards, feedback }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
