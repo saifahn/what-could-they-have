@@ -1,16 +1,17 @@
 import React, { Component, FormEvent, RefObject, SyntheticEvent } from 'react'
-import canBeCast from '../functions/canBeCast'
-import generateMana from '../functions/generateMana'
-import data from '../sets/WAR-card-base.json'
-import { Card } from '../common/types'
-import { iconify } from '../functions/iconify'
-import { CardLink } from './CardLink'
+import canBeCast from '../../functions/canBeCast'
+import generateMana from '../../functions/generateMana'
+import data from '../../sets/WAR-card-base.json'
+import { Card } from '../../common/types'
+import { iconify } from '../../functions/iconify'
+import { CardLink } from '../CardLink'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
-import { setSelectedCard, setCardModalState } from '../actions'
-import { StoreState } from '../reducers'
-import { CardModal } from './CardModal'
-import CardList from './CardList'
+import { setSelectedCard, setCardModalState } from '../../actions'
+import { StoreState } from '../../reducers'
+import { CardModal } from '../shared/CardModal'
+import { DifficultySelector } from './DifficultySelector'
+import { Guesser } from './Guesser'
 
 interface State {
   cards: Card[]
@@ -18,6 +19,7 @@ interface State {
   availableMana: string
   len: number
   coloursToGenerate: number
+  // TODO: convert to enum in a different file
   mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
   guess: string
@@ -88,11 +90,6 @@ class Game extends Component<Props, State> {
       feedback = "That card doesn't exist, or isn't castable"
       this.setState({ feedback })
     }
-  }
-
-  handleGuessChange = (event: FormEvent<HTMLInputElement>) => {
-    const guess = event.currentTarget.value
-    this.setState({ guess })
   }
 
   showCards = () => {
@@ -166,59 +163,26 @@ class Game extends Component<Props, State> {
     const {
       availableMana,
       cards,
-      mode,
       input,
       feedback,
-      guess,
       guessedCards,
       showAllCards,
     } = this.state
-    const {
-      setSelectedCard,
-      setCardModalState,
-      cardModalOpen,
-      selectedCard,
-    } = this.props
+    const { setCardModalState, cardModalOpen, selectedCard } = this.props
     const formattedMana = iconify(availableMana)
+    const isGameOver = showAllCards || guessedCards.length === cards.length
+
     return (
       <main>
-        <CardModal
-          selectedCard={selectedCard}
-          cardModalOpen={cardModalOpen}
-          closeModal={() => setCardModalState(false)}
-        />
         <section>
-          <form className="text-lg mt-2">
-            You are playing on{' '}
-            <select
-              ref={input}
-              className="appearance-none font-semibold bg-white border-b-2 border-dashed rounded-none border-pink-700 text-md sm:text-xl text-center py-1 focus:outline-none focus:bg-pink-300 focus:border-pink-400 mx-2 select-center"
-              onChange={this.setDifficulty}
-            >
-              <option value="basic">basic</option>
-              <option value="common">common</option>
-              <option value="uncommon">uncommon</option>
-              <option value="rare">rare</option>
-              <option value="mythic">mythic</option>
-            </select>{' '}
-            mode
-          </form>
+          <DifficultySelector
+            reference={input}
+            setDifficulty={this.setDifficulty}
+          />
           <p className="mt-4 font-semibold">
             Your opponent has <span>{formattedMana}</span> available.
           </p>
-          <form onSubmit={this.handleGuess} className="flex flex-wrap mt-6">
-            <input
-              disabled={showAllCards || guessedCards.length === cards.length}
-              type="text"
-              onChange={this.handleGuessChange}
-              value={guess}
-              className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker flex-shrink"
-              placeholder="Type your guess here!"
-            />
-            <button className="hover:bg-transparent bg-pink-700 hover:bg-pink-800 text-white py-2 px-2 border border-pink-700 hover:border-pink-800">
-              ⏎
-            </button>
-          </form>
+          <Guesser onGuess={this.handleGuess} disabled={isGameOver} />
           <section className="Feedback">
             <p className="text-red-500">{feedback}</p>
           </section>
