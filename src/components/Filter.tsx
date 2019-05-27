@@ -1,19 +1,24 @@
 import React, { Component, FormEvent } from 'react'
-// import { data } from '../RNA-flash-cards.json'
-import data from '../sets/WAR-card-base.json'
+
 import CardList from './CardList'
 import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+
+interface ConnectProps {
+  cards: Card[]
+}
+
+interface Props extends ConnectProps {}
 
 interface State {
-  cards: Card[]
   cardsToShow: Card[]
   manaFilter: string
 }
 
-class Filter extends Component {
+class Filter extends Component<Props, State> {
   // state = {
-  //   cards: [],
   //   filters: {
   //     mana: '',
   //     sortBy: [],
@@ -23,19 +28,17 @@ class Filter extends Component {
   //   sets: [],
   // }
   state: State = {
-    cards: [],
     cardsToShow: [],
     manaFilter: '',
   }
 
-  componentDidMount() {
-    const cards = data
-    const cardsToShow = data
-    this.setState({ cards, cardsToShow })
+  componentWillMount() {
+    const cardsToShow = this.props.cards
+    this.setState(() => ({ cardsToShow }))
   }
 
   filterCards = (filter: string): Card[] => {
-    const { cards } = this.state
+    const { cards } = this.props
     if (!filter) {
       return cards
     }
@@ -78,4 +81,14 @@ class Filter extends Component {
   }
 }
 
-export default Filter
+const mapStateToProps = (state: any) => {
+  const { cards } = state.shared
+  return { cards }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Filter)
