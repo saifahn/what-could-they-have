@@ -15,15 +15,18 @@ function getColours(numColours: number): string[] {
 }
 
 interface generateManaParams {
-  len: number
+  lengthToGenerate: number
   coloursToGenerate: number
 }
 
-function generateMana({ len, coloursToGenerate }: generateManaParams): string {
+function generateMana({
+  lengthToGenerate,
+  coloursToGenerate,
+}: generateManaParams): string {
   const shortenMana = Math.floor(Math.random() * 2)
   const colours = getColours(coloursToGenerate)
   let mana: string[] = []
-  for (let i = 0; i < len - shortenMana; i++) {
+  for (let i = 0; i < lengthToGenerate - shortenMana; i++) {
     const coloursLength = colours.length
     const randomNum = Math.floor(Math.random() * coloursLength)
     mana.push(`{${colours[randomNum]}}`)

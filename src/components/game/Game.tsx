@@ -1,47 +1,46 @@
 import React, { Component, RefObject, SyntheticEvent } from 'react'
-import canBeCast from '../../functions/canBeCast'
-import generateMana from '../../functions/generateMana'
 import data from '../../sets/WAR-card-base.json'
 import { Card } from '../../common/types'
 import { iconify } from '../../functions/iconify'
 import { CardLink } from '../CardLink'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
-import { setSelectedCard, setCardModalState } from '../../actions'
+import {
+  setSelectedCard,
+  setCardModalState,
+  setDifficulty,
+  startNewGame,
+} from '../../actions'
 import { DifficultySelector } from './DifficultySelector'
 import { Guesser } from './Guesser'
 
 interface State {
-  cards: Card[]
-  availableMana: string
-  len: number
-  coloursToGenerate: number
-  // TODO: convert to enum in a different file
-  mode: 'basic' | 'common' | 'uncommon' | 'rare' | 'mythic'
   input: RefObject<any>
   showAllCards: boolean
 }
 
 interface ConnectProps {
+  availableMana: string
+  difficulty: string
   selectedCard: Card | undefined
   cardModalOpen: boolean
   feedback: string
+  currentGameCards: Card[]
   guessedCards: Card[]
+  coloursToGenerate: number
+  lengthToGenerate: number
+  startNewGame: (cards: Card[]) => void
   setSelectedCard: (card: Card) => void
   setCardModalState: (value: boolean) => void
   addGuessedCard: (card: Card) => void
   resetGuessedCards: () => void
+  setDifficulty: (difficulty: string) => void
 }
 
 interface Props extends ConnectProps {}
 
 class Game extends Component<Props, State> {
   state: State = {
-    cards: [],
-    availableMana: '',
-    len: 3,
-    coloursToGenerate: 1,
-    mode: 'basic',
     input: React.createRef(),
     showAllCards: false,
   }
@@ -51,9 +50,9 @@ class Game extends Component<Props, State> {
   }
 
   getUnguessedCards = () => {
-    const { cards } = this.state
-    const guessedCardsSet = new Set(this.props.guessedCards)
-    return cards.filter((card) => !guessedCardsSet.has(card))
+    const { currentGameCards, guessedCards } = this.props
+    const guessedCardsSet = new Set(guessedCards)
+    return currentGameCards.filter((card) => !guessedCardsSet.has(card))
   }
 
   showCards = () => {
@@ -61,60 +60,26 @@ class Game extends Component<Props, State> {
   }
 
   newGame = () => {
-    const { len, coloursToGenerate } = this.state
-    const availableMana = generateMana({ len, coloursToGenerate })
-    const cards = data.filter((card: Card) => canBeCast(card, availableMana))
-    this.setState({
-      availableMana,
-      cards,
-      showAllCards: false,
-    })
+    const { startNewGame } = this.props
+    startNewGame(data as Card[])
+    this.setState({ showAllCards: false })
   }
 
   openCard = (cardName: string) => {
-    const { setCardModalState, setSelectedCard } = this.props
-    // find the selectedCard, set it
-    const card = this.state.cards.find((card) => card.name === cardName)
+    const { setCardModalState, setSelectedCard, currentGameCards } = this.props
+    const card = currentGameCards.find((card) => card.name === cardName)
     if (card) {
       setSelectedCard(card)
     }
-    // open the modal
     setCardModalState(true)
   }
 
   setDifficulty = (event: SyntheticEvent) => {
     event.preventDefault()
+    const { setDifficulty } = this.props
     const mode = this.state.input.current.value
-    let len, coloursToGenerate
-    switch (mode) {
-      case 'basic':
-        len = 3
-        coloursToGenerate = 1
-        break
-      case 'common':
-        len = 4
-        coloursToGenerate = 2
-        break
-      case 'uncommon':
-        len = 5
-        coloursToGenerate = 3
-        break
-      case 'rare':
-        len = 6
-        coloursToGenerate = 4
-        break
-      case 'mythic':
-        len = 7
-        coloursToGenerate = 5
-        break
-      default:
-        len = 3
-        coloursToGenerate = 1
-        break
-    }
-    this.setState({ mode, len, coloursToGenerate }, () => {
-      this.newGame()
-    })
+    setDifficulty(mode)
+    this.newGame()
   }
 
   componentDidMount() {
@@ -122,10 +87,16 @@ class Game extends Component<Props, State> {
   }
 
   render() {
-    const { availableMana, cards, input, showAllCards } = this.state
-    const { guessedCards, feedback } = this.props
+    const { input, showAllCards } = this.state
+    const {
+      currentGameCards,
+      availableMana,
+      guessedCards,
+      feedback,
+    } = this.props
     const formattedMana = iconify(availableMana)
-    const isGameOver = showAllCards || guessedCards.length === cards.length
+    const isGameOver =
+      showAllCards || guessedCards.length === currentGameCards.length
 
     return (
       <main>
@@ -137,14 +108,14 @@ class Game extends Component<Props, State> {
           <p className="mt-4 font-semibold">
             Your opponent has <span>{formattedMana}</span> available.
           </p>
-          <Guesser disabled={isGameOver} cards={cards} />
+          <Guesser disabled={isGameOver} cards={currentGameCards} />
           <section className="Feedback">
             <p className="text-red-500">{feedback}</p>
           </section>
           <p>
             You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
-            <strong>{cards.length}</strong> cards that can be cast at instant
-            speed.
+            <strong>{currentGameCards.length}</strong> cards that can be cast at
+            instant speed.
           </p>
         </section>
         <section className="mt-4">
@@ -192,20 +163,42 @@ class Game extends Component<Props, State> {
 
 const mapStateToProps = (state: any) => {
   const { selectedCard, cardModalOpen } = state.cardModal
-  const { guessedCards, feedback } = state.game
-  return { selectedCard, cardModalOpen, guessedCards, feedback }
-}
-
-const mapDispatchToProps = (dispatch: Dispatch) => {
+  const {
+    availableMana,
+    currentGameCards,
+    guessedCards,
+    feedback,
+    difficulty,
+    coloursToGenerate,
+    lengthToGenerate,
+  } = state.game
   return {
-    setSelectedCard: (card: Card) => {
-      dispatch(setSelectedCard(card))
-    },
-    setCardModalState: (value: boolean) => {
-      dispatch(setCardModalState(value))
-    },
+    availableMana,
+    selectedCard,
+    cardModalOpen,
+    currentGameCards,
+    guessedCards,
+    feedback,
+    difficulty,
+    coloursToGenerate,
+    lengthToGenerate,
   }
 }
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  setSelectedCard: (card: Card) => {
+    dispatch(setSelectedCard(card))
+  },
+  setCardModalState: (value: boolean) => {
+    dispatch(setCardModalState(value))
+  },
+  setDifficulty: (difficulty: string) => {
+    dispatch(setDifficulty(difficulty))
+  },
+  startNewGame: (cards: Card[]) => {
+    dispatch(startNewGame(cards))
+  },
+})
 
 export default connect(
   mapStateToProps,

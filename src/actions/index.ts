@@ -6,6 +6,8 @@ import {
   RESET_GUESSED_CARDS,
   SET_FEEDBACK,
   SET_SHARED_CARDS,
+  SET_DIFFICULTY,
+  START_NEW_GAME,
 } from '../constants'
 
 export interface SetCardModalState {
@@ -48,3 +50,10 @@ export const setSharedCards = (value: Card[]) => ({
   type: SET_SHARED_CARDS,
   value,
 })
+
+export const setDifficulty = (value: string) => ({
+  type: SET_DIFFICULTY,
+  value,
+})
+
+export const startNewGame = (value: Card[]) => ({ type: START_NEW_GAME, value })

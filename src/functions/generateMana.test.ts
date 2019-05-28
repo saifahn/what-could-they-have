@@ -13,12 +13,12 @@ TODO:
 */
 
 it('generates one colour of mana', () => {
-  const mana = generateMana({ len: 4, coloursToGenerate: 1 })
+  const mana = generateMana({ lengthToGenerate: 4, coloursToGenerate: 1 })
   expect(mana).toBeTruthy()
 })
 
 it('generates a random string of mana', () => {
-  const testParams = { len: 4, coloursToGenerate: 4 }
+  const testParams = { lengthToGenerate: 4, coloursToGenerate: 4 }
   const mana = generateMana(testParams)
   const manaTwo = generateMana(testParams)
   expect(mana).not.toEqual(manaTwo)
@@ -39,11 +39,11 @@ function getNumberOfColours(manaString: string) {
 
 it('can generate two colours of mana', () => {
   // TODO: rename variables
-  const len = 4
+  const lengthToGenerate = 4
   const coloursToGenerate = 2
   const testParams = {
-    len,
-    coloursToGenerate
+    lengthToGenerate,
+    coloursToGenerate,
   }
   const mana = generateMana(testParams)
   const numGeneratedColours = getNumberOfColours(mana)
