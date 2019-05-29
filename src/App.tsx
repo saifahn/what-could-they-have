@@ -9,11 +9,11 @@ import { CardModal } from './components/shared/CardModal'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { Card } from './common/types'
-import { setSharedCards } from './actions'
+import { setSharedCards, startNewGame } from './actions'
 import data from './sets/WAR-card-base.json'
 
 interface ConnectProps {
-  setSharedCards: (cards: Card[]) => void
+  setUpApp: (cards: Card[]) => void
 }
 
 interface Props extends ConnectProps {}
@@ -22,7 +22,7 @@ interface State {}
 
 class App extends React.Component<Props, State> {
   componentDidMount() {
-    this.props.setSharedCards(data)
+    this.props.setUpApp(data)
   }
 
   render() {
@@ -46,7 +46,10 @@ class App extends React.Component<Props, State> {
 const mapStateToProps = (state: any) => {}
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  setSharedCards: (cards: Card[]) => dispatch(setSharedCards(cards)),
+  setUpApp: (cards: Card[]) => {
+    dispatch(setSharedCards(cards))
+    dispatch(startNewGame(cards))
+  },
 })
 
 export default connect(

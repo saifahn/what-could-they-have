@@ -82,10 +82,6 @@ class Game extends Component<Props, State> {
     this.newGame()
   }
 
-  componentDidMount() {
-    this.newGame()
-  }
-
   render() {
     const { input, showAllCards } = this.state
     const {
