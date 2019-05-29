@@ -40,13 +40,13 @@ export class GuesserComponent extends React.Component<any> {
     })
 
     if (foundCard) {
-      addGuessedCard(foundCard)
       feedback =
-        this.props.guessedCards.length === cards.length
+        // dispatching the action is asynchronous, so do it this way
+        guessedCards.length === cards.length - 1
           ? 'Well done, you got them all!'
           : 'Nice one!'
+      addGuessedCard(foundCard)
       guess = ''
-
       this.setState({ guess })
       setFeedback(feedback)
     } else {
