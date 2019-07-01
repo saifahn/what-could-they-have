@@ -3,10 +3,10 @@ import marked from 'marked'
 const warText = require('../sets/WAR-text.md')
 
 class Intro extends React.Component {
-  state = {
+  public state = {
     markdown: { __html: '' },
   }
-  componentDidMount() {
+  public componentDidMount(): void {
     fetch(warText)
       .then((response) => {
         return response.text()
@@ -17,7 +17,7 @@ class Intro extends React.Component {
       })
   }
 
-  render() {
+  public render(): JSX.Element {
     const { markdown } = this.state
     const intro = (
       <>

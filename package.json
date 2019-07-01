@@ -7,7 +7,13 @@
     "@types/node": "11.11.0",
     "@types/react": "16.8.7",
     "@types/react-dom": "16.8.2",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
     "marked": "^0.6.2",
+    "prettier": "^1.17.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
@@ -35,15 +41,23 @@
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@storybook/react": "^3.4.12",
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/marked": "^0.6.5",
+    "@types/react-redux": "^7.0.8",
     "@types/react-router-dom": "^4.3.1",
+    "@types/redux": "^3.6.0",
     "@types/storybook__react": "^4.0.1",
     "autoprefixer": "^9.5.0",
     "awesome-typescript-loader": "^3.5.0",
     "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
     "postcss-cli": "^6.1.2",
     "react-docgen-typescript-loader": "^3.0.1",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
-    "tailwindcss": "^0.7.4"
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "tailwindcss": "^1.0.1"
   }
 }

@@ -1,3 +1,95 @@
-@tailwind preflight;
+@tailwind base;
+
+a {
+  color: theme('colors.blue.600');
+  text-decoration: underline;
+}
+
+a:visited {
+  color: theme('colors.pink.800');
+}
+
+a:hover {
+  color: theme('colors.blue.800');
+}
+
+a:focus {
+  outline: 1px dashed rgba(0, 0, 0, 0.5);
+  outline-offset: 3px;
+}
+
+p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: theme('fontSize.base');
+}
+
+@media screen and (min-width: 576px) {
+  p {
+    font-size: theme('fontSize.xl');
+  }
+}
+
+.select-center {
+  text-align-last: center;
+}
+
+.ml-tiny {
+  margin-left: 0.125rem;
+}
+
+.DifficultySelector {
+  outline: dashed 2px theme('colors.blue.200');
+  outline-offset: 0;
+}
+
+.DifficultySelector:focus {
+  outline: dashed 2px theme('colors.blue.600');
+}
+
+h2,
+h3 {
+  font-weight: theme('fontWeight.semibold');
+}
+
+.SetSpecificPart h2 {
+  font-size: theme('fontSize.2xl');
+  margin-top: 1.75rem;
+}
+
+.SetSpecificPart h3 {
+  font-size: theme('fontSize.lg');
+  margin-top: 1.5rem;
+}
+
+.SetSpecificPart ol {
+  margin-top: 1rem;
+}
+
+.SetSpecificPart ul {
+  list-style: square;
+  margin-top: 1rem;
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 1.5rem;
+}
+
+.SetSpecificPart li {
+  display: list-item;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .SetSpecificPart li {
+    font-size: 1.25rem;
+  }
+
+  .SetSpecificPart h3 {
+    font-size: theme('fontSize.xl');
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
