@@ -101,7 +101,7 @@ class Game extends Component<Props, State> {
             reference={input}
             setDifficulty={this.setDifficulty}
           />
-          <p className="mt-4 font-semibold">
+          <p className="mt-4 font-medium">
             Your opponent has <span>{formattedMana}</span> available.
           </p>
           <Guesser disabled={isGameOver} cards={currentGameCards} />
@@ -109,9 +109,10 @@ class Game extends Component<Props, State> {
             <p className="text-red-500">{feedback}</p>
           </section>
           <p>
-            You have guessed <strong>{guessedCards.length}</strong> out of the{' '}
-            <strong>{currentGameCards.length}</strong> cards that can be cast at
-            instant speed.
+            You have guessed{' '}
+            <span className="font-semibold">{guessedCards.length}</span> out of
+            the <span className="font-semibold">{currentGameCards.length}</span>{' '}
+            cards that can be cast at instant speed.
           </p>
         </section>
         <section className="mt-4">
@@ -131,7 +132,7 @@ class Game extends Component<Props, State> {
           </div>
         </section>
         <section className="GuessedCards">
-          <p className="font-semibold mt-8">Cards you have guessed:</p>
+          <p className="font-medium mt-8">Cards you have guessed:</p>
           <ul className="mt-4">
             {guessedCards.map(
               (card): JSX.Element => (

@@ -27,17 +27,17 @@ class Filter extends Component<Props, State> {
   //   isGrid: false,
   //   sets: [],
   // }
-  state: State = {
+  public state: State = {
     cardsToShow: [],
     manaFilter: '',
   }
 
-  componentWillMount() {
+  public componentDidMount(): void {
     const cardsToShow = this.props.cards
     this.setState(() => ({ cardsToShow }))
   }
 
-  filterCards = (filter: string): Card[] => {
+  private filterCards = (filter: string): Card[] => {
     const { cards } = this.props
     if (!filter) {
       return cards
@@ -45,19 +45,19 @@ class Filter extends Component<Props, State> {
     return cards.filter((card: Card) => canBeCast(card, filter))
   }
 
-  formatManaCost = (mana: string) => {
+  private formatManaCost = (mana: string): string => {
     const re = /(\w(\/\w)?)/g
     return mana.replace(re, '{$1}')
   }
 
-  handleManaChange = (event: FormEvent<HTMLInputElement>) => {
+  private handleManaChange = (event: FormEvent<HTMLInputElement>): void => {
     const manaFilter = event.currentTarget.value
     const formattedMana = this.formatManaCost(manaFilter)
     const cardsToShow = this.filterCards(formattedMana)
     this.setState({ manaFilter, cardsToShow })
   }
 
-  render() {
+  public render(): JSX.Element {
     const { cardsToShow, manaFilter } = this.state
     return (
       <main>
@@ -66,7 +66,7 @@ class Filter extends Component<Props, State> {
             Filter cards by mana cost
           </h3>
           <input
-            className="appearance-none border bg-grey-lighter border-grey-lighter text-black text-lg text-center w-full max-w-md sm:text-xl shadow py-2 px-4 mt-6 focus:outline-none focus:bg-white focus:border-red-darker"
+            className="appearance-none bg-gray-100 border-gray-100 text-black text-lg text-center w-full max-w-md sm:text-xl shadow py-2 px-4 mt-6 border-dashed border focus:outline-none focus:bg-white focus:border-blue-600"
             type="text"
             value={manaFilter}
             onChange={this.handleManaChange}
