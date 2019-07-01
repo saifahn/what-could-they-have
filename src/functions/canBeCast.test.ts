@@ -192,7 +192,7 @@ describe('integration? and other tests', () => {
   })
 
   test('generateMana can be used with canBeCast', () => {
-    const testCost = generateMana({ len: 4, coloursToGenerate: 4 })
+    const testCost = generateMana({ lengthToGenerate: 4, coloursToGenerate: 4 })
     const result = testCards.filter((card) => canBeCast(card, testCost))
     expect(result.length).toBeGreaterThan(0)
   })

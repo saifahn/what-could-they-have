@@ -120,16 +120,6 @@
     "type_line": "Instant"
   },
   {
-    "name": "Desperate Lunge",
-    "mana_cost": "{1}{W}",
-    "colors": ["W"],
-    "cmc": 2,
-    "layout": "normal",
-    "oracle_text": "Target creature gets +2/+2 and gains flying until end of turn. You gain 2 life.",
-    "scryfall_id": "69ce134a-25ef-4f8d-a385-7c29fc5707dc",
-    "type_line": "Instant"
-  },
-  {
     "name": "Divine Arrow",
     "mana_cost": "{1}{W}",
     "colors": ["W"],
