@@ -4,7 +4,7 @@ import { Card } from '../../common/types'
 import { iconify } from '../../functions/iconify'
 import { CardLink } from '../CardLink'
 import { Dispatch } from 'redux'
-import { connect } from 'react-redux'
+import { connect, Connect } from 'react-redux'
 import {
   setSelectedCard,
   setCardModalState,
@@ -40,32 +40,32 @@ interface ConnectProps {
 interface Props extends ConnectProps {}
 
 class Game extends Component<Props, State> {
-  state: State = {
+  public state: State = {
     input: React.createRef(),
     showAllCards: false,
   }
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props)
   }
 
-  getUnguessedCards = () => {
+  private getUnguessedCards = (): Card[] => {
     const { currentGameCards, guessedCards } = this.props
     const guessedCardsSet = new Set(guessedCards)
     return currentGameCards.filter((card) => !guessedCardsSet.has(card))
   }
 
-  showCards = () => {
+  private showCards = (): void => {
     this.setState({ showAllCards: true })
   }
 
-  newGame = () => {
+  private newGame = (): void => {
     const { startNewGame } = this.props
     startNewGame(data as Card[])
     this.setState({ showAllCards: false })
   }
 
-  openCard = (cardName: string) => {
+  private openCard = (cardName: string): void => {
     const { setCardModalState, setSelectedCard, currentGameCards } = this.props
     const card = currentGameCards.find((card) => card.name === cardName)
     if (card) {
@@ -74,7 +74,7 @@ class Game extends Component<Props, State> {
     setCardModalState(true)
   }
 
-  setDifficulty = (event: SyntheticEvent) => {
+  private setDifficulty = (event: SyntheticEvent): void => {
     event.preventDefault()
     const { setDifficulty } = this.props
     const mode = this.state.input.current.value
@@ -82,7 +82,7 @@ class Game extends Component<Props, State> {
     this.newGame()
   }
 
-  render() {
+  public render(): JSX.Element {
     const { input, showAllCards } = this.state
     const {
       currentGameCards,
@@ -118,13 +118,13 @@ class Game extends Component<Props, State> {
           <div className="flex flex-wrap justify-start">
             <button
               onClick={this.newGame}
-              className="bg-pink-700 hover:bg-pink-800 text-white py-2 px-4 mr-4"
+              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 mr-4"
             >
               New Game
             </button>
             <button
               onClick={this.showCards}
-              className="bg-transparent hover:bg-pink-700 text-pink-700 hover:text-white py-2 px-4 border border-pink-700 hover:border-transparent"
+              className="bg-transparent hover:bg-blue-500 text-blue-500 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent"
             >
               Give Up
             </button>
@@ -133,22 +133,26 @@ class Game extends Component<Props, State> {
         <section className="GuessedCards">
           <p className="font-semibold mt-8">Cards you have guessed:</p>
           <ul className="mt-4">
-            {guessedCards.map((card) => (
-              <li key={card.name} className="leading-normal">
-                <CardLink onPress={this.openCard}>{card.name}</CardLink>
-              </li>
-            ))}
+            {guessedCards.map(
+              (card): JSX.Element => (
+                <li key={card.name} className="leading-normal">
+                  <CardLink onPress={this.openCard}>{card.name}</CardLink>
+                </li>
+              ),
+            )}
           </ul>
         </section>
         {showAllCards && (
           <section className="AllCards mt-6">
             <p className="font-semibold">All Castable Cards</p>
             <ul className="mt-4">
-              {this.getUnguessedCards().map((card) => (
-                <li key={card.name} className="leading-normal">
-                  <CardLink onPress={this.openCard}>{card.name}</CardLink>
-                </li>
-              ))}
+              {this.getUnguessedCards().map(
+                (card): JSX.Element => (
+                  <li key={card.name} className="leading-normal">
+                    <CardLink onPress={this.openCard}>{card.name}</CardLink>
+                  </li>
+                ),
+              )}
             </ul>
           </section>
         )}
@@ -157,7 +161,7 @@ class Game extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: any): {} => {
   const { selectedCard, cardModalOpen } = state.cardModal
   const {
     availableMana,
@@ -181,17 +185,17 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  setSelectedCard: (card: Card) => {
+const mapDispatchToProps = (dispatch: Dispatch): {} => ({
+  setSelectedCard: (card: Card): void => {
     dispatch(setSelectedCard(card))
   },
-  setCardModalState: (value: boolean) => {
+  setCardModalState: (value: boolean): void => {
     dispatch(setCardModalState(value))
   },
-  setDifficulty: (difficulty: string) => {
+  setDifficulty: (difficulty: string): void => {
     dispatch(setDifficulty(difficulty))
   },
-  startNewGame: (cards: Card[]) => {
+  startNewGame: (cards: Card[]): void => {
     dispatch(startNewGame(cards))
   },
 })

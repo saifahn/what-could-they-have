@@ -5,11 +5,11 @@ import { setFeedback, addGuessedCard, resetGuessedCards } from '../../actions'
 import { Card } from '../../common/types'
 
 export class GuesserComponent extends React.Component<any> {
-  state = {
+  public state = {
     guess: '',
   }
 
-  handleGuess = (event: FormEvent) => {
+  private handleGuess = (event: FormEvent): void => {
     event.preventDefault()
     let { guess } = this.state
     let {
@@ -29,15 +29,17 @@ export class GuesserComponent extends React.Component<any> {
       return this.setState({ guess })
     }
 
-    const foundCard = cards.find((card: Card) => {
-      let isCorrectGuess
-      if (card.card_faces) {
-        isCorrectGuess = card.card_faces.some(
-          (face) => face.name.toLowerCase() === guess.toLowerCase(),
-        )
-      }
-      return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
-    })
+    const foundCard = cards.find(
+      (card: Card): boolean => {
+        let isCorrectGuess
+        if (card.card_faces) {
+          isCorrectGuess = card.card_faces.some(
+            (face): boolean => face.name.toLowerCase() === guess.toLowerCase(),
+          )
+        }
+        return isCorrectGuess || card.name.toLowerCase() === guess.toLowerCase()
+      },
+    )
 
     if (foundCard) {
       feedback =
@@ -55,12 +57,12 @@ export class GuesserComponent extends React.Component<any> {
     }
   }
 
-  handleChange = (event: FormEvent<HTMLInputElement>) => {
+  private handleChange = (event: FormEvent<HTMLInputElement>): void => {
     const guess = event.currentTarget.value
     this.setState({ guess })
   }
 
-  render() {
+  public render(): JSX.Element {
     const { disabled } = this.props
     const { guess } = this.state
 
@@ -71,10 +73,10 @@ export class GuesserComponent extends React.Component<any> {
           type="text"
           onChange={this.handleChange}
           value={guess}
-          className="appearance-none inline-block bg-grey-lighter border border-grey-lighter text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-red-darker flex-shrink"
+          className="appearance-none inline-block bg-gray-200 border border-gray-200 text-black text-lg sm:text-xl py-2 px-4 focus:outline-none focus:bg-white focus:border-blue-500 flex-shrink"
           placeholder="Type your guess here!"
         />
-        <button className="hover:bg-transparent bg-pink-700 hover:bg-pink-800 text-white py-2 px-2 border border-pink-700 hover:border-pink-800">
+        <button className="hover:bg-transparent bg-blue-500 hover:bg-blue-600 text-white py-2 px-3 border border-blue-500 hover:border-blue-600">
           ⏎
         </button>
       </form>
@@ -82,12 +84,12 @@ export class GuesserComponent extends React.Component<any> {
   }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: any): {} => {
   const { guessedCards, feedback, addGuessedCards } = state.game
   return { guessedCards, feedback, addGuessedCards }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch): {} => ({
   setFeedback: (value: string) => dispatch(setFeedback(value)),
   addGuessedCard: (card: Card) => {
     dispatch(addGuessedCard(card))
