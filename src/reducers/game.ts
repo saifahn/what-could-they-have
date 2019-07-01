@@ -7,7 +7,7 @@ import {
   SET_DIFFICULTY,
   START_NEW_GAME,
 } from '../constants'
-import generateMana from '../functions/generateMana'
+import generateMana, { GenerateManaParams } from '../functions/generateMana'
 import canBeCast from '../functions/canBeCast'
 
 export interface GameState {
@@ -30,7 +30,7 @@ const INITIAL_STATE: GameState = {
   lengthToGenerate: 3,
 }
 
-export function generateGameVariables(difficulty: string) {
+export function generateGameVariables(difficulty: string): GenerateManaParams {
   let coloursToGenerate, lengthToGenerate
   switch (difficulty) {
     case 'basic':
@@ -80,15 +80,15 @@ export function game(state = INITIAL_STATE, action: AnyAction): GameState {
         lengthToGenerate,
       }
     case START_NEW_GAME:
-      const feedback = ''
-      const guessedCards: Card[] = []
+      var feedback = ''
+      var guessedCards: Card[] = []
       var { coloursToGenerate, lengthToGenerate } = state
-      const availableMana = generateMana({
+      var availableMana = generateMana({
         coloursToGenerate,
         lengthToGenerate,
       })
-      const currentGameCards = action.value.filter((card: Card) =>
-        canBeCast(card, availableMana),
+      var currentGameCards = action.value.filter(
+        (card: Card): boolean => canBeCast(card, availableMana),
       )
       return {
         ...state,

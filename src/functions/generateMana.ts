@@ -14,7 +14,7 @@ function getColours(numColours: number): string[] {
   return colours
 }
 
-interface generateManaParams {
+export interface GenerateManaParams {
   lengthToGenerate: number
   coloursToGenerate: number
 }
@@ -22,7 +22,7 @@ interface generateManaParams {
 function generateMana({
   lengthToGenerate,
   coloursToGenerate,
-}: generateManaParams): string {
+}: GenerateManaParams): string {
   const shortenMana = Math.floor(Math.random() * 2)
   const colours = getColours(coloursToGenerate)
   let mana: string[] = []
