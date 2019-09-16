@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-# Planned Feature
-
 ## Overview
 
 Describe a problem and how the feature fixes it. Why is the feature necessary?
