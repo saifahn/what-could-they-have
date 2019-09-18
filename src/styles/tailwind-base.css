@@ -47,6 +47,15 @@ p {
   outline: dashed 2px theme('colors.blue.600');
 }
 
+.SetSelector {
+  outline: dashed 2px theme('colors.blue.200');
+  outline-offset: 0;
+}
+
+.SetSelector:focus {
+  outline: dashed 2px theme('colors.blue.600');
+}
+
 h2,
 h3 {
   font-weight: theme('fontWeight.semibold');

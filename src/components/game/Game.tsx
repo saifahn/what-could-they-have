@@ -1,10 +1,9 @@
 import React, { Component, RefObject, SyntheticEvent } from 'react'
-import data from '../../sets/WAR-card-base.json'
 import { Card } from '../../common/types'
 import { iconify } from '../../functions/iconify'
 import { CardLink } from '../CardLink'
 import { Dispatch } from 'redux'
-import { connect, Connect } from 'react-redux'
+import { connect } from 'react-redux'
 import {
   setSelectedCard,
   setCardModalState,
@@ -13,31 +12,16 @@ import {
 } from '../../actions'
 import { DifficultySelector } from './DifficultySelector'
 import { Guesser } from './Guesser'
+import { RootState } from '../../reducers'
 
 interface State {
   input: RefObject<any>
   showAllCards: boolean
 }
 
-interface ConnectProps {
-  availableMana: string
-  difficulty: string
-  selectedCard: Card | undefined
-  cardModalOpen: boolean
-  feedback: string
-  currentGameCards: Card[]
-  guessedCards: Card[]
-  coloursToGenerate: number
-  lengthToGenerate: number
-  startNewGame: (cards: Card[]) => void
-  setSelectedCard: (card: Card) => void
-  setCardModalState: (value: boolean) => void
-  addGuessedCard: (card: Card) => void
-  resetGuessedCards: () => void
-  setDifficulty: (difficulty: string) => void
-}
-
-interface Props extends ConnectProps {}
+interface Props
+  extends ReturnType<typeof mapDispatchToProps>,
+    ReturnType<typeof mapStateToProps> {}
 
 class Game extends Component<Props, State> {
   public state: State = {
@@ -45,7 +29,7 @@ class Game extends Component<Props, State> {
     showAllCards: false,
   }
 
-  public constructor(props: any) {
+  public constructor(props: Props) {
     super(props)
   }
 
@@ -61,7 +45,7 @@ class Game extends Component<Props, State> {
 
   private newGame = (): void => {
     const { startNewGame } = this.props
-    startNewGame(data as Card[])
+    startNewGame(this.props.cards as Card[])
     this.setState({ showAllCards: false })
   }
 
@@ -162,7 +146,8 @@ class Game extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any): {} => {
+const mapStateToProps = (state: RootState) => {
+  const { cards } = state.shared
   const { selectedCard, cardModalOpen } = state.cardModal
   const {
     availableMana,
@@ -183,10 +168,11 @@ const mapStateToProps = (state: any): {} => {
     difficulty,
     coloursToGenerate,
     lengthToGenerate,
+    cards,
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch): {} => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   setSelectedCard: (card: Card): void => {
     dispatch(setSelectedCard(card))
   },

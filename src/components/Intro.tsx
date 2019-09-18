@@ -1,30 +1,19 @@
 import React from 'react'
-import marked from 'marked'
-const warText = require('../sets/WAR-text.md')
+import { RootState } from '../reducers'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
 
-class Intro extends React.Component {
-  public state = {
-    markdown: { __html: '' },
-  }
-  public componentDidMount(): void {
-    fetch(warText)
-      .then((response) => {
-        return response.text()
-      })
-      .then((text) => {
-        const markdown = marked(text)
-        this.setState({ markdown: { __html: markdown } })
-      })
-  }
+interface Props extends ReturnType<typeof mapStateToProps> {}
 
-  public render(): JSX.Element {
-    const { markdown } = this.state
+class Intro extends React.Component<Props> {
+  public render() {
+    const markdown = { __html: this.props.introText }
     const intro = (
       <>
         <p>
           In Limited Magic, your opponent will oftentimes do something that
-          doesn't make sense according to what's on the board. When your
-          opponent attacks their 2/2 into your 3/3 they're up to something.
+          doesn&#39;t make sense according to what&#39;s on the board. When your
+          opponent attacks their 2/2 into your 3/3 they&#39;re up to something.
           Assuming that your opponent is not bluffing, there are limited
           possibilities to what could be going on.
         </p>
@@ -44,4 +33,14 @@ class Intro extends React.Component {
   }
 }
 
-export default Intro
+const mapStateToProps = (state: RootState) => {
+  const { introText } = state.shared
+  return { introText }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({})
+
+export default connect(
+  mapStateToProps,
+  null,
+)(Intro)

@@ -8,6 +8,7 @@ import {
   SET_SHARED_CARDS,
   SET_DIFFICULTY,
   START_NEW_GAME,
+  SET_INTRO_TEXT,
 } from '../constants'
 
 export interface SetCardModalState {
@@ -48,6 +49,11 @@ export const setFeedback = (value: string) => ({
 
 export const setSharedCards = (value: Card[]) => ({
   type: SET_SHARED_CARDS,
+  value,
+})
+
+export const setIntroText = (value: string) => ({
+  type: SET_INTRO_TEXT,
   value,
 })
 
