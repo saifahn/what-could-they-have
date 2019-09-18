@@ -18,26 +18,25 @@ interface State {
 }
 
 class Filter extends Component<Props, State> {
-  // state = {
-  //   filters: {
-  //     mana: '',
-  //     sortBy: [],
-  //   },
-  //   cardsToShow: [],
-  //   isGrid: false,
-  //   sets: [],
-  // }
-  public state: State = {
+  state = {
     cardsToShow: [],
     manaFilter: '',
   }
 
-  public componentDidMount(): void {
+  componentDidMount() {
     const cardsToShow = this.props.cards
     this.setState(() => ({ cardsToShow }))
   }
 
-  private filterCards = (filter: string): Card[] => {
+  componentDidUpdate(prevProps: Props) {
+    if (prevProps.cards !== this.props.cards) {
+      // if the cards supplied to the component are changed, show the new cards
+      // reset the mana filter to show all cards initially
+      this.setState({ cardsToShow: this.props.cards, manaFilter: '' })
+    }
+  }
+
+  private filterCards = (filter: string) => {
     const { cards } = this.props
     if (!filter) {
       return cards
@@ -45,19 +44,19 @@ class Filter extends Component<Props, State> {
     return cards.filter((card: Card) => canBeCast(card, filter))
   }
 
-  private formatManaCost = (mana: string): string => {
+  private formatManaCost = (mana: string) => {
     const re = /(\w(\/\w)?)/g
     return mana.replace(re, '{$1}')
   }
 
-  private handleManaChange = (event: FormEvent<HTMLInputElement>): void => {
+  private handleManaChange = (event: FormEvent<HTMLInputElement>) => {
     const manaFilter = event.currentTarget.value
     const formattedMana = this.formatManaCost(manaFilter)
     const cardsToShow = this.filterCards(formattedMana)
     this.setState({ manaFilter, cardsToShow })
   }
 
-  public render(): JSX.Element {
+  render() {
     const { cardsToShow, manaFilter } = this.state
     return (
       <main>
