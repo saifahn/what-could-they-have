@@ -11,9 +11,14 @@ export function formatText(text: string = '') {
 
 export function createText(text: string = '') {
   let splitText = text.split('\n')
-  let textElements = splitText.map((text) => {
+  let textElements = splitText.map((text, index) => {
     const formattedText = formatText(text)
-    return <p dangerouslySetInnerHTML={formattedText} />
+    return (
+      <p
+        dangerouslySetInnerHTML={formattedText}
+        key={`${formattedText.__html}__${index}`}
+      />
+    )
   })
   return textElements
 }

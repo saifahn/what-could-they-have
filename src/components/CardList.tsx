@@ -12,11 +12,11 @@ export default function CardList(props: Props) {
     <ul className="max-w-md">
       {cardsToShow &&
         cardsToShow.map((card) => (
-          <li className="border p-4 mt-4 rounded">
+          <li className="border p-4 mt-4 rounded" key={card.name}>
             {card.card_faces ? (
-              <SplitCard card={card} key={card.name} />
+              <SplitCard card={card} />
             ) : (
-              <BaseCard card={card} key={card.name} />
+              <BaseCard card={card} />
             )}
           </li>
         ))}
