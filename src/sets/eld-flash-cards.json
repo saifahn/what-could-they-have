@@ -1,0 +1,951 @@
+[
+    {
+        "name": "Ardenvale Tactician // Dizzying Swoop",
+        "colors": [
+            "W"
+        ],
+        "cmc": 3,
+        "mana_cost": "{1}{W}{W} // {1}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/7/c7d5e394-8e41-442e-ae97-a478a61e1b9d.jpg?1568302736",
+        "scryfall_uri": "https://scryfall.com/card/eld/5/ardenvale-tactician-dizzying-swoop?utm_source=api",
+        "type_line": "Creature — Human Knight // Instant — Adventure",
+        "power": "2",
+        "toughness": "3",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Ardenvale Tactician",
+                "mana_cost": "{1}{W}{W}",
+                "type_line": "Creature — Human Knight",
+                "oracle_text": "Flying",
+                "power": "2",
+                "toughness": "3",
+                "flavor_text": "In a castle that prizes loyalty above all, the bond between knight and griffin is unmatched.",
+                "artist": "Jason Rainville",
+                "artist_id": "6ed7e669-579b-443d-b223-e5cbcb2a7483",
+                "illustration_id": "627d6163-08a5-40b8-938c-264d01ec29bb"
+            },
+            {
+                "object": "card_face",
+                "name": "Dizzying Swoop",
+                "mana_cost": "{1}{W}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Tap up to two target creatures. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Jason Rainville",
+                "artist_id": "6ed7e669-579b-443d-b223-e5cbcb2a7483"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "c7d5e394-8e41-442e-ae97-a478a61e1b9d"
+    },
+    {
+        "name": "Bake into a Pie",
+        "colors": [
+            "B"
+        ],
+        "cmc": 4,
+        "mana_cost": "{2}{B}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/4/2/42a4d090-1bb7-4334-ab22-e2527391e79b.jpg?1567699206",
+        "scryfall_uri": "https://scryfall.com/card/eld/76/bake-into-a-pie?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "42a4d090-1bb7-4334-ab22-e2527391e79b",
+        "oracle_text": "Destroy target creature. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")"
+    },
+    {
+        "name": "Barge In",
+        "colors": [
+            "R"
+        ],
+        "cmc": 1,
+        "mana_cost": "{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/9/b/9bfe337c-4b8c-42ce-8c43-4c95051d09ac.jpg?1568387174",
+        "scryfall_uri": "https://scryfall.com/card/eld/112/barge-in?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "9bfe337c-4b8c-42ce-8c43-4c95051d09ac",
+        "oracle_text": "Target attacking creature gets +2/+2 until end of turn. Each attacking non-Human creature gains trample until end of turn."
+    },
+    {
+        "name": "Blacklance Paragon",
+        "colors": [
+            "B"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/f/e/fe0a63bb-dd94-429f-aa9b-21f3d1c53ae5.jpg?1568659754",
+        "scryfall_uri": "https://scryfall.com/card/eld/79/blacklance-paragon?utm_source=api",
+        "type_line": "Creature — Human Knight",
+        "power": "3",
+        "toughness": "1",
+        "layout": "normal",
+        "scryfall_id": "fe0a63bb-dd94-429f-aa9b-21f3d1c53ae5",
+        "oracle_text": "Flash\nWhen Blacklance Paragon enters the battlefield, target Knight gains deathtouch and lifelink until end of turn."
+    },
+    {
+        "name": "Bonecrusher Giant // Stomp",
+        "colors": [
+            "R"
+        ],
+        "cmc": 3,
+        "mana_cost": "{2}{R} // {1}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/0/9/09fd2d9c-1793-4beb-a3fb-7a869f660cd4.jpg?1568373206",
+        "scryfall_uri": "https://scryfall.com/card/eld/115/bonecrusher-giant-stomp?utm_source=api",
+        "type_line": "Creature — Giant // Instant — Adventure",
+        "power": "4",
+        "toughness": "3",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Bonecrusher Giant",
+                "mana_cost": "{2}{R}",
+                "type_line": "Creature — Giant",
+                "oracle_text": "Whenever Bonecrusher Giant becomes the target of a spell, Bonecrusher Giant deals 2 damage to that spell's controller.",
+                "power": "4",
+                "toughness": "3",
+                "flavor_text": "Not every tale ends in glory.",
+                "artist": "Victor Adame Minguez",
+                "artist_id": "bd8f7368-5b10-4554-b6b8-d052c6aca89f",
+                "illustration_id": "c7f49422-def6-4502-bc02-38aee9924371"
+            },
+            {
+                "object": "card_face",
+                "name": "Stomp",
+                "mana_cost": "{1}{R}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Damage can't be prevented this turn. Stomp deals 2 damage to any target.",
+                "artist": "Victor Adame Minguez",
+                "artist_id": "bd8f7368-5b10-4554-b6b8-d052c6aca89f"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "09fd2d9c-1793-4beb-a3fb-7a869f660cd4"
+    },
+    {
+        "name": "Brazen Borrower // Petty Theft",
+        "colors": [
+            "U"
+        ],
+        "cmc": 3,
+        "mana_cost": "{1}{U}{U} // {1}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/2/c2089ec9-0665-448f-bfe9-d181de127814.jpg?1568824963",
+        "scryfall_uri": "https://scryfall.com/card/eld/39/brazen-borrower-petty-theft?utm_source=api",
+        "type_line": "Creature — Faerie Rogue // Instant — Adventure",
+        "power": "3",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Brazen Borrower",
+                "mana_cost": "{1}{U}{U}",
+                "type_line": "Creature — Faerie Rogue",
+                "oracle_text": "Flash\nFlying\nBrazen Borrower can block only creatures with flying.",
+                "power": "3",
+                "toughness": "1",
+                "artist": "Eric Deschamps",
+                "artist_id": "37970e22-9cee-44c1-af44-5ee27cf26b76",
+                "illustration_id": "7561a5ca-8e49-4f91-80f3-96124a7e10f5"
+            },
+            {
+                "object": "card_face",
+                "name": "Petty Theft",
+                "mana_cost": "{1}{U}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Return target nonland permanent an opponent controls to its owner's hand.",
+                "artist": "Eric Deschamps",
+                "artist_id": "37970e22-9cee-44c1-af44-5ee27cf26b76"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "c2089ec9-0665-448f-bfe9-d181de127814"
+    },
+    {
+        "name": "Didn't Say Please",
+        "colors": [
+            "U"
+        ],
+        "cmc": 3,
+        "mana_cost": "{1}{U}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/7/77500b53-0852-4d6a-bfe3-b1e8ef5a12cd.jpg?1568990481",
+        "scryfall_uri": "https://scryfall.com/card/eld/42/didnt-say-please?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "77500b53-0852-4d6a-bfe3-b1e8ef5a12cd",
+        "oracle_text": "Counter target spell. Its controller puts the top three cards of their library into their graveyard."
+    },
+    {
+        "name": "Drown in the Loch",
+        "colors": [
+            "B",
+            "U"
+        ],
+        "cmc": 2,
+        "mana_cost": "{U}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/8/b/8bf5df5b-164d-4ec2-a5e6-bbaea152e271.jpg?1568624555",
+        "scryfall_uri": "https://scryfall.com/card/eld/188/drown-in-the-loch?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "8bf5df5b-164d-4ec2-a5e6-bbaea152e271",
+        "oracle_text": "Choose one —\n• Counter target spell with converted mana cost less than or equal to the number of cards in its controller's graveyard.\n• Destroy target creature with converted mana cost less than or equal to the number of cards in its controller's graveyard."
+    },
+    {
+        "name": "Embercleave",
+        "colors": [
+            "R"
+        ],
+        "cmc": 6,
+        "mana_cost": "{4}{R}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/a/a/aaae15dd-11b6-4421-99e9-365c7fe4a5d6.jpg?1568114558",
+        "scryfall_uri": "https://scryfall.com/card/eld/120/embercleave?utm_source=api",
+        "type_line": "Legendary Artifact — Equipment",
+        "layout": "normal",
+        "scryfall_id": "aaae15dd-11b6-4421-99e9-365c7fe4a5d6",
+        "oracle_text": "Flash\nThis spell costs {1} less to cast for each attacking creature you control.\nWhen Embercleave enters the battlefield, attach it to target creature you control.\nEquipped creature gets +1/+1 and has double strike and trample.\nEquip {3}"
+    },
+    {
+        "name": "Faerie Vandal",
+        "colors": [
+            "U"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/8/789c5c2b-3e51-4f6c-ac76-d276facf716f.jpg?1567699108",
+        "scryfall_uri": "https://scryfall.com/card/eld/45/faerie-vandal?utm_source=api",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "2",
+        "layout": "normal",
+        "scryfall_id": "789c5c2b-3e51-4f6c-ac76-d276facf716f",
+        "oracle_text": "Flash\nFlying\nWhenever you draw your second card each turn, put a +1/+1 counter on Faerie Vandal."
+    },
+    {
+        "name": "Fell the Pheasant",
+        "colors": [
+            "G"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/3/3/33d3cc84-7cb6-4de2-9018-4695a3b1e099.jpg?1568280026",
+        "scryfall_uri": "https://scryfall.com/card/eld/153/fell-the-pheasant?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "33d3cc84-7cb6-4de2-9018-4695a3b1e099",
+        "oracle_text": "Fell the Pheasant deals 5 damage to target creature with flying. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")"
+    },
+    {
+        "name": "Festive Funeral",
+        "colors": [
+            "B"
+        ],
+        "cmc": 5,
+        "mana_cost": "{4}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/9/0/90a90af0-eb40-40da-bf4b-f0af687c6430.jpg?1569341905",
+        "scryfall_uri": "https://scryfall.com/card/eld/87/festive-funeral?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "90a90af0-eb40-40da-bf4b-f0af687c6430",
+        "oracle_text": "Target creature gets -X/-X until end of turn, where X is the number of cards in your graveyard."
+    },
+    {
+        "name": "Fling",
+        "colors": [
+            "R"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/b/cb28fe03-8269-41de-b766-42c3421aeaef.jpg?1568978613",
+        "scryfall_uri": "https://scryfall.com/card/eld/126/fling?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "cb28fe03-8269-41de-b766-42c3421aeaef",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to any target."
+    },
+    {
+        "name": "Foulmire Knight // Profane Insight",
+        "colors": [
+            "B"
+        ],
+        "cmc": 1,
+        "mana_cost": "{B} // {2}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/5/c5f6c745-e46a-42eb-8eca-b7b74ab1245e.jpg?1567625553",
+        "scryfall_uri": "https://scryfall.com/card/eld/90/foulmire-knight-profane-insight?utm_source=api",
+        "type_line": "Creature — Zombie Knight // Instant — Adventure",
+        "power": "1",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Foulmire Knight",
+                "mana_cost": "{B}",
+                "type_line": "Creature — Zombie Knight",
+                "oracle_text": "Deathtouch",
+                "power": "1",
+                "toughness": "1",
+                "artist": "Alex Brock",
+                "artist_id": "ce381d25-868c-4f13-b1e9-e7cd2f67e994",
+                "illustration_id": "467bdd67-4baa-44b9-bc7e-a421163affb6"
+            },
+            {
+                "object": "card_face",
+                "name": "Profane Insight",
+                "mana_cost": "{2}{B}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "You draw a card and you lose 1 life. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Alex Brock",
+                "artist_id": "ce381d25-868c-4f13-b1e9-e7cd2f67e994"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "c5f6c745-e46a-42eb-8eca-b7b74ab1245e"
+    },
+    {
+        "name": "Garenbrig Carver // Shield's Might",
+        "colors": [
+            "G"
+        ],
+        "cmc": 4,
+        "mana_cost": "{3}{G} // {1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/1/9/194b7a1c-291a-470e-9a40-61b72a46793b.jpg?1568766019",
+        "scryfall_uri": "https://scryfall.com/card/eld/156/garenbrig-carver-shields-might?utm_source=api",
+        "type_line": "Creature — Human Warrior // Instant — Adventure",
+        "power": "3",
+        "toughness": "2",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Garenbrig Carver",
+                "mana_cost": "{3}{G}",
+                "type_line": "Creature — Human Warrior",
+                "oracle_text": "",
+                "power": "3",
+                "toughness": "2",
+                "flavor_text": "Countless knights of Garenbrig owe their lives to his peerless craftsmanship.",
+                "artist": "Lucas Graciano",
+                "artist_id": "ce98f39c-7cdd-47e6-a520-6c50443bb4c2",
+                "illustration_id": "a999c33c-fece-4051-80ac-881f0ba600a5"
+            },
+            {
+                "object": "card_face",
+                "name": "Shield's Might",
+                "mana_cost": "{1}{G}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Target creature gets +2/+2 until end of turn. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Lucas Graciano",
+                "artist_id": "ce98f39c-7cdd-47e6-a520-6c50443bb4c2"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "194b7a1c-291a-470e-9a40-61b72a46793b"
+    },
+    {
+        "name": "Giant Killer // Chop Down",
+        "colors": [
+            "W"
+        ],
+        "cmc": 1,
+        "mana_cost": "{W} // {2}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/5/75754468-2850-42e6-ab22-61ff7b9d1214.jpg?1568114110",
+        "scryfall_uri": "https://scryfall.com/card/eld/14/giant-killer-chop-down?utm_source=api",
+        "type_line": "Creature — Human Peasant // Instant — Adventure",
+        "power": "1",
+        "toughness": "2",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Giant Killer",
+                "mana_cost": "{W}",
+                "type_line": "Creature — Human Peasant",
+                "oracle_text": "{1}{W}, {T}: Tap target creature.",
+                "power": "1",
+                "toughness": "2",
+                "flavor_text": "\"What size advantage? They never even see me coming.\"",
+                "artist": "Jesper Ejsing",
+                "artist_id": "a5f8354a-8b51-4e59-96b2-0e3aeae4fa1d",
+                "illustration_id": "4f255291-7e3c-4f3a-8c08-51b72e576696"
+            },
+            {
+                "object": "card_face",
+                "name": "Chop Down",
+                "mana_cost": "{2}{W}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Destroy target creature with power 4 or greater. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Jesper Ejsing",
+                "artist_id": "a5f8354a-8b51-4e59-96b2-0e3aeae4fa1d"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "75754468-2850-42e6-ab22-61ff7b9d1214"
+    },
+    {
+        "name": "Hypnotic Sprite // Mesmeric Glare",
+        "colors": [
+            "U"
+        ],
+        "cmc": 2,
+        "mana_cost": "{U}{U} // {2}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/a/7acbd812-b994-4e68-8f95-04222796e994.jpg?1568226986",
+        "scryfall_uri": "https://scryfall.com/card/eld/49/hypnotic-sprite-mesmeric-glare?utm_source=api",
+        "type_line": "Creature — Faerie // Instant — Adventure",
+        "power": "2",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Hypnotic Sprite",
+                "mana_cost": "{U}{U}",
+                "type_line": "Creature — Faerie",
+                "oracle_text": "Flying",
+                "power": "2",
+                "toughness": "1",
+                "artist": "Irina Nordsol",
+                "artist_id": "1e4cb52d-476e-4c68-ac87-2e620aede6d4",
+                "illustration_id": "e6316eeb-83cc-4cac-a94c-3dee4aa48ae5"
+            },
+            {
+                "object": "card_face",
+                "name": "Mesmeric Glare",
+                "mana_cost": "{2}{U}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Counter target spell with converted mana cost 3 or less. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Irina Nordsol",
+                "artist_id": "1e4cb52d-476e-4c68-ac87-2e620aede6d4"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "7acbd812-b994-4e68-8f95-04222796e994"
+    },
+    {
+        "name": "Insatiable Appetite",
+        "colors": [
+            "G"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/2/3/2357f2db-00c2-41f6-bd04-93f905dea461.jpg?1568285875",
+        "scryfall_uri": "https://scryfall.com/card/eld/162/insatiable-appetite?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "2357f2db-00c2-41f6-bd04-93f905dea461",
+        "oracle_text": "You may sacrifice a Food. If you do, target creature gets +5/+5 until end of turn. Otherwise, that creature gets +3/+3 until end of turn."
+    },
+    {
+        "name": "Into the Story",
+        "colors": [
+            "U"
+        ],
+        "cmc": 7,
+        "mana_cost": "{5}{U}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/8/c838f08e-7fb6-46e7-83bb-dce8877d6c87.jpg?1568373241",
+        "scryfall_uri": "https://scryfall.com/card/eld/50/into-the-story?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "c838f08e-7fb6-46e7-83bb-dce8877d6c87",
+        "oracle_text": "This spell costs {3} less to cast if an opponent has seven or more cards in their graveyard.\nDraw four cards."
+    },
+    {
+        "name": "Lash of Thorns",
+        "colors": [
+            "B"
+        ],
+        "cmc": 1,
+        "mana_cost": "{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/e/a/ea45e972-6e4a-4854-9be3-6ffb24e7d7a5.jpg?1568978166",
+        "scryfall_uri": "https://scryfall.com/card/eld/92/lash-of-thorns?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "ea45e972-6e4a-4854-9be3-6ffb24e7d7a5",
+        "oracle_text": "Target creature gets +2/+1 and gains deathtouch until end of turn."
+    },
+    {
+        "name": "Lochmere Serpent",
+        "colors": [
+            "B",
+            "U"
+        ],
+        "cmc": 6,
+        "mana_cost": "{4}{U}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/3/2/3287beea-747c-4cb6-aea5-051e85c5de8d.jpg?1568227547",
+        "scryfall_uri": "https://scryfall.com/card/eld/195/lochmere-serpent?utm_source=api",
+        "type_line": "Creature — Serpent",
+        "power": "7",
+        "toughness": "7",
+        "layout": "normal",
+        "scryfall_id": "3287beea-747c-4cb6-aea5-051e85c5de8d",
+        "oracle_text": "Flash\n{U}, Sacrifice an Island: Lochmere Serpent can't be blocked this turn.\n{B}, Sacrifice a Swamp: You gain 1 life and draw a card.\n{U}{B}: Exile five target cards from an opponent's graveyard. Return Lochmere Serpent from your graveyard to your hand. Activate this ability only any time you could cast a sorcery."
+    },
+    {
+        "name": "Merchant of the Vale // Haggle",
+        "colors": [
+            "R"
+        ],
+        "cmc": 3,
+        "mana_cost": "{2}{R} // {R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/0/b/0b4399b6-e67f-40d8-8676-f5db7e04a6c9.jpg?1568286099",
+        "scryfall_uri": "https://scryfall.com/card/eld/131/merchant-of-the-vale-haggle?utm_source=api",
+        "type_line": "Creature — Human Peasant // Instant — Adventure",
+        "power": "2",
+        "toughness": "3",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Merchant of the Vale",
+                "mana_cost": "{2}{R}",
+                "type_line": "Creature — Human Peasant",
+                "oracle_text": "{2}{R}, Discard a card: Draw a card.",
+                "power": "2",
+                "toughness": "3",
+                "flavor_text": "\"Buying old, worn-out junk. Selling marvels of real value.\"",
+                "artist": "David Gaillet",
+                "artist_id": "3496c5b4-57bf-4e5e-8bac-a1e05a911a2d",
+                "illustration_id": "061c7c4f-8a52-4f22-8aac-d7f87cd9fa90"
+            },
+            {
+                "object": "card_face",
+                "name": "Haggle",
+                "mana_cost": "{R}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "You may discard a card. If you do, draw a card. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "David Gaillet",
+                "artist_id": "3496c5b4-57bf-4e5e-8bac-a1e05a911a2d"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "0b4399b6-e67f-40d8-8676-f5db7e04a6c9"
+    },
+    {
+        "name": "Murderous Rider // Swift End",
+        "colors": [
+            "B"
+        ],
+        "cmc": 3,
+        "mana_cost": "{1}{B}{B} // {1}{B}{B}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/e/7/e73d8a84-2c0d-423c-89c7-71de0af9e1ac.jpg?1568076482",
+        "scryfall_uri": "https://scryfall.com/card/eld/97/murderous-rider-swift-end?utm_source=api",
+        "type_line": "Creature — Zombie Knight // Instant — Adventure",
+        "power": "2",
+        "toughness": "3",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Murderous Rider",
+                "mana_cost": "{1}{B}{B}",
+                "type_line": "Creature — Zombie Knight",
+                "oracle_text": "Lifelink\nWhen Murderous Rider dies, put it on the bottom of its owner's library.",
+                "power": "2",
+                "toughness": "3",
+                "artist": "Josh Hass",
+                "artist_id": "8fa1fdf0-96d6-46f4-a7ff-b1c0257c3735",
+                "illustration_id": "a97fba85-e4ea-4373-8bdd-6085618953ca"
+            },
+            {
+                "object": "card_face",
+                "name": "Swift End",
+                "mana_cost": "{1}{B}{B}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Destroy target creature or planeswalker. You lose 2 life. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Josh Hass",
+                "artist_id": "8fa1fdf0-96d6-46f4-a7ff-b1c0257c3735"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "e73d8a84-2c0d-423c-89c7-71de0af9e1ac"
+    },
+    {
+        "name": "Mystical Dispute",
+        "colors": [
+            "U"
+        ],
+        "cmc": 3,
+        "mana_cost": "{2}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/f/b/fbe04cb8-a8b9-4241-baae-b398a2509a3a.jpg?1568114282",
+        "scryfall_uri": "https://scryfall.com/card/eld/58/mystical-dispute?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "fbe04cb8-a8b9-4241-baae-b398a2509a3a",
+        "oracle_text": "This spell costs {2} less to cast if it targets a blue spell.\nCounter target spell unless its controller pays {3}."
+    },
+    {
+        "name": "Once and Future",
+        "colors": [
+            "G"
+        ],
+        "cmc": 4,
+        "mana_cost": "{3}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/1/c/1c5dd4e8-4d5f-45a0-9cae-4f842751894d.jpg?1568227436",
+        "scryfall_uri": "https://scryfall.com/card/eld/168/once-and-future?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "1c5dd4e8-4d5f-45a0-9cae-4f842751894d",
+        "oracle_text": "Return target card from your graveyard to your hand. Put up to one other target card from your graveyard on top of your library. Exile Once and Future.\nAdamant — If at least three green mana was spent to cast this spell, instead return those cards to your hand and exile Once and Future."
+    },
+    {
+        "name": "Once Upon a Time",
+        "colors": [
+            "G"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/4/0/4034e5ba-9974-43e3-bde7-8d9b4586c3a4.jpg?1568114592",
+        "scryfall_uri": "https://scryfall.com/card/eld/169/once-upon-a-time?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "4034e5ba-9974-43e3-bde7-8d9b4586c3a4",
+        "oracle_text": "If this spell is the first spell you've cast this game, you may cast it without paying its mana cost.\nLook at the top five cards of your library. You may reveal a creature or land card from among them and put it into your hand. Put the rest on the bottom of your library in a random order."
+    },
+    {
+        "name": "Opt",
+        "colors": [
+            "U"
+        ],
+        "cmc": 1,
+        "mana_cost": "{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/3/c3669391-8f64-4904-b432-0f0582f30449.jpg?1568225417",
+        "scryfall_uri": "https://scryfall.com/card/eld/59/opt?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "c3669391-8f64-4904-b432-0f0582f30449",
+        "oracle_text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\nDraw a card."
+    },
+    {
+        "name": "Outflank",
+        "colors": [
+            "W"
+        ],
+        "cmc": 1,
+        "mana_cost": "{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/6/6/663e0208-81c3-4a76-bcc2-bc59cf8ca649.jpg?1568977201",
+        "scryfall_uri": "https://scryfall.com/card/eld/23/outflank?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "663e0208-81c3-4a76-bcc2-bc59cf8ca649",
+        "oracle_text": "Outflank deals damage to target attacking or blocking creature equal to the number of creatures you control."
+    },
+    {
+        "name": "Rally for the Throne",
+        "colors": [
+            "W"
+        ],
+        "cmc": 3,
+        "mana_cost": "{2}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/5/4/548d7ff0-70b6-4221-b50b-3ee8547e1b0a.jpg?1568657480",
+        "scryfall_uri": "https://scryfall.com/card/eld/25/rally-for-the-throne?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "548d7ff0-70b6-4221-b50b-3ee8547e1b0a",
+        "oracle_text": "Create two 1/1 white Human creature tokens.\nAdamant — If at least three white mana was spent to cast this spell, you gain 1 life for each creature you control."
+    },
+    {
+        "name": "Redcap Melee",
+        "colors": [
+            "R"
+        ],
+        "cmc": 1,
+        "mana_cost": "{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/6/b/6bd1dd34-d480-4dfd-9f82-73c4e24a11fc.jpg?1568390559",
+        "scryfall_uri": "https://scryfall.com/card/eld/135/redcap-melee?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "6bd1dd34-d480-4dfd-9f82-73c4e24a11fc",
+        "oracle_text": "Redcap Melee deals 4 damage to target creature or planeswalker. If a nonred permanent is dealt damage this way, you sacrifice a land."
+    },
+    {
+        "name": "Return of the Wildspeaker",
+        "colors": [
+            "G"
+        ],
+        "cmc": 5,
+        "mana_cost": "{4}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/b/8/b88a4943-bd1b-4d10-9cd3-b2ab91b25c10.jpg?1568897119",
+        "scryfall_uri": "https://scryfall.com/card/eld/172/return-of-the-wildspeaker?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "b88a4943-bd1b-4d10-9cd3-b2ab91b25c10",
+        "oracle_text": "Choose one —\n• Draw cards equal to the greatest power among non-Human creatures you control.\n• Non-Human creatures you control get +3/+3 until end of turn."
+    },
+    {
+        "name": "Return to Nature",
+        "colors": [
+            "G"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/3/c3d5088e-21d0-4255-a14c-ad950133a90e.jpg?1568114600",
+        "scryfall_uri": "https://scryfall.com/card/eld/173/return-to-nature?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "c3d5088e-21d0-4255-a14c-ad950133a90e",
+        "oracle_text": "Choose one —\n• Destroy target artifact.\n• Destroy target enchantment.\n• Exile target card from a graveyard."
+    },
+    {
+        "name": "Righteousness",
+        "colors": [
+            "W"
+        ],
+        "cmc": 1,
+        "mana_cost": "{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/d/2/d2910df2-e288-4fa0-9859-c5ca35da2d55.jpg?1568285500",
+        "scryfall_uri": "https://scryfall.com/card/eld/27/righteousness?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "d2910df2-e288-4fa0-9859-c5ca35da2d55",
+        "oracle_text": "Target blocking creature gets +7/+7 until end of turn."
+    },
+    {
+        "name": "Rimrock Knight // Boulder Rush",
+        "colors": [
+            "R"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{R} // {R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/a/3/a3d13d84-01e4-4429-93db-e5afff811527.jpg?1568978708",
+        "scryfall_uri": "https://scryfall.com/card/eld/137/rimrock-knight-boulder-rush?utm_source=api",
+        "type_line": "Creature — Dwarf Knight // Instant — Adventure",
+        "power": "3",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Rimrock Knight",
+                "mana_cost": "{1}{R}",
+                "type_line": "Creature — Dwarf Knight",
+                "oracle_text": "Rimrock Knight can't block.",
+                "power": "3",
+                "toughness": "1",
+                "artist": "Chris Rallis",
+                "artist_id": "a8e7b854-b15a-421a-b66d-6e68187ae285",
+                "illustration_id": "c82a6d15-3976-4fca-9142-2db874d3ed10"
+            },
+            {
+                "object": "card_face",
+                "name": "Boulder Rush",
+                "mana_cost": "{R}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Target creature gets +2/+0 until end of turn. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Chris Rallis",
+                "artist_id": "a8e7b854-b15a-421a-b66d-6e68187ae285"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "a3d13d84-01e4-4429-93db-e5afff811527"
+    },
+    {
+        "name": "Run Away Together",
+        "colors": [
+            "U"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/a/e/aeffc3c0-567c-442f-ba06-b7d9617c5789.jpg?1567699154",
+        "scryfall_uri": "https://scryfall.com/card/eld/62/run-away-together?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "aeffc3c0-567c-442f-ba06-b7d9617c5789",
+        "oracle_text": "Choose two target creatures controlled by different players. Return those creatures to their owners' hands."
+    },
+    {
+        "name": "Scorching Dragonfire",
+        "colors": [
+            "R"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/3/b/3b74a806-ed74-458e-8903-d3d084e9f507.jpg?1568186057",
+        "scryfall_uri": "https://scryfall.com/card/eld/139/scorching-dragonfire?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "3b74a806-ed74-458e-8903-d3d084e9f507",
+        "oracle_text": "Scorching Dragonfire deals 3 damage to target creature or planeswalker. If that creature or planeswalker would die this turn, exile it instead."
+    },
+    {
+        "name": "Searing Barrage",
+        "colors": [
+            "R"
+        ],
+        "cmc": 5,
+        "mana_cost": "{4}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/d/2/d2f11135-e9ce-4e4c-bea7-72a46d326e40.jpg?1568227146",
+        "scryfall_uri": "https://scryfall.com/card/eld/140/searing-barrage?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "d2f11135-e9ce-4e4c-bea7-72a46d326e40",
+        "oracle_text": "Searing Barrage deals 5 damage to target creature.\nAdamant — If at least three red mana was spent to cast this spell, Searing Barrage deals 3 damage to that creature's controller."
+    },
+    {
+        "name": "Shepherd of the Flock // Usher to Safety",
+        "colors": [
+            "W"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{W} // {W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/0/c0b4f0ce-0d18-4546-803d-94a2f4f30951.jpg?1568787289",
+        "scryfall_uri": "https://scryfall.com/card/eld/28/shepherd-of-the-flock-usher-to-safety?utm_source=api",
+        "type_line": "Creature — Human Peasant // Instant — Adventure",
+        "power": "3",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Shepherd of the Flock",
+                "mana_cost": "{1}{W}",
+                "type_line": "Creature — Human Peasant",
+                "oracle_text": "",
+                "power": "3",
+                "toughness": "1",
+                "flavor_text": "Not all heroes carry swords.",
+                "artist": "Drew Baker",
+                "artist_id": "a8c4ef83-94ad-41c7-861f-95debea16868",
+                "illustration_id": "f6bff105-d29d-4eac-b58c-3aadc40c6f17"
+            },
+            {
+                "object": "card_face",
+                "name": "Usher to Safety",
+                "mana_cost": "{W}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Return target permanent you control to its owner's hand. (Then exile this card. You may cast the creature later from exile.)",
+                "artist": "Drew Baker",
+                "artist_id": "a8c4ef83-94ad-41c7-861f-95debea16868"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "c0b4f0ce-0d18-4546-803d-94a2f4f30951"
+    },
+    {
+        "name": "Shining Armor",
+        "colors": [
+            "W"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/7/7791f46e-f772-4d3f-824e-52b4fc721b58.jpg?1567698959",
+        "scryfall_uri": "https://scryfall.com/card/eld/29/shining-armor?utm_source=api",
+        "type_line": "Artifact — Equipment",
+        "layout": "normal",
+        "scryfall_id": "7791f46e-f772-4d3f-824e-52b4fc721b58",
+        "oracle_text": "Flash\nWhen Shining Armor enters the battlefield, attach it to target Knight you control.\nEquipped creature gets +0/+2 and has vigilance.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)"
+    },
+    {
+        "name": "Silverflame Squire // On Alert",
+        "colors": [
+            "W"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{W} // {2}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/7/b/7bd105f3-fa33-4490-aea9-b47ca121b664.jpg?1568643593",
+        "scryfall_uri": "https://scryfall.com/card/eld/31/silverflame-squire-on-alert?utm_source=api",
+        "type_line": "Creature — Human Soldier // Instant — Adventure",
+        "power": "2",
+        "toughness": "1",
+        "card_faces": [
+            {
+                "object": "card_face",
+                "name": "Silverflame Squire",
+                "mana_cost": "{1}{W}",
+                "type_line": "Creature — Human Soldier",
+                "oracle_text": "",
+                "power": "2",
+                "toughness": "1",
+                "flavor_text": "Beacons along the borderlands are lit at any incursion from the wilds.",
+                "artist": "Lie Setiawan",
+                "artist_id": "6f771d3f-310e-4aa4-841f-5ba4ba9f025a",
+                "illustration_id": "b9367559-0e33-47cf-a2a2-6e34b5033086"
+            },
+            {
+                "object": "card_face",
+                "name": "On Alert",
+                "mana_cost": "{2}{W}",
+                "type_line": "Instant — Adventure",
+                "oracle_text": "Target creature gets +2/+2 until end of turn. Untap it. (Then exile this spell. You may cast the creature later from exile.)",
+                "artist": "Lie Setiawan",
+                "artist_id": "6f771d3f-310e-4aa4-841f-5ba4ba9f025a"
+            }
+        ],
+        "layout": "adventure",
+        "scryfall_id": "7bd105f3-fa33-4490-aea9-b47ca121b664"
+    },
+    {
+        "name": "Slaying Fire",
+        "colors": [
+            "R"
+        ],
+        "cmc": 3,
+        "mana_cost": "{2}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/8/3/83b5b110-c430-4ffe-9fc1-8e6987f52d1e.jpg?1567637901",
+        "scryfall_uri": "https://scryfall.com/card/eld/143/slaying-fire?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "83b5b110-c430-4ffe-9fc1-8e6987f52d1e",
+        "oracle_text": "Slaying Fire deals 3 damage to any target.\nAdamant — If at least three red mana was spent to cast this spell, it deals 4 damage instead."
+    },
+    {
+        "name": "So Tiny",
+        "colors": [
+            "U"
+        ],
+        "cmc": 1,
+        "mana_cost": "{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/4/2/421650f2-1b34-4a36-9675-9424997c9d0b.jpg?1568872628",
+        "scryfall_uri": "https://scryfall.com/card/eld/64/so-tiny?utm_source=api",
+        "type_line": "Enchantment — Aura",
+        "layout": "normal",
+        "scryfall_id": "421650f2-1b34-4a36-9675-9424997c9d0b",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets -2/-0. It gets -6/-0 instead as long as its controller has seven or more cards in their graveyard."
+    },
+    {
+        "name": "Thrill of Possibility",
+        "colors": [
+            "R"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{R}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/c/9/c9021f85-7ab4-4a78-a398-1611fe09cd14.jpg?1568919313",
+        "scryfall_uri": "https://scryfall.com/card/eld/146/thrill-of-possibility?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "c9021f85-7ab4-4a78-a398-1611fe09cd14",
+        "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards."
+    },
+    {
+        "name": "True Love's Kiss",
+        "colors": [
+            "W"
+        ],
+        "cmc": 4,
+        "mana_cost": "{2}{W}{W}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/2/3/23a4bac2-f6cb-4712-8510-a63657c43a5c.jpg?1568224721",
+        "scryfall_uri": "https://scryfall.com/card/eld/34/true-loves-kiss?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "23a4bac2-f6cb-4712-8510-a63657c43a5c",
+        "oracle_text": "Exile target artifact or enchantment.\nDraw a card"
+    },
+    {
+        "name": "Turn into a Pumpkin",
+        "colors": [
+            "U"
+        ],
+        "cmc": 4,
+        "mana_cost": "{3}{U}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/f/2/f2a37dcb-4a18-4f03-b28c-27188a1a5ec1.jpg?1568114139",
+        "scryfall_uri": "https://scryfall.com/card/eld/69/turn-into-a-pumpkin?utm_source=api",
+        "type_line": "Instant",
+        "layout": "normal",
+        "scryfall_id": "f2a37dcb-4a18-4f03-b28c-27188a1a5ec1",
+        "oracle_text": "Return target nonland permanent to its owner's hand. Draw a card.\nAdamant — If at least three blue mana was spent to cast this spell, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life.\")"
+    },
+    {
+        "name": "Wildborn Preserver",
+        "colors": [
+            "G"
+        ],
+        "cmc": 2,
+        "mana_cost": "{1}{G}",
+        "image_uri_normal": "https://img.scryfall.com/cards/normal/front/5/5/55f76830-369e-4224-9ded-7d1ce04c87e4.jpg?1568113937",
+        "scryfall_uri": "https://scryfall.com/card/eld/182/wildborn-preserver?utm_source=api",
+        "type_line": "Creature — Elf Archer",
+        "power": "2",
+        "toughness": "2",
+        "layout": "normal",
+        "scryfall_id": "55f76830-369e-4224-9ded-7d1ce04c87e4",
+        "oracle_text": "Flash\nReach\nWhenever another non-Human creature enters the battlefield under your control, you may pay {X}. When you do, put X +1/+1 counters on Wildborn Preserver."
+    }
+]

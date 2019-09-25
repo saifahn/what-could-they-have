@@ -19,7 +19,7 @@ interface State {}
 
 class App extends React.Component<Props, State> {
   componentDidMount() {
-    this.props.setUpApp('war')
+    this.props.setUpApp('eld')
   }
 
   render() {
