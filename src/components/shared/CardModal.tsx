@@ -2,15 +2,13 @@ import React from 'react'
 import { Card } from '../../common/types'
 import { SplitCard, BaseCard } from '../Card'
 import { connect } from 'react-redux'
-import { CardModalState } from '../../reducers/cardModal'
 import { Dispatch } from 'redux'
 import { setCardModalState } from '../../actions'
+import { RootState } from '../../reducers'
 
-interface Props {
-  selectedCard: Card | undefined
-  cardModalOpen: boolean
-  closeModal: () => void
-}
+interface Props
+  extends ReturnType<typeof mapStateToProps>,
+    ReturnType<typeof mapDispatchToProps> {}
 
 export const CardModalComponent: React.SFC<Props> = ({
   selectedCard,
@@ -48,7 +46,7 @@ function CardInfo({ card }: { card: Card }) {
   )
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: RootState) => {
   const { selectedCard, cardModalOpen } = state.cardModal
   return { selectedCard, cardModalOpen }
 }
