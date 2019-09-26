@@ -8,7 +8,7 @@ import warCards from '../sets/WAR-card-base.json'
 const warText = require('../sets/WAR-text.md')
 import grnCards from '../sets/GRN-card-base.json'
 const grnText = require('../sets/GRN-text.md')
-import eldCards from '../sets/eld-flash-cards.json'
+import eldCards from '../sets/eld-all-cards.json'
 const eldText = require('../sets/eld-text.md')
 
 export const selectNewSet = (setName: string = 'eld') => async (

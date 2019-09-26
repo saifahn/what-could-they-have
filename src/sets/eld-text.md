@@ -17,7 +17,7 @@
 ## ELD Keywords
 
 - _Adventure_. There are some creatures with Instant adventures, but these will just be treated as Instants. There may be times that you don't want to give them value from the Instant adventures, but that may not be a problem.
-- _Adamant_. You will just need to be aware of the cards that may change effect based on their mana. Be aware of cards that can add any type of mana, such as [[Rosethorn Acolyte]]
+- _Adamant_. You will just need to be aware of the cards that may change effect based on their mana. Be aware of cards that can add any type of mana, such as `Rosethorn Acolyte // Seasonal Ritual`
 
 ## Additional Damage
 
@@ -25,121 +25,121 @@ Not an entirely accurate title. This includes +X/+X effects, -X/-X effects, and 
 
 ### X = 2
 
-- [[Silverflame Squire // On Alert]]
-- [[Barge In]]
-- [[Bonecrusher Giant // Stomp]]
-- [[Rimrock Knight // Boulder Rush]]
-- [[Garenbrig Carver // Shield's Might]]
-- [[Lash of Thorns]] (+2 may matter when you don't want to take lethal)
+- `Silverflame Squire // On Alert`
+- `Barge In`
+- `Bonecrusher Giant // Stomp`
+- `Rimrock Knight // Boulder Rush`
+- `Garenbrig Carver // Shield's Might`
+- `Lash of Thorns` (+2 may matter when you don't want to take lethal)
 
 ### X = 3
 
-- [[Scorching Dragonfire]]
-- [[Slaying Fire]]
-- [[Insatiable Appetite]]
-- [[Return of the Wildspeaker]]
-- [[Scalding Cauldron]]
+- `Scorching Dragonfire`
+- `Slaying Fire`
+- `Insatiable Appetite`
+- `Return of the Wildspeaker`
+- `Scalding Cauldron`
 
 ### X = 4
 
-- [[Redcap Melee]]
-- [[Slaying Fire]] (with Adamant)
+- `Redcap Melee`
+- `Slaying Fire` (with Adamant)
 
 ### X = 5
 
-- [[Searing Barrage]]
-- [[Fell the Pheasant]]
-- [[Insatiable Appetite]] (with Food)
+- `Searing Barrage`
+- `Fell the Pheasant`
+- `Insatiable Appetite` (with Food)
 
 ### X > 5
 
-- [[Righteouesness]]
+- `Righteouesness`
 
 ### Unspecified
 
-- [[Outflank]]
-- [[Festive Funeral]]
-- [[Embercleave]]
-- [[Fling]]
+- `Outflank`
+- `Festive Funeral`
+- `Embercleave`
+- `Fling`
 
 ## Miscellaneous Post-Combat Plays
 
-- [[Frogify]] (can kill things with 1 damage on them)
-- [[Kenrith's Transformation]] (a bit of a stretch, but can kill things with 3 damage on them)
+- `Frogify` (can kill things with 1 damage on them)
+- `Kenrith's Transformation` (a bit of a stretch, but can kill things with 3 damage on them)
 
 ## Sweepers
 
 Opponents may make weird attacks with small creatures if they're going to play a sweeper post-combat.
 
-- [[Realm-Cloaked Giant]]
-- [[Witch's Vengeance]]
+- `Realm-Cloaked Giant`
+- `Witch's Vengeance`
 
 ## Flash Creatures
 
-- [[Brazen Borrower // Petty Theft]]
-- [[Faerie Vandal]]
-- [[Blacklance Paragon]]
-- [[Wildborn Preserver]]
-- [[Lochmere Serpent]]
+- `Brazen Borrower // Petty Theft`
+- `Faerie Vandal`
+- `Blacklance Paragon`
+- `Wildborn Preserver`
+- `Lochmere Serpent`
 
 ## Direct Damage
 
-- [[Cauldron Familiar?]]
-- [[Smitten Swordmaster]]
-- [[Slaying Fire]]
-- [[Searing Barrage]] (with Adamant)
+- `Cauldron Familiar?`
+- `Smitten Swordmaster`
+- `Slaying Fire`
+- `Searing Barrage` (with Adamant)
 
 ## Graveyard Recursion
 
 Opponents may chump attack with 'enter the battlefield' abilities in the hope that they may trade and they can recur them.
 
-- [[Forever Young]]
-- [[Order of Midnight]]
-- [[Once and Future]]
+- `Forever Young`
+- `Order of Midnight`
+- `Once and Future`
 
 ## Counter Spells
 
-- [[Didn't Say Please]]
-- [[Hypnotic Sprite // Mesmeric Glare]]
-- [[Mystical Dispute]]
-- [[Drown in the Loch]]
+- `Didn't Say Please`
+- `Hypnotic Sprite // Mesmeric Glare`
+- `Mystical Dispute`
+- `Drown in the Loch`
 
 ## Lifegain
 
 Instant-speed food falls into this section.
 
-- [[Rall for the Throne]] (with Adamant)
-- [[Turn into Pumpkin]] (with Adamant)
-- [[Bake into a Pie]]
+- `Rall for the Throne` (with Adamant)
+- `Turn into Pumpkin` (with Adamant)
+- `Bake into a Pie`
 
 ## Instant Bounce Spells
 
-- [[Shepherd of the Flock]] (self-bounce only)
-- [[Brazen Borrower // Petty Theft]] (opponent-bounce only)
-- [[Run Away Together]]
-- [[Turn into a Pumpkin]]
+- `Shepherd of the Flock` (self-bounce only)
+- `Brazen Borrower // Petty Theft` (opponent-bounce only)
+- `Run Away Together`
+- `Turn into a Pumpkin`
 
 ## Damage Prevention
 
 Putting -X/-0 on an opposing creature or +0/+X is similar to prevention too.
 
-- [[Shining Armor]]
-- [[So Tiny]]
+- `Shining Armor`
+- `So Tiny`
 
 ## Naturalize Effects
 
-- [[True Love's Kiss]]
-- [[Return to Nature]]
+- `True Love's Kiss`
+- `Return to Nature`
 
 ## Instant Draw
 
-Drawing two cards a turn is the theme for the blue/red colour pair in this format. Cards such as [[Faerie Vandal]], [[Bloodhaze Wolverine]] and [[Irencrag Pyromancer]] have abilities that trigger upon drawing your second card. This section contains instant-speed draw spells and abilities.
+Drawing two cards a turn is the theme for the blue/red colour pair in this format. Cards such as `Faerie Vandal`, `Bloodhaze Wolverine` and `Irencrag Pyromancer` have abilities that trigger upon drawing your second card. This section contains instant-speed draw spells and abilities.
 
-- [[True Love's Kiss]]
-- [[Into the Story]]
-- [[Opt]]
-- [[Turn into a Pumpkin]]
-- onboard [[Witching Well]]
-- [[Foulmire Knight]]
-- [[Merchant of the Vale]]
-- [[Thrill of Possibility]]
+- `True Love's Kiss`
+- `Into the Story`
+- `Opt`
+- `Turn into a Pumpkin`
+- onboard `Witching Well`
+- `Foulmire Knight`
+- `Merchant of the Vale`
+- `Thrill of Possibility`
