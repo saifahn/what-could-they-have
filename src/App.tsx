@@ -7,13 +7,11 @@ import './App.css'
 import Header from './components/Header'
 import { CardModal } from './components/shared/CardModal'
 import { connect } from 'react-redux'
-import { RootState } from './reducers'
+// import { RootState } from './reducers'
 import { selectNewSet } from './actions/selectNewSet'
 import { ThunkDispatch } from './store'
 
-interface Props
-  extends ReturnType<typeof mapStateToProps>,
-    ReturnType<typeof mapDispatchToProps> {}
+interface Props extends ReturnType<typeof mapDispatchToProps> {}
 
 interface State {}
 
@@ -40,18 +38,13 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: RootState) => {
-  const { cards } = state.shared
-  return {
-    cards,
-  }
-}
+// const mapStateToProps = (state: RootState) => {}
 
 const mapDispatchToProps = (dispatch: ThunkDispatch) => ({
   setUpApp: (setName: string) => dispatch(selectNewSet(setName)),
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(App)

@@ -1,7 +1,8 @@
 import { Card } from '../common/types.js'
 import { Dispatch } from 'redux'
-import { setIntroText, setSharedCards, startNewGame } from './index'
+import { setIntroText, setFlashCards, startNewGame, setAllCards } from './index'
 import marked from 'marked'
+import { isFlashCard } from '../functions/isFlashCard'
 
 // sets
 import warCards from '../sets/WAR-card-base.json'
@@ -43,6 +44,8 @@ export const selectNewSet = (setName: string = 'eld') => async (
       introText = marked(text)
     })
   dispatch(setIntroText(introText))
-  dispatch(setSharedCards(cards))
-  dispatch(startNewGame(cards))
+  dispatch(setAllCards(cards))
+  const flashCards = cards.filter((card) => isFlashCard(card))
+  dispatch(setFlashCards(flashCards))
+  dispatch(startNewGame(flashCards))
 }

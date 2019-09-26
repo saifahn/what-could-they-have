@@ -15,8 +15,8 @@ class Intro extends React.Component<Props> {
   }
 
   openCard = (cardName: string) => {
-    const { setCardModalState, setSelectedCard, cards } = this.props
-    const card = cards.find((card) => card.name === cardName)
+    const { setCardModalState, setSelectedCard, allCards } = this.props
+    const card = allCards.find((card) => card.name === cardName)
     if (card) {
       setSelectedCard(card)
     }
@@ -75,8 +75,8 @@ class Intro extends React.Component<Props> {
 }
 
 const mapStateToProps = (state: RootState) => {
-  const { introText, cards } = state.shared
-  return { introText, cards }
+  const { introText, allCards } = state.shared
+  return { introText, allCards }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
