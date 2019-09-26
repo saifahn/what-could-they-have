@@ -7,22 +7,17 @@ import './App.css'
 import Header from './components/Header'
 import { CardModal } from './components/shared/CardModal'
 import { connect } from 'react-redux'
-import { Dispatch } from 'redux'
-import { Card } from './common/types'
-import { setSharedCards, startNewGame } from './actions'
-import data from './sets/WAR-card-base.json'
+// import { RootState } from './reducers'
+import { selectNewSet } from './actions/selectNewSet'
+import { ThunkDispatch } from './store'
 
-interface ConnectProps {
-  setUpApp: (cards: Card[]) => void
-}
-
-interface Props extends ConnectProps {}
+interface Props extends ReturnType<typeof mapDispatchToProps> {}
 
 interface State {}
 
 class App extends React.Component<Props, State> {
   componentDidMount() {
-    this.props.setUpApp(data)
+    this.props.setUpApp('eld')
   }
 
   render() {
@@ -43,16 +38,13 @@ class App extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => {}
+// const mapStateToProps = (state: RootState) => {}
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  setUpApp: (cards: Card[]) => {
-    dispatch(setSharedCards(cards))
-    dispatch(startNewGame(cards))
-  },
+const mapDispatchToProps = (dispatch: ThunkDispatch) => ({
+  setUpApp: (setName: string) => dispatch(selectNewSet(setName)),
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(App)

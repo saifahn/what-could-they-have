@@ -1,30 +1,60 @@
 import React from 'react'
-import marked from 'marked'
-const warText = require('../sets/WAR-text.md')
+import { RootState } from '../reducers'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { setSelectedCard, setCardModalState } from '../actions'
+import { Card } from '../common/types'
 
-class Intro extends React.Component {
-  public state = {
-    markdown: { __html: '' },
-  }
-  public componentDidMount(): void {
-    fetch(warText)
-      .then((response) => {
-        return response.text()
-      })
-      .then((text) => {
-        const markdown = marked(text)
-        this.setState({ markdown: { __html: markdown } })
-      })
+interface Props
+  extends ReturnType<typeof mapStateToProps>,
+    ReturnType<typeof mapDispatchToProps> {}
+
+class Intro extends React.Component<Props> {
+  state = {
+    introText: '',
   }
 
-  public render(): JSX.Element {
-    const { markdown } = this.state
+  openCard = (cardName: string) => {
+    const { setCardModalState, setSelectedCard, allCards } = this.props
+    const card = allCards.find((card) => card.name === cardName)
+    if (card) {
+      setSelectedCard(card)
+    }
+    setCardModalState(true)
+  }
+
+  // @TODO find a better alternative to this
+  // it doesn't seem like the best way to do this in React
+  // just used this solution as I'm trying to release before the prerelease
+  // we aren't using the CardLink component, which may be a mistake?
+  replaceCardsWithLinks() {
+    const cardNames = document.querySelectorAll('code')
+    cardNames.forEach((card) => {
+      const button = document.createElement('button')
+      button.innerText = card.innerText
+      button.className =
+        'text-lg border-pink-400 underline hover:text-pink-400 px-1'
+      button.addEventListener('click', () => this.openCard(card.innerText))
+      card.replaceWith(button)
+    })
+  }
+
+  componentDidMount() {
+    this.replaceCardsWithLinks()
+  }
+
+  componentDidUpdate() {
+    this.replaceCardsWithLinks()
+  }
+
+  render() {
+    const markdown = { __html: this.props.introText }
     const intro = (
       <>
         <p>
           In Limited Magic, your opponent will oftentimes do something that
-          doesn't make sense according to what's on the board. When your
-          opponent attacks their 2/2 into your 3/3 they're up to something.
+          doesn&#39;t make sense according to what&#39;s on the board. When your
+          opponent attacks their 2/2 into your 3/3 they&#39;re up to something.
           Assuming that your opponent is not bluffing, there are limited
           possibilities to what could be going on.
         </p>
@@ -44,4 +74,21 @@ class Intro extends React.Component {
   }
 }
 
-export default Intro
+const mapStateToProps = (state: RootState) => {
+  const { introText, allCards } = state.shared
+  return { introText, allCards }
+}
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  setSelectedCard: (card: Card): void => {
+    dispatch(setSelectedCard(card))
+  },
+  setCardModalState: (value: boolean): void => {
+    dispatch(setCardModalState(value))
+  },
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Intro)

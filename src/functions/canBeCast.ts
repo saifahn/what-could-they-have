@@ -1,8 +1,16 @@
 import { Card } from '../common/types'
 
+interface ManaObject {
+  [key: string]: number
+}
+
+/**
+ * Converts a mana string into a ManaObject that is used in other functions
+ * @param cost a mana cost as a string
+ */
 export function formatMana(cost: string) {
   const manaRE = /\{([\dWUBRGCP/]+)\}/g
-  const manaObject: any = { cmc: 0 }
+  const manaObject: ManaObject = { cmc: 0 }
   const manaArray = cost.match(manaRE) || []
   manaArray.forEach((symbol) => {
     const newSymbol = symbol.replace(manaRE, '$1')
@@ -22,6 +30,12 @@ export function formatMana(cost: string) {
   return manaObject
 }
 
+/**
+ * Assigns a number depending on the colour of the card. Used in canBeCast to
+ * work out the necessary colour requirements before checking flexible requirements
+ * like hybrid.
+ * @param symbol mana symbol for sorting
+ */
 function assignNumToColour(symbol: string): number {
   const value = symbol.length === 1 ? symbol : 'other'
   let number
@@ -50,11 +64,12 @@ function assignNumToColour(symbol: string): number {
   return number
 }
 
+/**
+ * Takes a card and a mana cost and returns true if the card can be cast
+ * @param card a Card object to validate castability
+ * @param cost a mana cost string to validate againts
+ */
 function canBeCast(card: Card, cost: string): boolean {
-  /*
-    takes a card and a mana cost
-    returns true if the card can be cast
-  */
   if (!card.mana_cost) {
     // console.log(`the card is ${card.name} and it doesn't have a cost`)
     return false
@@ -83,20 +98,22 @@ function canBeCast(card: Card, cost: string): boolean {
   }
 
   const cardEntries = Object.entries(cardMana)
+  // sort by colours first, then other afterwards, including hybrid mana
   cardEntries.sort((a, b) => {
     const aColour = assignNumToColour(a[0])
     const bColour = assignNumToColour(b[0])
     return aColour - bColour
   })
-  // go through each cardEntry
   for (let i = 0; i < cardEntries.length; i++) {
     const symbol = cardEntries[i][0]
+    // ignore cmc and generic as we won't be using them
+    // cmc was already used
     if (symbol == 'cmc' || symbol == 'generic') {
       continue
     }
 
-    let amount: any = cardEntries[i][1]
-    // if hybrid
+    // the amount of the current symbol in the mana cost
+    let amount = cardEntries[i][1]
     const hybridRE = /([WUBRG2])\/([WUBRGCP])/
     const hybridMatch = symbol.match(hybridRE)
     if (hybridMatch) {
@@ -117,12 +134,10 @@ function canBeCast(card: Card, cost: string): boolean {
           availableMana[secondSymbol]--
           amount--
         } else {
-          amount--
           return false
         }
       }
     }
-    // while there is more than 0 as the amount of that mana
     while (amount > 0) {
       // look in availableMana for that one, take 1 away
       // console.log(card.name, cost, symbol, availableMana[symbol])

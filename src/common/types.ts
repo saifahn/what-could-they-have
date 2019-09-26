@@ -8,6 +8,8 @@ export interface Card {
   layout?: string
   card_faces?: Card[]
   oracle_text?: string
+  scryfall_id?: string
+  colors?: string[]
 }
 
 // maybe change card face to its own thing

@@ -1,5 +1,4 @@
 import { Card } from '../common/types'
-import { Action } from '../actions'
 import { SET_CARD_MODAL_STATE, SET_SELECTED_CARD } from '../constants'
 import { AnyAction } from 'redux'
 

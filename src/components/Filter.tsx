@@ -5,12 +5,9 @@ import { Card } from '../common/types'
 import canBeCast from '../functions/canBeCast'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { RootState } from '../reducers'
 
-interface ConnectProps {
-  cards: Card[]
-}
-
-interface Props extends ConnectProps {}
+interface Props extends ReturnType<typeof mapStateToProps> {}
 
 interface State {
   cardsToShow: Card[]
@@ -18,46 +15,45 @@ interface State {
 }
 
 class Filter extends Component<Props, State> {
-  // state = {
-  //   filters: {
-  //     mana: '',
-  //     sortBy: [],
-  //   },
-  //   cardsToShow: [],
-  //   isGrid: false,
-  //   sets: [],
-  // }
-  public state: State = {
+  state = {
     cardsToShow: [],
     manaFilter: '',
   }
 
-  public componentDidMount(): void {
-    const cardsToShow = this.props.cards
+  componentDidMount() {
+    const cardsToShow = this.props.flashCards
     this.setState(() => ({ cardsToShow }))
   }
 
-  private filterCards = (filter: string): Card[] => {
-    const { cards } = this.props
-    if (!filter) {
-      return cards
+  componentDidUpdate(prevProps: Props) {
+    if (prevProps.flashCards !== this.props.flashCards) {
+      // if the cards supplied to the component are changed, show the new cards
+      // reset the mana filter to show all cards initially
+      this.setState({ cardsToShow: this.props.flashCards, manaFilter: '' })
     }
-    return cards.filter((card: Card) => canBeCast(card, filter))
   }
 
-  private formatManaCost = (mana: string): string => {
+  private filterCards = (filter: string) => {
+    const { flashCards } = this.props
+    if (!filter) {
+      return flashCards
+    }
+    return flashCards.filter((card: Card) => canBeCast(card, filter))
+  }
+
+  private formatManaCost = (mana: string) => {
     const re = /(\w(\/\w)?)/g
     return mana.replace(re, '{$1}')
   }
 
-  private handleManaChange = (event: FormEvent<HTMLInputElement>): void => {
+  private handleManaChange = (event: FormEvent<HTMLInputElement>) => {
     const manaFilter = event.currentTarget.value
     const formattedMana = this.formatManaCost(manaFilter)
     const cardsToShow = this.filterCards(formattedMana)
     this.setState({ manaFilter, cardsToShow })
   }
 
-  public render(): JSX.Element {
+  render() {
     const { cardsToShow, manaFilter } = this.state
     return (
       <main>
@@ -81,14 +77,14 @@ class Filter extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => {
-  const { cards } = state.shared
-  return { cards }
+const mapStateToProps = (state: RootState) => {
+  const { flashCards } = state.shared
+  return { flashCards }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({})
+// const mapDispatchToProps = (dispatch: Dispatch) => ({})
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  // mapDispatchToProps,
 )(Filter)

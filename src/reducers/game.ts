@@ -87,8 +87,8 @@ export function game(state = INITIAL_STATE, action: AnyAction): GameState {
         coloursToGenerate,
         lengthToGenerate,
       })
-      var currentGameCards = action.value.filter(
-        (card: Card): boolean => canBeCast(card, availableMana),
+      var currentGameCards = action.value.filter((card: Card) =>
+        canBeCast(card, availableMana),
       )
       return {
         ...state,
