@@ -2,11 +2,52 @@ import React from 'react'
 import { RootState } from '../reducers'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
+import { setSelectedCard, setCardModalState } from '../actions'
+import { Card } from '../common/types'
 
-interface Props extends ReturnType<typeof mapStateToProps> {}
+interface Props
+  extends ReturnType<typeof mapStateToProps>,
+    ReturnType<typeof mapDispatchToProps> {}
 
 class Intro extends React.Component<Props> {
-  public render() {
+  state = {
+    introText: '',
+  }
+
+  openCard = (cardName: string) => {
+    const { setCardModalState, setSelectedCard, allCards } = this.props
+    const card = allCards.find((card) => card.name === cardName)
+    if (card) {
+      setSelectedCard(card)
+    }
+    setCardModalState(true)
+  }
+
+  // @TODO find a better alternative to this
+  // it doesn't seem like the best way to do this in React
+  // just used this solution as I'm trying to release before the prerelease
+  // we aren't using the CardLink component, which may be a mistake?
+  replaceCardsWithLinks() {
+    const cardNames = document.querySelectorAll('code')
+    cardNames.forEach((card) => {
+      const button = document.createElement('button')
+      button.innerText = card.innerText
+      button.className =
+        'text-lg border-pink-400 underline hover:text-pink-400 px-1'
+      button.addEventListener('click', () => this.openCard(card.innerText))
+      card.replaceWith(button)
+    })
+  }
+
+  componentDidMount() {
+    this.replaceCardsWithLinks()
+  }
+
+  componentDidUpdate() {
+    this.replaceCardsWithLinks()
+  }
+
+  render() {
     const markdown = { __html: this.props.introText }
     const intro = (
       <>
@@ -34,13 +75,20 @@ class Intro extends React.Component<Props> {
 }
 
 const mapStateToProps = (state: RootState) => {
-  const { introText } = state.shared
-  return { introText }
+  const { introText, allCards } = state.shared
+  return { introText, allCards }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({})
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  setSelectedCard: (card: Card): void => {
+    dispatch(setSelectedCard(card))
+  },
+  setCardModalState: (value: boolean): void => {
+    dispatch(setCardModalState(value))
+  },
+})
 
 export default connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(Intro)

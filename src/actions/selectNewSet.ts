@@ -1,15 +1,20 @@
 import { Card } from '../common/types.js'
 import { Dispatch } from 'redux'
-import { setIntroText, setSharedCards, startNewGame } from './index'
+import { setIntroText, setFlashCards, startNewGame, setAllCards } from './index'
 import marked from 'marked'
+import { isFlashCard } from '../functions/isFlashCard'
 
 // sets
 import warCards from '../sets/WAR-card-base.json'
 const warText = require('../sets/WAR-text.md')
 import grnCards from '../sets/GRN-card-base.json'
 const grnText = require('../sets/GRN-text.md')
+import eldCards from '../sets/eld-all-cards.json'
+const eldText = require('../sets/eld-text.md')
 
-export const selectNewSet = (setName: string) => async (dispatch: Dispatch) => {
+export const selectNewSet = (setName: string = 'eld') => async (
+  dispatch: Dispatch,
+) => {
   let cards = [] as Card[]
   let textLink
   switch (setName) {
@@ -20,6 +25,10 @@ export const selectNewSet = (setName: string) => async (dispatch: Dispatch) => {
     case 'grn':
       cards = grnCards
       textLink = grnText
+      break
+    case 'eld':
+      cards = eldCards
+      textLink = eldText
       break
     default:
       cards = warCards
@@ -35,6 +44,8 @@ export const selectNewSet = (setName: string) => async (dispatch: Dispatch) => {
       introText = marked(text)
     })
   dispatch(setIntroText(introText))
-  dispatch(setSharedCards(cards))
-  dispatch(startNewGame(cards))
+  dispatch(setAllCards(cards))
+  const flashCards = cards.filter((card) => isFlashCard(card))
+  dispatch(setFlashCards(flashCards))
+  dispatch(startNewGame(flashCards))
 }

@@ -45,7 +45,7 @@ class Game extends Component<Props, State> {
 
   private newGame = (): void => {
     const { startNewGame } = this.props
-    startNewGame(this.props.cards as Card[])
+    startNewGame(this.props.flashCards)
     this.setState({ showAllCards: false })
   }
 
@@ -147,7 +147,7 @@ class Game extends Component<Props, State> {
 }
 
 const mapStateToProps = (state: RootState) => {
-  const { cards } = state.shared
+  const { flashCards } = state.shared
   const { selectedCard, cardModalOpen } = state.cardModal
   const {
     availableMana,
@@ -168,7 +168,7 @@ const mapStateToProps = (state: RootState) => {
     difficulty,
     coloursToGenerate,
     lengthToGenerate,
-    cards,
+    flashCards,
   }
 }
 

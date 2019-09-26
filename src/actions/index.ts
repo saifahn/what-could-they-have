@@ -5,10 +5,11 @@ import {
   SET_CARD_MODAL_STATE,
   RESET_GUESSED_CARDS,
   SET_FEEDBACK,
-  SET_SHARED_CARDS,
+  SET_FLASH_CARDS,
   SET_DIFFICULTY,
   START_NEW_GAME,
   SET_INTRO_TEXT,
+  SET_ALL_CARDS,
 } from '../constants'
 
 export interface SetCardModalState {
@@ -47,8 +48,13 @@ export const setFeedback = (value: string) => ({
   value,
 })
 
-export const setSharedCards = (value: Card[]) => ({
-  type: SET_SHARED_CARDS,
+export const setAllCards = (value: Card[]) => ({
+  type: SET_ALL_CARDS,
+  value,
+})
+
+export const setFlashCards = (value: Card[]) => ({
+  type: SET_FLASH_CARDS,
   value,
 })
 

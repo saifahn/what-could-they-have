@@ -8,7 +8,9 @@ export const RESET_GUESSED_CARDS = 'RESET_GUESSED_CARDS'
 
 export const SET_FEEDBACK = 'SET_FEEDBACK'
 
-export const SET_SHARED_CARDS = 'SET_SHARED_CARDS'
+export const SET_ALL_CARDS = 'SET_ALL_CARDS'
+
+export const SET_FLASH_CARDS = 'SET_FLASH_CARDS'
 
 export const SET_INTRO_TEXT = 'SET_INTRO_TEXT'
 

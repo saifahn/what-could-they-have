@@ -27,6 +27,7 @@ class Header extends React.Component<Props> {
             className="appearance-none font-semibold bg-white rounded-none border-blue-700 text-xl sm:text-3xl text-center px-1 mx-2 focus:bg-gray-200 select-center SetSelector"
             onChange={this.handleSetSelect}
           >
+            <option value="eld">Throne of Eldraine</option>
             <option value="war">War of the Spark</option>
             <option value="grn">Guilds of Ravnica</option>
           </select>
