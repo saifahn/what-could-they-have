@@ -5,8 +5,9 @@ import { Card } from '../common/types'
  * @param card a Card object to validate instant-speed
  */
 export function isFlashCard(card: Card) {
-  return (
-    card.type_line === 'Instant' ||
+  // return false instead of undefined if falsy
+  return !!(
+    card.type_line.includes('Instant') ||
     (card.oracle_text && card.oracle_text.includes('Flash'))
   )
 }
