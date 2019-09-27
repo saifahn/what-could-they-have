@@ -1,6 +1,6 @@
 ## Table of Contents
 
-1. [ELD Mechanics](#eld-mechanics)
+1. [ELD Keywords](#eld-keywords)
 2. [X damage / +X / -X Effects](#additional-damage)
 3. [Misc. Post-Combat Plays](#miscellaneous-post-combat-plays)
 4. [Sweepers](#sweepers)
@@ -53,7 +53,7 @@ Not an entirely accurate title. This includes +X/+X effects, -X/-X effects, and 
 
 ### X > 5
 
-- `Righteouesness`
+- `Righteousness`
 
 ### Unspecified
 
@@ -71,7 +71,7 @@ Not an entirely accurate title. This includes +X/+X effects, -X/-X effects, and 
 
 Opponents may make weird attacks with small creatures if they're going to play a sweeper post-combat.
 
-- `Realm-Cloaked Giant`
+- `Realm-Cloaked Giant // Cast Off`
 - `Witch's Vengeance`
 
 ## Flash Creatures
@@ -84,8 +84,8 @@ Opponents may make weird attacks with small creatures if they're going to play a
 
 ## Direct Damage
 
-- `Cauldron Familiar?`
-- `Smitten Swordmaster`
+- `Cauldron Familiar` (can this really be counted?)
+- `Smitten Swordmaster // Curry Favor`
 - `Slaying Fire`
 - `Searing Barrage` (with Adamant)
 
@@ -93,8 +93,10 @@ Opponents may make weird attacks with small creatures if they're going to play a
 
 Opponents may chump attack with 'enter the battlefield' abilities in the hope that they may trade and they can recur them.
 
+- `Barrow Witches`
+- `Cauldron's Gift`
 - `Forever Young`
-- `Order of Midnight`
+- `Order of Midnight // Alter Fate`
 - `Once and Future`
 
 ## Counter Spells
@@ -108,13 +110,13 @@ Opponents may chump attack with 'enter the battlefield' abilities in the hope th
 
 Instant-speed food falls into this section.
 
-- `Rall for the Throne` (with Adamant)
-- `Turn into Pumpkin` (with Adamant)
+- `Rally for the Throne` (with Adamant)
+- `Turn into a Pumpkin` (with Adamant)
 - `Bake into a Pie`
 
 ## Instant Bounce Spells
 
-- `Shepherd of the Flock` (self-bounce only)
+- `Shepherd of the Flock // Usher to Safety` (self-bounce only)
 - `Brazen Borrower // Petty Theft` (opponent-bounce only)
 - `Run Away Together`
 - `Turn into a Pumpkin`
@@ -140,6 +142,6 @@ Drawing two cards a turn is the theme for the blue/red colour pair in this forma
 - `Opt`
 - `Turn into a Pumpkin`
 - onboard `Witching Well`
-- `Foulmire Knight`
-- `Merchant of the Vale`
+- `Foulmire Knight // Profane Insight`
+- `Merchant of the Vale // Haggle`
 - `Thrill of Possibility`
