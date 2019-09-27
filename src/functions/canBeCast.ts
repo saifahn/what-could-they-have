@@ -81,10 +81,12 @@ function canBeCast(card: Card, cost: string): boolean {
     const firstFace = card.card_faces[0]
     const secondFace = card.card_faces[1]
     // stop evaluating a face if it isn't instant
-    const firstFaceCastable =
-      firstFace.type_line == 'Instant' ? canBeCast(firstFace, cost) : false
-    const secondFaceCastable =
-      secondFace.type_line == 'Instant' ? canBeCast(secondFace, cost) : false
+    const firstFaceCastable = firstFace.type_line.includes('Instant')
+      ? canBeCast(firstFace, cost)
+      : false
+    const secondFaceCastable = secondFace.type_line.includes('Instant')
+      ? canBeCast(secondFace, cost)
+      : false
     // if one face is castable, then the whole card is valid
     // console.log(firstFaceCastable)
     // console.log(secondFaceCastable)
