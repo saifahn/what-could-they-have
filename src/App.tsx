@@ -17,7 +17,8 @@ interface State {}
 
 class App extends React.Component<Props, State> {
   componentDidMount() {
-    this.props.setUpApp('eld')
+    // set first set
+    this.props.setUpApp('m21')
   }
 
   render() {
