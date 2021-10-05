@@ -8,6 +8,8 @@ export function isFlashCard(card: Card) {
   // return false instead of undefined if falsy
   return !!(
     card.type_line.includes('Instant') ||
-    (card.oracle_text && card.oracle_text.includes('Flash'))
+    (card.oracle_text &&
+      card.oracle_text.includes('Flash') &&
+      !card.oracle_text.includes('Flashback'))
   )
 }
