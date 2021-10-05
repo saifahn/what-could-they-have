@@ -18,7 +18,7 @@ interface State {}
 class App extends React.Component<Props, State> {
   componentDidMount() {
     // set first set
-    this.props.setUpApp('m21')
+    this.props.setUpApp('mid')
   }
 
   render() {
@@ -45,7 +45,4 @@ const mapDispatchToProps = (dispatch: ThunkDispatch) => ({
   setUpApp: (setName: string) => dispatch(selectNewSet(setName)),
 })
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(App)
+export default connect(null, mapDispatchToProps)(App)

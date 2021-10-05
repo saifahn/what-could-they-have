@@ -27,6 +27,7 @@ class Header extends React.Component<Props> {
             className="appearance-none font-semibold bg-white rounded-none border-blue-700 text-xl sm:text-3xl text-center px-1 mx-2 focus:bg-gray-200 select-center SetSelector"
             onChange={this.handleSetSelect}
           >
+            <option value="mid">Innistrad: Midnight Hunt</option>
             <option value="m21">Core Set 2021</option>
             <option value="eld">Throne of Eldraine</option>
             <option value="war">War of the Spark</option>
@@ -42,7 +43,4 @@ const mapDispatchToProps = (dispatch: ThunkDispatch) => ({
   selectNewSet: (setName: string) => dispatch(selectNewSet(setName)),
 })
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Header)
+export default connect(null, mapDispatchToProps)(Header)
