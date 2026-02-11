@@ -63,7 +63,7 @@ const map: Map = {
 }
 
 export function iconify(mana: string = '') {
-  const manaRE = /\{([\dWUBRGCP/]+)\}/g
+  const manaRE = /\{([\dWUBRGCPX/]+)\}/g
   const splitMana = mana.match(manaRE)
   let manaIcons
   if (splitMana) {
