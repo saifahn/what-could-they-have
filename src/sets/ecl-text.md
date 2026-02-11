@@ -1,7 +1,17 @@
 ## Lorwyn Eclipsed (ECL)
 
-Released: January 23, 2026
+Released: 2026-01-23
 
-Lorwyn Eclipsed brings players back to the plane of Lorwyn, featuring tribal synergies and the return of beloved mechanics.
+**Total instant-speed cards**: 51 unique cards
 
-**Total instant-speed cards**: 52 unique cards (instants and cards with Flash)
+Includes:
+
+- Instants (including those with Flashback)
+- Cards with Flash keyword
+- Cards with conditional Flash (e.g., "cast as though it had flash if...")
+- Excludes: Sorceries with Flashback
+
+This set data was generated using the Scryfall API query:
+`set:ECL (t:instant OR o:flash) unique:cards`
+
+Then filtered to remove non-instant Flashback cards.

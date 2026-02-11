@@ -25,7 +25,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/6/8/68ce9752-21f9-48e9-bf48-7f76f1cecbc5.jpg?1767692118"
     },
     "mana_cost": "{3}{W}",
-    "cmc": 4.0,
+    "cmc": 4,
     "type_line": "Instant",
     "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nOne or two target creatures each get +2/+1 until end of turn.",
     "colors": [
@@ -91,7 +91,7 @@
     "rarity": "common",
     "flavor_text": "Adherents of the sun implore others to bask in Eirdu's light and expel darkness from the plane.",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-    "artist": "Milivoj \u0106eran",
+    "artist": "Milivoj Ćeran",
     "artist_ids": [
       "1eced451-4da5-42bc-b49d-70c41246581f"
     ],
@@ -148,8 +148,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/9/a/9af9a907-fd2e-4ae0-ac7b-529074b79a14.jpg?1767871750"
     },
     "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Enchantment \u2014 Aura",
+    "cmc": 2,
+    "type_line": "Enchantment — Aura",
     "oracle_text": "Flash\nEnchant creature you control\nWhen this Aura enters, enchanted creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)\nEnchanted creature gets +1/+2.",
     "colors": [
       "U"
@@ -274,9 +274,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/f/e/fe3a421d-07b6-4b94-b177-aec44c7fe689.jpg?1759144840"
     },
     "mana_cost": "{3}{U}{R}",
-    "cmc": 5.0,
-    "type_line": "Kindred Instant \u2014 Elemental",
-    "oracle_text": "Choose two \u2014\n\u2022 Create a token that's a copy of target Elemental you control.\n\u2022 Target player draws two cards.\n\u2022 Ashling's Command deals 2 damage to each creature target player controls.\n\u2022 Target player creates two Treasure tokens.",
+    "cmc": 5,
+    "type_line": "Kindred Instant — Elemental",
+    "oracle_text": "Choose two —\n• Create a token that's a copy of target Elemental you control.\n• Target player draws two cards.\n• Ashling's Command deals 2 damage to each creature target player controls.\n• Target player creates two Treasure tokens.",
     "colors": [
       "R",
       "U"
@@ -302,7 +302,7 @@
         "id": "201c73b6-368f-4dac-b034-49c6aa6408ff",
         "component": "combo_piece",
         "name": "Ashling's Command",
-        "type_line": "Kindred Instant \u2014 Elemental",
+        "type_line": "Kindred Instant — Elemental",
         "uri": "https://api.scryfall.com/cards/201c73b6-368f-4dac-b034-49c6aa6408ff"
       }
     ],
@@ -418,8 +418,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/8/f/8ff1a13c-e338-42e9-8eb3-b303fabd67de.jpg?1767957075"
     },
     "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Artifact \u2014 Equipment",
+    "cmc": 2,
+    "type_line": "Artifact — Equipment",
     "oracle_text": "Flash\nWhen this Equipment enters, attach it to target creature you control. That creature gains wither until end of turn. (It deals damage to creatures in the form of -1/-1 counters.)\nEquipped creature gets +1/+2.\nEquip {2}",
     "colors": [
       "B"
@@ -541,8 +541,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/7/1/7127164d-f2a3-4d79-b6db-93507ff5ab47.jpg?1759144841"
     },
     "mana_cost": "{B}{B}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Faerie Rogue",
+    "cmc": 2,
+    "type_line": "Creature — Faerie Rogue",
     "oracle_text": "Flash\nFlying\nAt the beginning of your upkeep, you lose 1 life and create a 1/1 blue and black Faerie creature token with flying.",
     "power": "1",
     "toughness": "1",
@@ -562,7 +562,7 @@
         "id": "01524db2-c96f-4902-8394-bc7a7128e573",
         "component": "token",
         "name": "Faerie",
-        "type_line": "Token Creature \u2014 Faerie",
+        "type_line": "Token Creature — Faerie",
         "uri": "https://api.scryfall.com/cards/01524db2-c96f-4902-8394-bc7a7128e573"
       },
       {
@@ -570,7 +570,7 @@
         "id": "895e7a6e-cd10-4a00-bfec-30e6330e193c",
         "component": "combo_piece",
         "name": "Bitterbloom Bearer",
-        "type_line": "Creature \u2014 Faerie Rogue",
+        "type_line": "Creature — Faerie Rogue",
         "uri": "https://api.scryfall.com/cards/895e7a6e-cd10-4a00-bfec-30e6330e193c"
       }
     ],
@@ -691,7 +691,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/5/2/5201bdeb-ba47-459b-ac0d-603367914578.jpg?1767952066"
     },
     "mana_cost": "{2}{B}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
     "oracle_text": "Put four -1/-1 counters on target creature.",
     "colors": [
@@ -812,7 +812,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/3/c/3cce80d0-b937-4325-a603-1278c110f244.jpg?1767658356"
     },
     "mana_cost": "{G}",
-    "cmc": 1.0,
+    "cmc": 1,
     "type_line": "Instant",
     "oracle_text": "Target creature you control gets +2/+2 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
     "colors": [
@@ -934,8 +934,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/4/6/46ce3474-381c-433b-acd8-4e628d0048d2.jpg?1767692155"
     },
     "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Kithkin Knight",
+    "cmc": 4,
+    "type_line": "Creature — Kithkin Knight",
     "oracle_text": "Flash\nAs an additional cost to cast this spell, behold a Kithkin and exile it. (Exile a Kithkin you control or a Kithkin card from your hand.)\nOther Kithkin you control get +1/+1.\nWhen this creature leaves the battlefield, return the exiled card to its owner's hand.",
     "power": "4",
     "toughness": "5",
@@ -1002,7 +1002,7 @@
     "digital": false,
     "rarity": "rare",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-    "artist": "Edgar S\u00e1nchez Hidalgo",
+    "artist": "Edgar Sánchez Hidalgo",
     "artist_ids": [
       "cd897b75-a7b0-4902-8dc4-b1fda5303ec8"
     ],
@@ -1061,8 +1061,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/8/f/8f2fb3c6-af75-47a3-9f97-521872c32890.jpg?1767732469"
     },
     "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Kindred Instant \u2014 Shapeshifter",
+    "cmc": 3,
+    "type_line": "Kindred Instant — Shapeshifter",
     "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
     "colors": [
       "W"
@@ -1079,7 +1079,7 @@
         "id": "8f2fb3c6-af75-47a3-9f97-521872c32890",
         "component": "combo_piece",
         "name": "Crib Swap",
-        "type_line": "Kindred Instant \u2014 Shapeshifter",
+        "type_line": "Kindred Instant — Shapeshifter",
         "uri": "https://api.scryfall.com/cards/8f2fb3c6-af75-47a3-9f97-521872c32890"
       },
       {
@@ -1087,7 +1087,7 @@
         "id": "c2963ce1-f9d8-437a-9489-e0913a8b8d26",
         "component": "token",
         "name": "Shapeshifter",
-        "type_line": "Token Creature \u2014 Shapeshifter",
+        "type_line": "Token Creature — Shapeshifter",
         "uri": "https://api.scryfall.com/cards/c2963ce1-f9d8-437a-9489-e0913a8b8d26"
       }
     ],
@@ -1203,8 +1203,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/7/6/76e80656-6bcb-4d99-8bd2-ca5f75f40daf.jpg?1767873724"
     },
     "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Elf Archer",
+    "cmc": 3,
+    "type_line": "Creature — Elf Archer",
     "oracle_text": "Flash\nReach",
     "power": "4",
     "toughness": "2",
@@ -1329,8 +1329,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/d/9/d988e28b-fa60-4b60-8229-7a15932c784b.jpg?1767659290"
     },
     "mana_cost": "{W}{U}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Merfolk Wizard",
+    "cmc": 2,
+    "type_line": "Creature — Merfolk Wizard",
     "oracle_text": "Flash\nWhen this creature enters, untap each other Merfolk you control.\nAs long as you attacked with three or more Merfolk this turn, Merfolk you control get +1/+0.",
     "power": "2",
     "toughness": "2",
@@ -1456,8 +1456,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/4/c/4c6dbbaa-6844-4d7c-abbb-472a83bb99ab.jpg?1767659142"
     },
     "mana_cost": "{3}{U}{U}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Merfolk Wizard",
+    "cmc": 5,
+    "type_line": "Creature — Merfolk Wizard",
     "oracle_text": "Flash\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, return up to one other target nonland permanent to its owner's hand.",
     "power": "3",
     "toughness": "3",
@@ -1583,7 +1583,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/4/7/47414323-ca30-45b7-a0b2-6668312bee04.jpg?1765883451"
     },
     "mana_cost": "{4}{B}",
-    "cmc": 5.0,
+    "cmc": 5,
     "type_line": "Instant",
     "oracle_text": "Return target creature card from your graveyard to the battlefield. Then if it isn't your main phase, blight 2. (Put two -1/-1 counters on a creature you control.)",
     "colors": [
@@ -1711,7 +1711,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/0/f/0f0a90ae-b3b3-4f52-8997-eac514b29e57.jpg?1767952140"
     },
     "mana_cost": "{X}{R}",
-    "cmc": 1.0,
+    "cmc": 1,
     "type_line": "Instant",
     "oracle_text": "End-Blaze Epiphany deals X damage to target creature. When that creature dies this turn, exile a number of cards from the top of your library equal to its power, then choose a card exiled this way. Until the end of your next turn, you may play that card.",
     "colors": [
@@ -1832,7 +1832,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/5/9/59740755-c353-4b6c-a84c-3b76133ce3ec.jpg?1767957151"
     },
     "mana_cost": "{3}{R}",
-    "cmc": 4.0,
+    "cmc": 4,
     "type_line": "Instant",
     "oracle_text": "Feed the Flames deals 5 damage to target creature. If that creature would die this turn, exile it instead.",
     "colors": [
@@ -1953,8 +1953,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/d/3/d32d0336-5140-41f9-bc67-f3d743b9231d.jpg?1767658337"
     },
     "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Shapeshifter",
+    "cmc": 3,
+    "type_line": "Creature — Shapeshifter",
     "oracle_text": "Changeling (This card is every creature type.)\nFlash\nFlying\nWhen this creature enters, return up to one other target creature you control to its owner's hand.",
     "power": "2",
     "toughness": "2",
@@ -2079,9 +2079,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/1/a/1ac52728-adb3-4220-8392-73f7bd379ab4.jpg?1767957191"
     },
     "mana_cost": "{1}{R}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
-    "oracle_text": "Choose one \u2014\n\u2022 Target creature you control deals damage equal to its power to target creature an opponent controls.\n\u2022 Destroy target artifact.",
+    "oracle_text": "Choose one —\n• Target creature you control deals damage equal to its power to target creature an opponent controls.\n• Destroy target artifact.",
     "colors": [
       "R"
     ],
@@ -2200,8 +2200,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/7/3/739e5ab5-d562-407a-906e-c5c5173ad325.jpg?1767957211"
     },
     "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Enchantment \u2014 Aura",
+    "cmc": 3,
+    "type_line": "Enchantment — Aura",
     "oracle_text": "Flash\nEnchant creature\nWhen this Aura enters, enchanted creature gains trample and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)\nEnchanted creature gets +2/+0.",
     "colors": [
       "G"
@@ -2266,7 +2266,7 @@
     "digital": false,
     "rarity": "common",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
-    "artist": "Volkan Ba\u01f5a",
+    "artist": "Volkan Baǵa",
     "artist_ids": [
       "93bec3c0-0260-4d31-8064-5d01efb4153f"
     ],
@@ -2326,8 +2326,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/b/d/bd764dd4-2395-4138-ac29-260eac1aeaae.jpg?1767732516"
     },
     "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Faerie Wizard",
+    "cmc": 2,
+    "type_line": "Creature — Faerie Wizard",
     "oracle_text": "Flash\nFlying\nWhen this creature enters, choose up to one other target creature. Until end of turn, that creature has base power and toughness 4/4 and gains all creature types.",
     "power": "1",
     "toughness": "2",
@@ -2453,9 +2453,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/b/8/b8b7c23a-0034-453c-ab44-f6ec0f31d1eb.jpg?1767956988"
     },
     "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Faerie Rogue",
-    "oracle_text": "Flash\nFlying\nWhen this creature enters, choose one \u2014\n\u2022 Tap target creature.\n\u2022 Untap target creature.",
+    "cmc": 3,
+    "type_line": "Creature — Faerie Rogue",
+    "oracle_text": "Flash\nFlying\nWhen this creature enters, choose one —\n• Tap target creature.\n• Untap target creature.",
     "power": "2",
     "toughness": "2",
     "colors": [
@@ -2579,8 +2579,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/3/8/388d2e4a-0aa5-4b82-a86c-4777ca60161c.jpg?1767951867"
     },
     "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Faerie Wizard",
+    "cmc": 3,
+    "type_line": "Creature — Faerie Wizard",
     "oracle_text": "Flash\nFlying\nThis creature enters with a -1/-1 counter on it.\n{1}{U}, Remove a counter from this creature: Counter target noncreature spell. Its controller draws a card.",
     "power": "3",
     "toughness": "4",
@@ -2707,7 +2707,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/f/a/fa5bfbf9-dca2-42b7-a431-f9afedb54528.jpg?1767659156"
     },
     "mana_cost": "{2}{U}{U}",
-    "cmc": 4.0,
+    "cmc": 4,
     "type_line": "Instant",
     "oracle_text": "This spell can't be countered.\nCounter all spells your opponents control and all abilities your opponents control. Create a 1/1 blue and black Faerie creature token with flying for each spell and ability countered this way.",
     "colors": [
@@ -2731,7 +2731,7 @@
         "id": "01524db2-c96f-4902-8394-bc7a7128e573",
         "component": "token",
         "name": "Faerie",
-        "type_line": "Token Creature \u2014 Faerie",
+        "type_line": "Token Creature — Faerie",
         "uri": "https://api.scryfall.com/cards/01524db2-c96f-4902-8394-bc7a7128e573"
       }
     ],
@@ -2787,7 +2787,7 @@
     "collector_number": "52",
     "digital": false,
     "rarity": "mythic",
-    "flavor_text": "\"This is *my* domain, and *I* am its Queen.\"\n\u2014Maralen, fae ascendant",
+    "flavor_text": "\"This is *my* domain, and *I* am its Queen.\"\n—Maralen, fae ascendant",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
     "artist": "Sam Guay",
     "artist_ids": [
@@ -2847,7 +2847,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/2/7/2715e0c0-9913-4bea-9a42-ad1164f6130a.jpg?1767659551"
     },
     "mana_cost": "{4}{U}{U}",
-    "cmc": 6.0,
+    "cmc": 6,
     "type_line": "Instant",
     "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Draw a card for each permanent you control of that type.",
     "colors": [
@@ -2971,8 +2971,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/e/b/eb4229a9-8df4-4adc-9d3e-acd2221fa3e9.jpg?1767957009"
     },
     "mana_cost": "{4}{U}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Faerie Wizard",
+    "cmc": 5,
+    "type_line": "Creature — Faerie Wizard",
     "oracle_text": "You may cast this spell as though it had flash if you control a Faerie.\nFlying\nThis creature has hexproof as long as it's untapped. (It can't be the target of spells or abilities your opponents control.)",
     "power": "4",
     "toughness": "3",
@@ -3096,9 +3096,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/4/a/4ab1601c-634c-4f21-8926-ba3cb92008c1.jpg?1767956928"
     },
     "mana_cost": "{1}{W}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
-    "oracle_text": "Choose one \u2014\n\u2022 Keep Out deals 4 damage to target tapped creature.\n\u2022 Destroy target enchantment.",
+    "oracle_text": "Choose one —\n• Keep Out deals 4 damage to target tapped creature.\n• Destroy target enchantment.",
     "colors": [
       "W"
     ],
@@ -3217,7 +3217,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/c/5/c5112bbf-752c-41e7-9c61-4c81e6a77463.jpg?1767732843"
     },
     "mana_cost": "{1}{G}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Mill four cards, then you may return a permanent card from among them to your hand. (To mill four cards, put the top four cards of your library into your graveyard.)",
     "colors": [
@@ -3341,7 +3341,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/5/5/55d30256-f5d8-4f61-a3f5-878970ced6d1.jpg?1767659560"
     },
     "mana_cost": "{4}{U}{U}",
-    "cmc": 6.0,
+    "cmc": 6,
     "type_line": "Instant",
     "oracle_text": "Each nonland permanent you control becomes a copy of target non-Aura permanent.",
     "colors": [
@@ -3463,8 +3463,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/3/b/3b66fa00-2fa6-4060-9e7f-8e3fde6deb73.jpg?1767957261"
     },
     "mana_cost": "{1}{U/B}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Shapeshifter",
+    "cmc": 2,
+    "type_line": "Creature — Shapeshifter",
     "oracle_text": "Changeling (This card is every creature type.)\nFlash",
     "power": "2",
     "toughness": "2",
@@ -3591,8 +3591,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/7/a/7a4944ac-839e-4aa1-8200-78cff36bb2ed.jpg?1767871890"
     },
     "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Kindred Instant \u2014 Shapeshifter",
+    "cmc": 2,
+    "type_line": "Kindred Instant — Shapeshifter",
     "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
     "colors": [
       "B"
@@ -3655,7 +3655,7 @@
     "collector_number": "113",
     "digital": false,
     "rarity": "uncommon",
-    "flavor_text": "Eclipsed realms are the spaces between Lorwyn's stability and Shadowmoor's chaos\u2014raw and undefined boundaries where the plane naturally corrects imbalances in power and influence.",
+    "flavor_text": "Eclipsed realms are the spaces between Lorwyn's stability and Shadowmoor's chaos—raw and undefined boundaries where the plane naturally corrects imbalances in power and influence.",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
     "artist": "Dominik Mayer",
     "artist_ids": [
@@ -3715,8 +3715,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/0/7/076c0ac1-722e-49ef-b815-ace210069972.jpg?1767957020"
     },
     "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Enchantment \u2014 Aura",
+    "cmc": 2,
+    "type_line": "Enchantment — Aura",
     "oracle_text": "Flash\nEnchant creature\nEnchanted creature loses all abilities and is a colorless Noggle with base power and toughness 1/1. (It loses all colors and all other creature types.)",
     "colors": [
       "U"
@@ -3841,7 +3841,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/1/1/1172582d-fb2d-4022-95b1-e48b03df3a95.jpg?1767658640"
     },
     "mana_cost": "{1}{W}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. Create a 1/1 colorless Shapeshifter creature token with changeling. (It's every creature type.)",
     "colors": [
@@ -3865,7 +3865,7 @@
         "id": "c2963ce1-f9d8-437a-9489-e0913a8b8d26",
         "component": "token",
         "name": "Shapeshifter",
-        "type_line": "Token Creature \u2014 Shapeshifter",
+        "type_line": "Token Creature — Shapeshifter",
         "uri": "https://api.scryfall.com/cards/c2963ce1-f9d8-437a-9489-e0913a8b8d26"
       }
     ],
@@ -3921,7 +3921,7 @@
     "collector_number": "28",
     "digital": false,
     "rarity": "uncommon",
-    "flavor_text": "\"I found myself wishing I could run away and start anew. That's when I saw those yellow eyes.\"\n\u2014Yenn, kithkin nomad",
+    "flavor_text": "\"I found myself wishing I could run away and start anew. That's when I saw those yellow eyes.\"\n—Yenn, kithkin nomad",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
     "artist": "Slawomir Maniak",
     "artist_ids": [
@@ -3981,7 +3981,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/1/1/113975e1-7712-4760-96ad-405f8b4e41e3.jpg?1767956959"
     },
     "mana_cost": "{2}{W}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
     "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy target attacking or blocking creature.",
     "colors": [
@@ -4104,9 +4104,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/c/c/cce5b16d-07fb-4e64-8ec9-b8b29ba86cff.jpg?1767732492"
     },
     "mana_cost": "{2}{W}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
-    "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n\u2022 Destroy target artifact or enchantment.\n\u2022 Destroy target creature with mana value 3 or greater.",
+    "oracle_text": "As an additional cost to cast this spell, you may blight 2. (You may put two -1/-1 counters on a creature you control.)\nChoose one. If this spell's additional cost was paid, choose both instead.\n• Destroy target artifact or enchantment.\n• Destroy target creature with mana value 3 or greater.",
     "colors": [
       "W"
     ],
@@ -4226,7 +4226,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/2/4/24a5b025-4cdb-416d-aad6-0fc7e8da3df2.jpg?1767957141"
     },
     "mana_cost": "{1}{R}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Target creature gets +3/+2 until end of turn. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
     "colors": [
@@ -4251,7 +4251,7 @@
         "id": "ac4384b7-853c-417d-b3b4-f54cd0b5d361",
         "component": "token",
         "name": "Treasure",
-        "type_line": "Token Artifact \u2014 Treasure",
+        "type_line": "Token Artifact — Treasure",
         "uri": "https://api.scryfall.com/cards/ac4384b7-853c-417d-b3b4-f54cd0b5d361"
       },
       {
@@ -4374,7 +4374,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/f/2/f21b0fb7-91b6-403f-a81a-562665961276.jpg?1767732705"
     },
     "mana_cost": "{B}",
-    "cmc": 1.0,
+    "cmc": 1,
     "type_line": "Instant",
     "oracle_text": "As an additional cost to cast this spell, you may blight 1. (You may put a -1/-1 counter on a creature you control.)\nDestroy target creature with mana value 2 or less. If this spell's additional cost was paid, you gain 2 life.",
     "colors": [
@@ -4496,8 +4496,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/a/7/a7072412-4aa2-40ef-a267-bd717551a42b.jpg?1767659090"
     },
     "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Legendary Creature \u2014 Elf Warrior",
+    "cmc": 2,
+    "type_line": "Legendary Creature — Elf Warrior",
     "oracle_text": "Flash\nWhen Rhys enters, another target creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)\n{W}, {T}: Remove any number of counters from target creature you control. Activate only as a sorcery.",
     "power": "2",
     "toughness": "2",
@@ -4624,9 +4624,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/a/9/a9a425f4-2103-4f96-88a0-91fe554037d7.jpg?1767957062"
     },
     "mana_cost": "{6}{U}",
-    "cmc": 7.0,
+    "cmc": 7,
     "type_line": "Instant",
-    "oracle_text": "Vivid \u2014 This spell costs {1} less to cast for each color among permanents you control.\nTap up to two target creatures. Put a stun counter on each of them. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nDraw a card.",
+    "oracle_text": "Vivid — This spell costs {1} less to cast for each color among permanents you control.\nTap up to two target creatures. Put a stun counter on each of them. (If a permanent with a stun counter would become untapped, remove one from it instead.)\nDraw a card.",
     "colors": [
       "U"
     ],
@@ -4746,7 +4746,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/8/8/88a79f3e-ca74-467c-b0a8-22802ac5b465.jpg?1767956969"
     },
     "mana_cost": "{1}{W}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Target creature gets +2/+2 and gains first strike until end of turn. Untap it.",
     "colors": [
@@ -4808,7 +4808,7 @@
     "collector_number": "33",
     "digital": false,
     "rarity": "common",
-    "flavor_text": "\"If you hire a riverguard for protection, go in with your best offer. They won't consider anything less.\"\n\u2014Cenna, ferry pilot",
+    "flavor_text": "\"If you hire a riverguard for protection, go in with your best offer. They won't consider anything less.\"\n—Cenna, ferry pilot",
     "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
     "artist": "Lucas Graciano",
     "artist_ids": [
@@ -4867,7 +4867,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/3/5/35c56aff-1f0f-464a-b705-d67803e3d060.jpg?1767732563"
     },
     "mana_cost": "{1}{U}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Choose two target creatures controlled by different players. Return those creatures to their owners' hands.",
     "colors": [
@@ -4989,7 +4989,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/aea9b5c0-3b32-44be-9773-566b9daafa6b.jpg?1767957161"
     },
     "mana_cost": "{B}",
-    "cmc": 1.0,
+    "cmc": 1,
     "type_line": "Instant",
     "oracle_text": "Target creature you control gains deathtouch and lifelink until end of turn. When that creature dies this turn, create a 2/2 black and green Elf creature token.",
     "colors": [
@@ -5013,7 +5013,7 @@
         "id": "39b36f22-21f9-44fe-8a49-bdc859503342",
         "component": "token",
         "name": "Elf",
-        "type_line": "Token Creature \u2014 Elf",
+        "type_line": "Token Creature — Elf",
         "uri": "https://api.scryfall.com/cards/39b36f22-21f9-44fe-8a49-bdc859503342"
       }
     ],
@@ -5128,7 +5128,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/a/e/aeb4612c-758b-4492-ba03-eb6741b4176e.jpg?1767658325"
     },
     "mana_cost": "{1}{R}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Sear deals 4 damage to target creature or planeswalker.",
     "colors": [
@@ -5250,8 +5250,8 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/a/c/ac95b1c3-9eb2-4f80-bb32-72b36817d622.jpg?1767658386"
     },
     "mana_cost": "{3}{G}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Elf Warrior",
+    "cmc": 5,
+    "type_line": "Creature — Elf Warrior",
     "oracle_text": "Flash\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nWhen this creature enters, choose a creature type. Other permanents you control of that type gain hexproof and indestructible until end of turn.",
     "power": "4",
     "toughness": "2",
@@ -5376,7 +5376,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/b/7/b7551b61-656e-4f37-b9da-73174db983b7.jpg?1767659595"
     },
     "mana_cost": "{U}",
-    "cmc": 1.0,
+    "cmc": 1,
     "type_line": "Instant",
     "oracle_text": "Counter target spell with mana value 2.",
     "colors": [
@@ -5497,7 +5497,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/2/f/2fb0ea3f-2f6d-4b64-a9d7-e822c8854a03.jpg?1767732569"
     },
     "mana_cost": "{2}{U}{U}",
-    "cmc": 4.0,
+    "cmc": 4,
     "type_line": "Instant",
     "oracle_text": "This spell costs {2} less to cast if a creature is attacking you.\nThe owner of target spell or creature puts it on their choice of the top or bottom of their library.",
     "colors": [
@@ -5618,7 +5618,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/c/3/c3949f8c-d1c5-45c2-80ed-a57f4f9af86e.jpg?1767957051"
     },
     "mana_cost": "{2}{U}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
     "oracle_text": "Draw three cards. Then discard two cards unless you discard a creature card.",
     "colors": [
@@ -5740,7 +5740,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/1/9/19cfc015-b6d5-4918-99a7-990209e77441.jpg?1767872036"
     },
     "mana_cost": "{1}{G}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "Target creature gets +3/+3 until end of turn. If a creature entered the battlefield under your control this turn, draw a card.",
     "colors": [
@@ -5861,7 +5861,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/3/c/3ceab0e6-1bb8-487d-ab4b-2da8457b970a.jpg?1767873738"
     },
     "mana_cost": "{2}{R}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
     "oracle_text": "Tweeze deals 3 damage to any target. You may discard a card. If you do, draw a card.",
     "colors": [
@@ -5982,9 +5982,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/b/0/b00766db-4109-4225-a62a-fa12fd526970.jpg?1767871924"
     },
     "mana_cost": "{1}{B}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
-    "oracle_text": "Choose one \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Return two target creature cards that share a creature type from your graveyard to your hand.",
+    "oracle_text": "Choose one —\n• Return target creature card from your graveyard to your hand.\n• Return two target creature cards that share a creature type from your graveyard to your hand.",
     "colors": [
       "B"
     ],
@@ -6103,7 +6103,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/7/b/7b540a5f-7f1b-421a-864f-5af469556fc6.jpg?1765451670"
     },
     "mana_cost": "{3}{U}{U}",
-    "cmc": 5.0,
+    "cmc": 5,
     "type_line": "Instant",
     "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDraw three cards, then discard a card.",
     "colors": [
@@ -6232,9 +6232,9 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/0/b/0bef3905-24f8-419b-aeca-396adfc6d0dc.jpg?1767872046"
     },
     "mana_cost": "{2}{G}",
-    "cmc": 3.0,
+    "cmc": 3,
     "type_line": "Instant",
-    "oracle_text": "Choose one \u2014\n\u2022 Destroy target creature with flying.\n\u2022 Destroy target enchantment.\n\u2022 Create a 2/2 black and green Elf creature token.",
+    "oracle_text": "Choose one —\n• Destroy target creature with flying.\n• Destroy target enchantment.\n• Create a 2/2 black and green Elf creature token.",
     "colors": [
       "G"
     ],
@@ -6256,7 +6256,7 @@
         "id": "39b36f22-21f9-44fe-8a49-bdc859503342",
         "component": "token",
         "name": "Elf",
-        "type_line": "Token Creature \u2014 Elf",
+        "type_line": "Token Creature — Elf",
         "uri": "https://api.scryfall.com/cards/39b36f22-21f9-44fe-8a49-bdc859503342"
       }
     ],
@@ -6371,7 +6371,7 @@
       "border_crop": "https://cards.scryfall.io/border_crop/front/0/1/01522fec-9136-4fa6-91a3-370a8bb08b42.jpg?1767871807"
     },
     "mana_cost": "{U}{U}",
-    "cmc": 2.0,
+    "cmc": 2,
     "type_line": "Instant",
     "oracle_text": "As an additional cost to cast this spell, blight 2 or pay {1}. (To blight 2, put two -1/-1 counters on a creature you control.)\nCounter target spell.",
     "colors": [

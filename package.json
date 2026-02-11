@@ -28,7 +28,8 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "fetch-set": "ts-node scripts/fetch-set.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,6 +58,7 @@
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
-    "tailwindcss": "^1.0.1"
+    "tailwindcss": "^1.0.1",
+    "ts-node": "^8.10.2"
   }
 }

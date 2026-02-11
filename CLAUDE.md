@@ -107,10 +107,28 @@ Redux store structure:
 
 ### Adding a New Card Set
 
-1. Get card data from Scryfall API for the set
-2. Add `[SET]-card-base.json` to `src/sets/`
-3. Add set code to set selection logic
-4. Update filter options
+**Automated way (recommended):**
+```bash
+yarn fetch-set <SET_CODE>
+```
+This script automatically:
+- Fetches instant-speed cards from Scryfall API using query: `set:<CODE> (t:instant OR o:flash) unique:cards`
+- Removes duplicate printings automatically
+- Correctly filters instants, Flash cards, and conditional Flash (excludes Flashback sorceries)
+- Saves both JSON and markdown files to `src/sets/`
+
+Cards included:
+- All instants (including those with Flashback)
+- Cards with Flash keyword
+- Cards with conditional Flash (e.g., "cast as though it had flash if...")
+- Excludes: Sorceries with Flashback
+
+**Manual steps after fetching:**
+1. Import the set in `src/actions/selectNewSet.ts`
+2. Add a case to the switch statement
+3. Add set option to `src/components/Header.tsx` dropdown
+
+**Script details:** See `scripts/README.md` for full documentation
 
 ### Updating Dependencies
 
