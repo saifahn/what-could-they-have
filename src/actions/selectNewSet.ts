@@ -15,6 +15,8 @@ import m21Cards from '../sets/m21-card-base.json'
 const m21Text = require('../sets/m21-text.md')
 import midCards from '../sets/MID-card-base.json'
 const midText = require('../sets/mid-text.md')
+import eclCards from '../sets/ECL-card-base.json'
+const eclText = require('../sets/ecl-text.md')
 
 export const selectNewSet = (setName: string = 'eld') => async (
   dispatch: Dispatch,
@@ -41,6 +43,11 @@ export const selectNewSet = (setName: string = 'eld') => async (
     case 'mid':
       cards = midCards
       textLink = midText
+      break
+    case 'ecl':
+      cards = eclCards
+      textLink = eclText
+      break
     default:
       cards = midCards
       textLink = midText

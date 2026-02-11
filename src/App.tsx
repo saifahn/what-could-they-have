@@ -18,7 +18,7 @@ interface State {}
 class App extends React.Component<Props, State> {
   componentDidMount() {
     // set first set
-    this.props.setUpApp('mid')
+    this.props.setUpApp('ecl')
   }
 
   render() {
@@ -32,7 +32,7 @@ class App extends React.Component<Props, State> {
             <Route exact path="/" component={Intro} />
             <Route path="/filter" component={Filter} />
             <Route path="/game" component={Game} />
-          </Switch>
+          </Switch> 
         </div>
       </Router>
     )
